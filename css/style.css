@@ -18,7 +18,7 @@ html, body {
 }
 .bg2 {
  /* background-color: #299DB6; #004c7d*/
-background-image: linear-gradient(to top, white 0%, #3b5998 50%);
+background-image: linear-gradient(to top, white 0%, #3b5998 0%);
 
 }
 #headerblob {
