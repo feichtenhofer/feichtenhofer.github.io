@@ -1,3 +1,4 @@
+<!--template source: https://github.com/daviddao/daviddao.github.io-->
 <!DOCTYPE html>
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -70,6 +71,16 @@
   <h3>Education</h3>
   <div id="timeline">
     <div class="timelineitem">
+      <div class="tdate">03/2015 - 06/2015</div>
+      <div class="ttitle">University of Oxford, Oxford, UK: Visiting Researcher  </div>
+	  <div class="tdesc"> Worked with Prof. Andrew Zisserman in the field of Human Action Recognition </div>
+    </div>
+	<div class="timelineitem">
+      <div class="tdate">06/2014</div>
+      <div class="ttitle">York University, Toronto, Canada: Visiting Researcher  </div>
+	  <div class="tdesc"> Worked with Prof. Richard P. Wildes in the field of Dynamic Scene Recognition </div>
+    </div>
+    <div class="timelineitem">
       <div class="tdate">Since 2014</div>
       <div class="ttitle">Graz University of Technology: PhD Student</div>
       <div class="tdesc">Specialization on <span class="thigh">Learning Effective Spatiotemporal Representations for Recognition in Computer Vision </span></div>
@@ -101,6 +112,88 @@
   <h2>Publications</h2>
   <div id="pubs">
 
+   	<div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="pubs/cvpr16_architecture.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Convolutional Two-Stream Network Fusion for Video Action Recognition</div>
+            <div class="pubd">...
+			</div>
+            <div class="puba">Christoph Feichtenhofer, Axel Pinz, Andrew Zisserman</div>
+            <div class="pubv">in CVPR 2016 </div>
+            <div class="publ">
+              <ul>
+                <li><a href="pubs/.pdf">paper</a></li>			
+              </ul>
+			  
+            </div>
+          </div>
+        </div>
+      </div>
+	</div>   
+	
+ 	<div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="pubs/DPCF_intro_square.jpg">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Dynamic Scene Recognition with Complementary Spatiotemporal Features</div>
+            <div class="pubd">This paper presents Dynamically Pooled Complementary Features, a unified approach to dynamic scene recognition that analyzes a short video clip in terms of its spatial, temporal and color properties.  The complementarity of these properties is preserved through all main steps of processing, including primitive feature extraction, coding and pooling. In the feature extraction step, spatial orientations capture static appearance, spatiotemporal oriented energies capture image dynamics and color statistics capture chromatic information. Subsequently, primitive features are encoded into a mid-level representation that has been learned for the task of dynamic scene recognition. Finally, a novel dynamic spacetime pyramid is introduced. This  dynamic pooling approach can handle both global as well as local motion by adapting to the temporal structure, as guided by pooling energies. The resulting system provides online recognition of dynamic scenes that is thoroughly evaluated on the two current benchmark datasets and yields best results to date on both datasets. In-depth analysis reveals  the benefits of explicitly modeling feature complementarity in combination with the dynamic spacetime pyramid, indicating that this unified approach should be well-suited to many areas of video analysis.
+			</div>
+            <div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
+            <div class="pubv">in PAMI 2016 </div>
+            <div class="publ">
+              <ul>
+                <li><a href="pubs/FeichtenhoferPinzWildesPAMI2016.pdf">paper</a></li>			
+              </ul>
+			  
+            </div>
+          </div>
+        </div>
+      </div>
+	</div>   
+   
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+		  <table width="100%">
+			  <tr>
+				<td align="center" valign="bottom">	<video autoplay loop> <source src="pubs/Davis_Love_III__Beautiful_swing!_golf_f_cm_np1_ri_med_0.mp4" type="video/mp4"> </video></td>
+			  </tr>
+			  <tr>
+				<td align="center" valign="bottom">   <video autoplay loop> <source src="pubs/Davis_Love_III__Beautiful_swing!_golf_f_cm_np1_ri_med_sal.mp4" type="video/mp4"> </video></td>
+			  </tr>
+		  </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Dynamically Encoded Actions based on Spacetime Saliency</div>
+            <div class="pubd">Human actions typically occur over a well localized extent in both space and time. Similarly, as typically captured in video, human actions have small spatiotemporal support in image space. This paper capitalizes on these observations by weighting feature pooling for action recognition over those areas within a video where actions are most likely to occur. To enable this operation, we define a novel measure of spacetime saliency. The measure relies on two observations regarding foreground motion of human actors: They typically exhibit motion that contrasts with that of their surrounding region and they are spatially compact. By using the resulting definition of saliency during feature pooling we show that action recognition performance achieves state-of-the-art levels on three widely considered action recognition datasets. Our saliency weighted pooling can be applied to essentially any locally defined features and encodings thereof. Additionally, we demonstrate that inclusion of locally aggregated spatiotemporal energy features, which efficiently result as a by-product of the saliency computation, further boosts performance over reliance on standard action recognition features alone.</div>
+            <div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
+            <div class="pubv">in Proc. CVPR 2015 </div>
+            <div class="publ">
+              <ul>
+                <li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Feichtenhofer_Dynamically_Encoded_Actions_2015_CVPR_paper.pdf">paper</a></li>			
+              </ul>
+			  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+  
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
@@ -122,7 +215,7 @@
             <div class="publ">
               <ul>
                 <li><a href="pubs/Feichtenhofer_Bags_of_Spacetime_2014_CVPR_paper.pdf">paper</a></li>
-			<li><a href="#" onClick="BoSESpotlight=window.open('pubs/BoSE_spotlight.mp4','BoSESpotlight','toolbar=no, location=no, directories=no,status=no, menubar=no,scrollbars=no, resizable=true'); return false;">Spotlight Video</a></li>
+			<li><a href="#" onClick="BoSESpotlight=window.open('pubs/BoSE_spotlight.mp4','BoSESpotlight','toolbar=no, location=no, directories=no,status=no, menubar=no,scrollbars=no, resizable=true'); return false;">spotlight video</a></li>
 			
               </ul>
 			  
