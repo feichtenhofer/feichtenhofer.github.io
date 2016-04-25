@@ -11,15 +11,14 @@ html, body {
   margin-bottom: 40px;
 }
 .bg1 {
-  background-image: url('bgpic.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: auto 100%;
+  background: 
+   url(http://feichtenhofer.github.io/img/bgpic.jpg) bottom center no-repeat;  
+  width: 1200px;
+  height: 800px;
 }
 .bg2 {
  /* background-color: #299DB6; #004c7d*/
 background-image: linear-gradient(to top, white 0%, #3b5998 0%);
-
 }
 #headerblob {
   position: absolute;
