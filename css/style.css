@@ -40,15 +40,18 @@ background-image: linear-gradient(to top, white 0%, #3b5998 0%);
 #htname {
   font-size: 46px;
   font-weight: 400;
+  margin-left: 20px;
 }
 #htdesc {
   font-size: 18px;
   font-weight: 300;
   margin-top: -6px;
+  margin-left: 20px;
 }
 #htem {
   font-size: 14px;
   font-weight: 300;
+  margin-left: 20px;
 }
 @media (max-width: 768px) {
   #headerblob {
@@ -242,6 +245,10 @@ hr.soft {
 .puba {
   font-size: 18px;
   color: #900;
+}
+.pubaw {
+  font-size: 18px;
+  color: #EE2556;
 }
 .pubv {
   color: #090;

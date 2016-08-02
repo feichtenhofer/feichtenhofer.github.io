@@ -39,13 +39,13 @@
       <div id="htem" style="color:white">feichtenhofer _at_ tugraz.at</div>
       <div id="icons">
         <div class="svgico">
-          <a href="https://plus.google.com/117756895023424530482/posts"><img src="./img/80-google-plus.svg"></a>
+          <a href="https://plus.google.com/117756895023424530482/posts"><img src="./img/80-google-plus.svg" width="48px"></a>
         </div>
         <div class="svgico">
-          <a href="https://github.com/feichtenhofer"><img src="./img/octocat.svg" width="56px"></a>
+          <a href="https://github.com/feichtenhofer"><img src="./img/octocat.svg" width="48px"></a>
 		</div>
         <div class="svgico">
-          <a href="http://scholar.google.com/citations?user=UxuqG1EAAAAJ"><img src="./img/gscholar.svg" width="50px"></a>		  
+          <a href="http://scholar.google.com/citations?user=UxuqG1EAAAAJ"><img src="./img/gscholar.svg" width="48px"></a>		  
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
   <h3>Research Statement</h3>
 
   <blockquote>
-<p class="text-left">My research interests are in the fields of computer vision and machine learning, with a focus on learning effective video representations for dynamic scene understanding. In particular, I plan to explore computational theories that represent spatiotemporal visual information, within a confluence of machine vision and learning. I aim to find efficient solutions for problems that are grounded in applications such as video search and retrieval. </p>
+<p class="text-left">My research interests are in the fields of computer vision and machine learning, with a focus on learning effective video representations for dynamic scene understanding. In particular, I plan to explore computational theories that represent spatiotemporal visual information, within a confluence of machine vision and learning. I aim to find efficient solutions for problems that are grounded in applications such as recognition and detection from video. </p>
 
   </blockquote>
 </div>
@@ -118,13 +118,16 @@
         <div class="col-md-6">
           <div class="pub">
             <div class="pubt">Convolutional Two-Stream Network Fusion for Video Action Recognition</div>
+			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Andrew Zisserman</div>
+            <div class="pubv">in Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2016 </div>
+			<div class="pubaw">Best Presentation Award at the International Computer Vision Summer School (<a href="http://svg.dmi.unict.it/icvss2016/index.html">ICVSS</a>) 2016.  </div>
             <div class="pubd">Recent applications of Convolutional Neural Networks (ConvNets) for human action recognition in videos have proposed different solutions for incorporating the appearance and motion information. We study a number of ways of fusing ConvNet towers both spatially and temporally in order to best take advantage of this spatio-temporal information. We make the following findings: (i) that rather than fusing at the softmax layer, a spatial and temporal network can be fused at a convolution layer without loss of performance, but with a substantial saving in parameters; (ii) that it is better to fuse such networks spatially at the last convolutional layer than earlier, and that additionally fusing at the class prediction layer can boost accuracy; finally (iii) that pooling of abstract convolutional features over spatiotemporal neighbourhoods further boosts performance. Based on these studies we propose a new ConvNet architecture for spatiotemporal fusion of video snippets, and evaluate its performance on standard benchmarks where this architecture achieves state-of-the-art results.
 			</div>
-            <div class="puba">Christoph Feichtenhofer, Axel Pinz, Andrew Zisserman</div>
-            <div class="pubv">in Proc. CVPR 2016 </div>
+
             <div class="publ">
               <ul>
-                <li><a href="pubs/Feichtenhofer_Two_Stream_Fusion_2016_CVPR.pdf">paper</a></li>			
+                <li><a href="pubs/Feichtenhofer_Two_Stream_Fusion_2016_CVPR.pdf">paper</a></li>	
+                <li><a href="https://github.com/feichtenhofer/twostreamfusion">code</a></li>					
               </ul>
 			  
             </div>
@@ -143,10 +146,11 @@
         <div class="col-md-6">
           <div class="pub">
             <div class="pubt">Dynamic Scene Recognition with Complementary Spatiotemporal Features</div>
+			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
+            <div class="pubv">in IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI) 2016 </div>
+
             <div class="pubd">This paper presents Dynamically Pooled Complementary Features, a unified approach to dynamic scene recognition that analyzes a short video clip in terms of its spatial, temporal and color properties.  The complementarity of these properties is preserved through all main steps of processing, including primitive feature extraction, coding and pooling. In the feature extraction step, spatial orientations capture static appearance, spatiotemporal oriented energies capture image dynamics and color statistics capture chromatic information. Subsequently, primitive features are encoded into a mid-level representation that has been learned for the task of dynamic scene recognition. Finally, a novel dynamic spacetime pyramid is introduced. This  dynamic pooling approach can handle both global as well as local motion by adapting to the temporal structure, as guided by pooling energies. The resulting system provides online recognition of dynamic scenes that is thoroughly evaluated on the two current benchmark datasets and yields best results to date on both datasets. In-depth analysis reveals  the benefits of explicitly modeling feature complementarity in combination with the dynamic spacetime pyramid, indicating that this unified approach should be well-suited to many areas of video analysis.
 			</div>
-            <div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">in PAMI 2016 </div>
             <div class="publ">
               <ul>
                 <li><a href="pubs/FeichtenhoferPinzWildesPAMI2016.pdf">paper</a></li>			
@@ -175,10 +179,11 @@
         <div class="col-md-6">
           <div class="pub">
             <div class="pubt">Dynamically Encoded Actions based on Spacetime Saliency</div>
-            <div class="pubd">Human actions typically occur over a well localized extent in both space and time. Similarly, as typically captured in video, human actions have small spatiotemporal support in image space. This paper capitalizes on these observations by weighting feature pooling for action recognition over those areas within a video where actions are most likely to occur. To enable this operation, we define a novel measure of spacetime saliency. The measure relies on two observations regarding foreground motion of human actors: They typically exhibit motion that contrasts with that of their surrounding region and they are spatially compact. By using the resulting definition of saliency during feature pooling we show that action recognition performance achieves state-of-the-art levels on three widely considered action recognition datasets. Our saliency weighted pooling can be applied to essentially any locally defined features and encodings thereof. Additionally, we demonstrate that inclusion of locally aggregated spatiotemporal energy features, which efficiently result as a by-product of the saliency computation, further boosts performance over reliance on standard action recognition features alone.</div>
             <div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">in Proc. CVPR 2015 </div>
-            <div class="publ">
+            <div class="pubv">in Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2015 </div>
+
+            <div class="pubd">Human actions typically occur over a well localized extent in both space and time. Similarly, as typically captured in video, human actions have small spatiotemporal support in image space. This paper capitalizes on these observations by weighting feature pooling for action recognition over those areas within a video where actions are most likely to occur. To enable this operation, we define a novel measure of spacetime saliency. The measure relies on two observations regarding foreground motion of human actors: They typically exhibit motion that contrasts with that of their surrounding region and they are spatially compact. By using the resulting definition of saliency during feature pooling we show that action recognition performance achieves state-of-the-art levels on three widely considered action recognition datasets. Our saliency weighted pooling can be applied to essentially any locally defined features and encodings thereof. Additionally, we demonstrate that inclusion of locally aggregated spatiotemporal energy features, which efficiently result as a by-product of the saliency computation, further boosts performance over reliance on standard action recognition features alone.</div>
+             <div class="publ">
               <ul>
                 <li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Feichtenhofer_Dynamically_Encoded_Actions_2015_CVPR_paper.pdf">paper</a></li>			
               </ul>
@@ -205,9 +210,13 @@
         <div class="col-md-6">
           <div class="pub">
             <div class="pubt">Bags of Spacetime Energies for Dynamic Scene Recognition</div>
+
+			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
+            <div class="pubv">in Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2014 </div>
+			<div class="pubaw">Best Poster Award at the Scene Understanding Workshop (<a href="http://sunw.csail.mit.edu/2014/posters.html">SUNw</a>) 2014.  </div>
+
             <div class="pubd">This paper presents a unified bag of visual word (BoW) framework for dynamic scene recognition. The approach builds on primitive features that uniformly capture spatial and temporal orientation structure of the imagery (e.g., video), as extracted via application of a bank of spatiotemporally oriented filters. Various feature encoding techniques are investigated to abstract the primitives to an intermediate representation that is best suited to dynamic scene representation. Further, a novel approach to adaptive pooling of the encoded features is presented that captures spatial layout of the scene even while being robust to situations where camera motion and scene dynamics are confounded. The resulting overall approach has been evaluated on two standard, publically available dynamic scene datasets. The results show that in comparison to a representative set of alternatives, the proposed approach outperforms the previous state-of-the-art in classification accuracy by 10%.</div>
-            <div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">in Proc. CVPR 2014 </div>
+
             <div class="publ">
               <ul>
                 <li><a href="pubs/Feichtenhofer_Bags_of_Spacetime_2014_CVPR_paper.pdf">paper</a></li>
@@ -232,6 +241,9 @@
         <div class="col-md-6">
           <div class="pub">
             <div class="pubt">Fusing RFID and Computer Vision for Probabilistic Tag Localization</div>
+			<div class="puba">Michael Goller, Christoph Feichtenhofer, Axel Pinz</div>
+            <div class="pubv">in Proc. IEEE International Conference on RFID (IEEE RFID) 2014 </div>
+
             <div class="pubd">The combination of RFID and computer vision
 						systems is an effective approach to mitigate the limited tag
 						localization capabilities of current RFID deployments. In this
@@ -249,9 +261,7 @@
 						evaluation shows that the fusion of RFID and computer vision
 						provides robustness to false positive observations and allows for
 						a reliable system operation.</div>
-            <div class="puba">Michael Goller, Christoph Feichtenhofer, Axel Pinz</div>
-            <div class="pubv">in Proc. IEEE RFID 2014 </div>
-            <div class="publ">
+			<div class="publ">
               <ul>
                 <li><a href="pubs/Goller_fusing_RFID_with_Vision_2014.pdf">paper</a></li>			
               </ul>
@@ -272,6 +282,8 @@
           <div class="pub">
             <div class="pubt">Spacetime Forests with Complementary
 									Features for Dynamic Scene Recognition</div>
+            <div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
+            <div class="pubv">in Proc. British Machine Vision Conference (BMVC) 2013 </div>
             <div class="pubd">This paper presents spacetime forests defined over complementary spatial and temporal
 								features for recognition of naturally occurring dynamic scenes. The approach
 								improves on the previous state-of-the-art in both classification and execution rates. A
@@ -286,8 +298,7 @@
 								and for efficient, incremental processing. The integrated approach is evaluated empirically
 								on two publically available datasets to document its outstanding performance.
 			</div>
-            <div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">in Proc. BMVC 2013 </div>
+
             <div class="publ">
               <ul>
                 <li><a href="pubs/spacetime_forests_BMVC13.pdf">paper</a></li>			
@@ -309,6 +320,8 @@
 	<div class="col-md-6">
 	  <div class="pub">
 		<div class="pubt">Spatio-Temporal Good Features to Track</div>
+		<div class="puba">Christoph Feichtenhofer, Axel Pinz</div>
+		<div class="pubv">in Proc. Workshop on Computer Vision for Autonomous Driving, IEEE International Conference on Computer Vision (ICCV) 2013</div>
 		<div class="pubd">This paper presents two fundamental contributions that
 							can be very useful for any autonomous system that requires
 							point correspondences for visual odometry. First,
@@ -331,8 +344,7 @@
 							measure highly correlates with the accuracy in structure
 							and motion estimation.
 		</div>
-		<div class="puba">Christoph Feichtenhofer, Axel Pinz</div>
-		<div class="pubv">in Proc. CVAD, ICCV 2013 </div>
+
 		<div class="publ">
 		  <ul>
 			<li><a href="pubs/Feichtenhofer_Bags_of_Spacetime_2014_CVPR_paper.pdf">paper</a></li>			
@@ -355,6 +367,9 @@
           <div class="pub">
             <div class="pubt">A Perceptual Image Sharpness Metric Based on
 								Local Edge Gradient Analysis</div>
+            <div class="puba">Christoph Feichtenhofer, Hannes Fassold, Peter Schallauer</div>
+            <div class="pubv">in IEEE Signal Processing Letters 2013 </div>
+			
             <div class="pubd">In this letter, a no-reference perceptual sharpness
 						metric based on a statistical analysis of local edge gradients is
 						presented. The method takes properties of the human visual
@@ -366,8 +381,7 @@
 						computational complexity. In contrast to existing metrics, the PSI
 						performs well for a wide range of blurriness and shows a high
 						degree of invariance for different image contents.</div>
-            <div class="puba">Christoph Feichtenhofer, Hannes Fassold, Peter Schallauer</div>
-            <div class="pubv">in IEEE Signal Processing Letters 2013 </div>
+
             <div class="publ">
               <ul>
                 <li><a href="pubs/Feichtenhofer_Image_Sharpness_Metric_IEEE_SPL_2013.pdf">paper</a></li>			
@@ -397,10 +411,10 @@
   </div>
   <h3>My Lectures cover</h3>
   <div class="ctr">
-    <div class="hht"><a href="pubs/teaching/IVU_Convolutional_Filtering_and_Thinking_in_Frequency.pdf">Convolutional Filtering and Thinking in Frequency </a> </div>
+    <div class="hht"><a href="pubs/teaching/IVU_Convolutional_Filtering_and_Thinking_in_Frequency.pdf">Convolutional Filtering and Thinking in Frequency (2014)</a> </div>
   </div>
   <div class="ctr">
-    <div class="hht"><a href="pubs/teaching/IVU_Convolutional_Networks_and_Video_Representations.pdf">Convolutional Networks and Video Representations</a> </div>
+    <div class="hht"><a href="pubs/teaching/IVU_Convolutional_Networks_and_Video_Representations.pdf">Convolutional Networks and Video Representations (2014)</a> </div>
   </div>
 </div>
 
