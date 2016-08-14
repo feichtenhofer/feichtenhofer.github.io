@@ -111,15 +111,17 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-
+            <img src="pubs/nips16_teaser.jpg"><br><br>
+			<img src="pubs/nips16_temporal_resnet.png">
           </div>
         </div>
         <div class="col-md-6">
           <div class="pub">
             <div class="pubt">Spatiotemporal Residual Networksfor Video Action Recognition</div>
 			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">in Proc. Conference on Neural Information Processing Systems (NIPS) 2016 </div>
-
+            <div class="pubv">Advances in Neural Information Processing Systems (NIPS) 2016 </div>
+            <div class="pubd">Two-stream Convolutional Networks (ConvNets) have shown strong performance for human action recognition in videos. Recently, Residual Networks (ResNets) have arisen as a new technique to train extremely deep architectures. In this paper, we introduce spatiotemporal ResNets as a combination of these two approaches. Our novel architecture generalizes ResNets for the spatiotemporal domain by introducing residual connections in two ways. First, we inject residual connections between the appearance and motion pathways of a two-stream architecture to allow spatiotemporal interaction between the two streams. Second, we transform pretrained image ConvNets into spatiotemporal networks by equipping these with learnable convolutional filters that are initialized as temporal residual connections and operate on adjacent feature maps in time.  This approach slowly increases the spatiotemporal receptive field as the depth of the model increases and naturally integrates image ConvNet design principles. The whole model is trained end-to-end to allow hierarchical learning of complex spatiotemporal features. We evaluate our novel spatiotemporal ResNet using two widely used  action recognition benchmarks where it exceeds the previous state-of-the-art.
+			</div>
 
             <div class="publ">
               <ul>
@@ -146,7 +148,7 @@
           <div class="pub">
             <div class="pubt">Convolutional Two-Stream Network Fusion for Video Action Recognition</div>
 			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Andrew Zisserman</div>
-            <div class="pubv">in Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2016 </div>
+            <div class="pubv">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2016 </div>
 			<div class="pubaw">Best Presentation Award at the International Computer Vision Summer School (<a href="http://svg.dmi.unict.it/icvss2016/index.html">ICVSS</a>) 2016.  </div>
             <div class="pubd">Recent applications of Convolutional Neural Networks (ConvNets) for human action recognition in videos have proposed different solutions for incorporating the appearance and motion information. We study a number of ways of fusing ConvNet towers both spatially and temporally in order to best take advantage of this spatio-temporal information. We make the following findings: (i) that rather than fusing at the softmax layer, a spatial and temporal network can be fused at a convolution layer without loss of performance, but with a substantial saving in parameters; (ii) that it is better to fuse such networks spatially at the last convolutional layer than earlier, and that additionally fusing at the class prediction layer can boost accuracy; finally (iii) that pooling of abstract convolutional features over spatiotemporal neighbourhoods further boosts performance. Based on these studies we propose a new ConvNet architecture for spatiotemporal fusion of video snippets, and evaluate its performance on standard benchmarks where this architecture achieves state-of-the-art results.
 			</div>
@@ -176,7 +178,7 @@
           <div class="pub">
             <div class="pubt">Dynamic Scene Recognition with Complementary Spatiotemporal Features</div>
 			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">in IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI) 2016 </div>
+            <div class="pubv">IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI) 2016 </div>
 
             <div class="pubd">This paper presents Dynamically Pooled Complementary Features, a unified approach to dynamic scene recognition that analyzes a short video clip in terms of its spatial, temporal and color properties.  The complementarity of these properties is preserved through all main steps of processing, including primitive feature extraction, coding and pooling. In the feature extraction step, spatial orientations capture static appearance, spatiotemporal oriented energies capture image dynamics and color statistics capture chromatic information. Subsequently, primitive features are encoded into a mid-level representation that has been learned for the task of dynamic scene recognition. Finally, a novel dynamic spacetime pyramid is introduced. This  dynamic pooling approach can handle both global as well as local motion by adapting to the temporal structure, as guided by pooling energies. The resulting system provides online recognition of dynamic scenes that is thoroughly evaluated on the two current benchmark datasets and yields best results to date on both datasets. In-depth analysis reveals  the benefits of explicitly modeling feature complementarity in combination with the dynamic spacetime pyramid, indicating that this unified approach should be well-suited to many areas of video analysis.
 			</div>
@@ -209,7 +211,7 @@
           <div class="pub">
             <div class="pubt">Dynamically Encoded Actions based on Spacetime Saliency</div>
             <div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">in Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2015 </div>
+            <div class="pubv">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2015 </div>
 
             <div class="pubd">Human actions typically occur over a well localized extent in both space and time. Similarly, as typically captured in video, human actions have small spatiotemporal support in image space. This paper capitalizes on these observations by weighting feature pooling for action recognition over those areas within a video where actions are most likely to occur. To enable this operation, we define a novel measure of spacetime saliency. The measure relies on two observations regarding foreground motion of human actors: They typically exhibit motion that contrasts with that of their surrounding region and they are spatially compact. By using the resulting definition of saliency during feature pooling we show that action recognition performance achieves state-of-the-art levels on three widely considered action recognition datasets. Our saliency weighted pooling can be applied to essentially any locally defined features and encodings thereof. Additionally, we demonstrate that inclusion of locally aggregated spatiotemporal energy features, which efficiently result as a by-product of the saliency computation, further boosts performance over reliance on standard action recognition features alone.</div>
              <div class="publ">
@@ -241,7 +243,7 @@
             <div class="pubt">Bags of Spacetime Energies for Dynamic Scene Recognition</div>
 
 			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">in Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2014 </div>
+            <div class="pubv">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2014 </div>
 			<div class="pubaw">Best Poster Award at the Scene Understanding Workshop (<a href="http://sunw.csail.mit.edu/2014/posters.html">SUNw</a>) 2014.  </div>
 
             <div class="pubd">This paper presents a unified bag of visual word (BoW) framework for dynamic scene recognition. The approach builds on primitive features that uniformly capture spatial and temporal orientation structure of the imagery (e.g., video), as extracted via application of a bank of spatiotemporally oriented filters. Various feature encoding techniques are investigated to abstract the primitives to an intermediate representation that is best suited to dynamic scene representation. Further, a novel approach to adaptive pooling of the encoded features is presented that captures spatial layout of the scene even while being robust to situations where camera motion and scene dynamics are confounded. The resulting overall approach has been evaluated on two standard, publically available dynamic scene datasets. The results show that in comparison to a representative set of alternatives, the proposed approach outperforms the previous state-of-the-art in classification accuracy by 10%.</div>
@@ -271,7 +273,7 @@
           <div class="pub">
             <div class="pubt">Fusing RFID and Computer Vision for Probabilistic Tag Localization</div>
 			<div class="puba">Michael Goller, Christoph Feichtenhofer, Axel Pinz</div>
-            <div class="pubv">in Proc. IEEE International Conference on RFID (IEEE RFID) 2014 </div>
+            <div class="pubv">IEEE International Conference on RFID (IEEE RFID) 2014 </div>
 
             <div class="pubd">The combination of RFID and computer vision
 						systems is an effective approach to mitigate the limited tag
@@ -312,7 +314,7 @@
             <div class="pubt">Spacetime Forests with Complementary
 									Features for Dynamic Scene Recognition</div>
             <div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">in Proc. British Machine Vision Conference (BMVC) 2013 </div>
+            <div class="pubv">British Machine Vision Conference (BMVC) 2013 </div>
             <div class="pubd">This paper presents spacetime forests defined over complementary spatial and temporal
 								features for recognition of naturally occurring dynamic scenes. The approach
 								improves on the previous state-of-the-art in both classification and execution rates. A
@@ -350,7 +352,7 @@
 	  <div class="pub">
 		<div class="pubt">Spatio-Temporal Good Features to Track</div>
 		<div class="puba">Christoph Feichtenhofer, Axel Pinz</div>
-		<div class="pubv">in Proc. Workshop on Computer Vision for Autonomous Driving, IEEE International Conference on Computer Vision (ICCV) 2013</div>
+		<div class="pubv">Workshop on Computer Vision for Autonomous Driving, IEEE International Conference on Computer Vision (ICCV) 2013</div>
 		<div class="pubd">This paper presents two fundamental contributions that
 							can be very useful for any autonomous system that requires
 							point correspondences for visual odometry. First,
@@ -397,7 +399,7 @@
             <div class="pubt">A Perceptual Image Sharpness Metric Based on
 								Local Edge Gradient Analysis</div>
             <div class="puba">Christoph Feichtenhofer, Hannes Fassold, Peter Schallauer</div>
-            <div class="pubv">in IEEE Signal Processing Letters 2013 </div>
+            <div class="pubv">IEEE Signal Processing Letters 2013 </div>
 			
             <div class="pubd">In this letter, a no-reference perceptual sharpness
 						metric based on a statistical analysis of local edge gradients is
