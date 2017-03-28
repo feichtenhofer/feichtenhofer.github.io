@@ -106,39 +106,23 @@
 <div class="container">
   <h2>Publications</h2>
   <div id="pubs">
-  
-	<div class="pubwrap">
+  	<div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
+		    <img src="pubs/cvpr17_multiplier.jpg"><br><br>
+			<img src="pubs/gradient_mul.png" style="width: 49% ">
+			<img src="pubs/temporal_conv.png" style="width: 49% ">
           </div>
         </div>
         <div class="col-md-6">
           <div class="pub">
-            <div class="pubt">Temporal Residual Networks for Dynamic Scene Recognition</div>
+            <div class="pubt">Spatiotemporal Multiplier Networks for Video Action Recognition</div>
 			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
             <div class="pubv">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2017 </div>
-            <div class="publ">
-              <ul>
-				<li><a href="">paper</a></li>	
-                <li><a href="">code</a></li>		
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-	</div>  
-	<div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Spatiotemporal Multiplier Networks</div>
-			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
-            <div class="pubv">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2017 </div>
+			 <div class="pubd">This paper presents a general ConvNet architecture for video action recognition based on multiplicative interactions of spacetime features. Our model combines the appearance and motion pathways of a two-stream architecture by motion gating and is trained end-to-end. We theoretically motivate multiplicative gating functions for residual networks and empirically study their effect on classification accuracy. To capture long-term dependencies we inject  identity mapping kernels for learning temporal relationships. Our architecture is fully convolutional in spacetime and able to evaluate a video in a single forward pass. Empirical investigation reveals that our model produces state-of-the-art results on two standard action recognition datasets.
+			</div>
+			
             <div class="publ">
               <ul>
 				<li><a href="">paper</a></li>	
@@ -150,6 +134,32 @@
       </div>
 	</div>  
 	
+	<div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+		    <img src="pubs/cvpr17_tres.jpg"><br><br>
+			<img src="pubs/cvpr17_scenes.jpg"><br><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Temporal Residual Networks for Dynamic Scene Recognition</div>
+			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
+            <div class="pubv">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2017 </div>
+			 <div class="pubd">This paper combines three contributions to establish a new state-of-the-art in dynamic scene recognition. First, we present a novel ConvNet architecture based on temporal residual units that is fully convolutional in spacetime. Our model augments spatial ResNets with convolutions across time to hierarchically add temporal residuals as the depth of the network increases. Second, existing approaches to video-based recognition are categorized and a baseline of seven previously top performing algorithms is selected for comparative evaluation on dynamic scenes. Third, we introduce a new and challenging video database of dynamic scenes that more than doubles the size of those previously available.This dataset is explicitly split into two subsets of equal size that contain videos with and without camera motion to allow for systematic study of how this variable interacts with the defining dynamics of the scene per se. Our evaluations verify the particular strengths and weaknesses of the baseline algorithms with respect to various scene classes and camera motion parameters. Finally, our temporal ResNet boosts recognition performance and establishes a new state-of-the-art on dynamic scene recognition, as well as on the complementary task of action recognition.
+			</div>
+            <div class="publ">
+              <ul>
+				<li><a href="">paper</a></li>	
+                <li><a href="">code</a></li>		
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+	</div>  
+
    	<div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
