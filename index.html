@@ -65,6 +65,7 @@
 <div class="container">
   <h3>Education</h3>
   <div id="timeline">
+ 
     <div class="timelineitem">
       <div class="tdate">03/2015 - 06/2015</div>
       <div class="ttitle">University of Oxford, Oxford, UK: Visiting Researcher  </div>
@@ -106,7 +107,49 @@
 <div class="container">
   <h2>Publications</h2>
   <div id="pubs">
-  	<div class="pubwrap">
+  
+    	<div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+			<img src="pubs/DTschematic.png"><br><br>
+			<img src="pubs/DTfeatures.jpg"><br><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Detect to Track and Track to Detect</div>
+			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Andrew Zisserman</div>
+            <div class="pubv">IEEE International Conference on Computer Vision (ICCV) 2017 </div>
+			 <div class="pubd">Recent approaches for high accuracy detection and tracking of object
+					categories in video consist
+					of complex multistage solutions that become more cumbersome each
+					year.  In this paper we propose a ConvNet architecture that jointly
+					performs detection and tracking, solving the task in a simple and
+					effective way.
+
+					Our contributions are threefold: (i) we set up a ConvNet architecture for simultaneous detection and tracking, using a multi-task objective for frame-based object detection and across-frame track regression; (ii) we introduce novel correlation features that represent object co-occurrences across time to aid the ConvNet during tracking;  (iii) we link the frame level detections based on our across-frame tracklets to produce high accuracy detections
+					at the video level. Our ConvNet architecture for spatio-temporal
+					object detection is evaluated on the large-scale ImageNet VID dataset
+					where it achieves state-of-the-art results. Our approach provides
+					better single model performance than the winning method of the last
+					ImageNet challenge while being conceptually much simpler. Finally, we
+					show that by increasing the temporal stride we can dramatically
+					increase the tracker speed.
+			</div>
+			
+            <div class="publ">
+              <ul>
+				<li><a href="">paper</a></li>	
+                <li><a href="">code</a></li>		
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+	</div>  
+
+   	<div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
@@ -133,6 +176,8 @@
         </div>
       </div>
 	</div>  
+	
+
 	
 	<div class="pubwrap">
       <div class="row">
