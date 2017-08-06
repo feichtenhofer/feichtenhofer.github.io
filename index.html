@@ -41,6 +41,9 @@
         <div class="svgico">
           <a href="https://github.com/feichtenhofer"><img src="./img/octocat.svg" width="48px"></a>
 		</div>
+	   <div class="svgico">
+          <a href="http://linkedin.com/in/christoph-feichtenhofer-549433a1"><img src="./img/linkedin.svg" width="63px"></a>
+        </div>
         <div class="svgico">
           <a href="http://scholar.google.com/citations?user=UxuqG1EAAAAJ"><img src="./img/gscholar.svg" width="48px"></a>		  
         </div>
@@ -98,6 +101,39 @@
 </div>
 
 
+	
+<div class="container">
+  <h2>News & Highlights </h2>
+ 
+  <div class="pubwrap">
+    <div class="ttitle">Invited talk at the <a href="https://sites.google.com/view/fvt2017/">Workshop on Frontiers of Video Technology - 2017</a> </div>
+	<div class="tdesc">"What have we learned from deep representations for action recognition?" </div>
+  </div>
+  <div class="pubwrap">
+    <div class="ttitle">Winner of the <a href="http://benchmark.tusimple.ai/#/t/2">Velocity Estimation Challenge</a> at the Autonomous Driving Challenge Workshop, CVPR 2017  </div>
+	<div class="tdesc">"Camera-based Vehicle Velocity Estimation using Spatiotemporal Depth and Motion Features" </div>
+	<div class="tdesc"> <span class="thigh"> Moritz Kampelmuehler, Michael Mueller, and Christoph Feichtenhofer </span></div>
+  </div>
+  <div class="pubwrap">
+	<div class="ttitle">Best Presentation Award at the <a href="http://svg.dmi.unict.it/icvss2016/index.html"> International Computer Vision Summer School </a> 2016  </div>
+	<div class="tdesc">"Convolutional Two-Stream Network Fusion for Video Action Recognition" </div>
+  </div>
+  <div class="pubwrap">
+	<div class="ttitle">Received a Doctoral Fellowship of the  <a href="https://www.oeaw.ac.at/en/austrian-academy-of-sciences/"> Austrian Academy of Sciences </a> granted by the Federal Ministry for Science and Research  </div>
+	<div class="tdesc">"Space-Time Representations for Dynamic Scene Understanding" </div>
+  </div>
+  <div class="pubwrap">
+	<div class="ttitle">Received two <a href="https://developer.nvidia.com/academic_gpu_seeding">Nvidia Academic Hardware Donations  </a>  for research in  </div>
+	<div class="tdesc">"Deep Convolutional Representations for Spatiotemporal Image Understanding" </div>
+  </div>
+  <div class="pubwrap">
+	<div class="ttitle">Best Poster Award at the <a href="http://sunw.csail.mit.edu/2014/posters.html"> Scene Understanding Workshop </a>, CVPR 2014.  </div>
+	<div class="tdesc">"Bags of Spacetime Energies for Dynamic Scene Recognition" </div>
+  </div>
+  
+</div>
+
+
 
 <hr class="soft">
 
@@ -126,7 +162,7 @@
 					effective way.
 
 					Our contributions are threefold: (i) we set up a ConvNet architecture for simultaneous detection and tracking, using a multi-task objective for frame-based object detection and across-frame track regression; (ii) we introduce novel correlation features that represent object co-occurrences across time to aid the ConvNet during tracking;  (iii) we link the frame level detections based on our across-frame tracklets to produce high accuracy detections
-					at the video level. Our ConvNet architecture for spatio-temporal
+					at the video level. Our ConvNet architecture for spatiotemporal
 					object detection is evaluated on the large-scale ImageNet VID dataset
 					where it achieves state-of-the-art results. Our approach provides
 					better single model performance than the winning method of the last
@@ -243,7 +279,6 @@
             <div class="pubt">Convolutional Two-Stream Network Fusion for Video Action Recognition</div>
 			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Andrew Zisserman</div>
             <div class="pubv">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2016 </div>
-			<div class="pubaw">Best Presentation Award at the International Computer Vision Summer School (<a href="http://svg.dmi.unict.it/icvss2016/index.html">ICVSS</a>) 2016.  </div>
             <div class="pubd">Recent applications of Convolutional Neural Networks (ConvNets) for human action recognition in videos have proposed different solutions for incorporating the appearance and motion information. We study a number of ways of fusing ConvNet towers both spatially and temporally in order to best take advantage of this spatio-temporal information. We make the following findings: (i) that rather than fusing at the softmax layer, a spatial and temporal network can be fused at a convolution layer without loss of performance, but with a substantial saving in parameters; (ii) that it is better to fuse such networks spatially at the last convolutional layer than earlier, and that additionally fusing at the class prediction layer can boost accuracy; finally (iii) that pooling of abstract convolutional features over spatiotemporal neighbourhoods further boosts performance. Based on these studies we propose a new ConvNet architecture for spatiotemporal fusion of video snippets, and evaluate its performance on standard benchmarks where this architecture achieves state-of-the-art results.
 			</div>
 
@@ -338,7 +373,6 @@
 
 			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes</div>
             <div class="pubv">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2014 </div>
-			<div class="pubaw">Best Poster Award at the Scene Understanding Workshop (<a href="http://sunw.csail.mit.edu/2014/posters.html">SUNw</a>) 2014.  </div>
 
             <div class="pubd">This paper presents a unified bag of visual word (BoW) framework for dynamic scene recognition. The approach builds on primitive features that uniformly capture spatial and temporal orientation structure of the imagery (e.g., video), as extracted via application of a bank of spatiotemporally oriented filters. Various feature encoding techniques are investigated to abstract the primitives to an intermediate representation that is best suited to dynamic scene representation. Further, a novel approach to adaptive pooling of the encoded features is presented that captures spatial layout of the scene even while being robust to situations where camera motion and scene dynamics are confounded. The resulting overall approach has been evaluated on two standard, publically available dynamic scene datasets. The results show that in comparison to a representative set of alternatives, the proposed approach outperforms the previous state-of-the-art in classification accuracy by 10%.</div>
 
@@ -529,21 +563,41 @@
 
 <div class="container">
   <h2>Teaching</h2>
-  <div class="ctr">
-    <div class="pubt">Image and Video Understanding (winter 2014-2015, together with Prof. Axel Pinz)</div>
+ 
+  <div class="pubwrap">
+    <div class="pubt">Image and Video Understanding (2014-2017, together with Prof. Axel Pinz)</div>
       <img src="./pubs/teaching/dynamic_scene_understanding.png" >
     </a>
+	<h4>My Lectures cover</h4>
+    <div class="pubd"><a href="pubs/teaching/IVU_Convolutional_Filtering_and_Thinking_in_Frequency.pdf">Convolutional Filtering and Thinking in Frequency (2014)</a> </div>
+    <div class="pubd"><a href="pubs/teaching/IVU_Convolutional_Networks_and_Video_Representations.pdf">Convolutional Networks and Video Representations (2014)</a> </div>
   </div>
-  <h3>My Lectures cover</h3>
-  <div class="ctr">
-    <div class="hht"><a href="pubs/teaching/IVU_Convolutional_Filtering_and_Thinking_in_Frequency.pdf">Convolutional Filtering and Thinking in Frequency (2014)</a> </div>
+   
+  <div class="pubwrap">
+    <div class="pubt">	Image Based Measurement, Laboratory (2016-2017)</div>
   </div>
-  <div class="ctr">
-    <div class="hht"><a href="pubs/teaching/IVU_Convolutional_Networks_and_Video_Representations.pdf">Convolutional Networks and Video Representations (2014)</a> </div>
+  <div class="pubwrap">
+    <div class="pubt">	Optical Measurement Principles, Laboratory (2016-2017)</div>
+  </div>
+  <div class="pubwrap">
+    <div class="pubt">	Optical Measurement Principles (2017, together with Prof. Axel Pinz)</div>
   </div>
 </div>
 
 
+<div class="container">
+  <h2>Student Supervision</h2>
+       	
+	<div class="pubd">
+		<p>Moritz Kampelmuehler, 2017 (MSc level):		<b>	Camera-based Vehicle Velocity Estimation </b>  </p>  
+		<p>Horst Fuchs, 2017 (MSc level):				<b>Visualizing and Understanding Deep Driving Models </b>  </p> 
+		<p>Roland Mulczet, 2017 (BSc level):			<b>Measuring the Invisible with Laser Speckles </b>  </p> 
+		<p>Oliver Papst, 2017 (BSc level):				<b>3D Object Detection for Road Scene Understanding </b>  </p> 
+		<p>Gerhard Neuhold, 2015 (MSc; now at <a href="http://research.mapillary.com/">Mapillary</a>):	<b>Pedestrian Detection with Convolutional Neural Networks </b>  </p> 
+
+	</div>
+</div>
+ 
 
 
 </body></html>
