@@ -17,7 +17,7 @@
    sodipodi:docname="octocat.svg"><metadata
      id="metadata13"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs11" /><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -27,21 +27,30 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1809"
+     inkscape:window-width="1812"
      inkscape:window-height="1057"
      id="namedview9"
      showgrid="false"
      inkscape:zoom="7.375"
-     inkscape:cx="4.0931152"
+     inkscape:cx="-16.178071"
      inkscape:cy="16.730139"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Layer_1" /><style
+     inkscape:current-layer="layer1" /><style
      type="text/css"
      id="style3"><![CDATA[
 	.st0{fill-rule:evenodd;clip-rule:evenodd;}
 ]]></style><g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="bg"><rect
+       style="fill:#3b5998;fill-opacity:1"
+       id="rect3338"
+       width="26.305084"
+       height="26.169491"
+       x="0"
+       y="0.10169491" /></g><g
      id="g5"
      style="fill:#ffffff"
      transform="matrix(0.05803571,0,0,0.05803878,-1.8571427,-1.8572405)"><path
