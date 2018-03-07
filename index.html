@@ -124,7 +124,11 @@
 	
 <div class="container">
   <h2>News & Highlights </h2>
-  <div class="ttitle">I will be starting to work as a Research Scientist at <a href="	https://research.fb.com/category/facebook-ai-research-fair/"> Facebook AI Research (FAIR) </a> in Menlo Park, CA
+  <div class="pubwrap">
+  	<div class="ttitle">Best Student Paper Award at the <a href="http://cmp.felk.cvut.cz/cvww2018/index.html"> Computer Vision Winter Workshop, (CVWW) 2018 </a> </div>
+	<div class="tdesc">"Camera-based vehicle velocity estimation from monocular video",  <span class="thigh"> Moritz Kampelmuehler, Michael Mueller, and Christoph Feichtenhofer </span>	</div> 
+  </div>
+  <div class="ttitle">I will be starting to work as a Research Scientist at <a href="	https://research.fb.com/category/facebook-ai-research-fair/"> Facebook AI Research (FAIR) </a> in Menlo Park, CA, USA
   </div>
    <div class="pubwrap">
 	<div class="tdesc"></div>
@@ -192,7 +196,7 @@
           <div class="pub">
             <div class="pubt">What have we learned from deep representations for action recognition?</div>
 			<div class="puba">Christoph Feichtenhofer, Axel Pinz, Richard P. Wildes, Andrew Zisserman</div>
-            <div class="pubv">Tech report, arXiv, Jan. 2018</div>
+            <div class="pubv">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018</div>
 			 <div class="pubd">As the success of deep models has led to their deployment in all areas of computer vision, it is increasingly important to understand how these representations work and what they are capturing. In this paper, we shed light on deep spatiotemporal representations by visualizing what two-stream models have learned in order to recognize actions in video. We show that local detectors for appearance and motion objects arise to form distributed representations for recognizing human actions. Key observations include the following. First, cross-stream fusion enables the learning of true spatiotemporal features rather than simply separate appearance and motion features. Second, the networks can learn local representations that are highly class specific, but also generic representations that can serve a range of classes. Third, throughout the hierarchy of the network, features become more abstract and show increasing invariance to aspects of the data that are unimportant to desired distinctions (e.g. motion patterns across various speeds). Fourth, visualizations can be used not only to shed light on learned representations, but also to reveal idiosyncracies of training data and to explain failure cases of the system.
 			</div>
 			
@@ -206,7 +210,52 @@
         </div>
       </div>
 	</div>  
-	
+	<div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+		   <div class="pubimg">
+			<img src="pubs/vel_est_overall_architecture.png"><br><br>
+			<img src="pubs/vel_est_sample.jpg"><br><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Camera-based vehicle velocity estimation from monocular video</div>
+			<div class="puba">Moritz Kampelmühler, Michael G. Müller, Christoph Feichtenhofer</div>
+            <div class="pubv">Computer Vision Winter Workshop (CVWW), 2018</div>
+			 <div class="pubd"> 	This paper documents the winning entry at
+									the CVPR2017 vehicle velocity estimation challenge.
+									Velocity estimation is an emerging task in autonomous
+									driving which has not yet been thoroughly
+									explored. The goal is to estimate the relative velocity
+									of a specific vehicle from a sequence of images. In
+									this paper, we present a light-weight approach for directly
+									regressing vehicle velocities from their trajectories
+									using a multilayer perceptron. Another contribution
+									is an explorative study of features for monocular
+									vehicle velocity estimation. We find that lightweight
+									trajectory based features outperform depth
+									and motion cues extracted from deep ConvNets, especially
+									for far-distance predictions where current disparity
+									and optical flow estimators are challenged significantly.
+									Our light-weight approach is real-time capable
+									on a single CPU and outperforms all competing
+									entries in the velocity estimation challenge. On
+									the test set, we report an average error of 1.12 m/s
+									which is comparable to a (ground-truth) system that
+									combines LiDAR and radar techniques to achieve an
+									error of around 0.71 m/s.
+			</div>
+			
+            <div class="publ">
+              <ul>
+				<li><a href="https://arxiv.org/pdf/1802.07094.pdf">paper</a></li>	
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+	</div>  
 	<div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
