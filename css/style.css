@@ -11,8 +11,8 @@ html, body {
   margin-bottom: 40px;
 }
 .bg1 {
-  background: 
-   url(http://feichtenhofer.github.io/img/bgpic.jpg) bottom center no-repeat;  
+  background:
+   url(http://feichtenhofer.github.io/img/bgpic.jpg) bottom center no-repeat;
   width: 1200px;
   height: 800px;
 }
@@ -215,10 +215,10 @@ h2 {
 hr.soft {
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
   padding: 0;
   margin: 0;
 }
@@ -237,7 +237,7 @@ hr.soft {
     text-align: justify;
   }
 }
-.pubd {  
+.pubd {
     text-align: justify;
   font-size: 18px;
   font-weight: 300;
@@ -270,8 +270,8 @@ hr.soft {
   display: inline-block;
 }
 .pubwrap {
-  padding-bottom: 20px;
-  margin-bottom: 50px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #DDD;
 }
 .pubwrap:last-child {
