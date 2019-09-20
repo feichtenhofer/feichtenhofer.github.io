@@ -152,32 +152,32 @@
     </div>
   </div>
 
-  <div class="pubwrap">
-    <div class="row">
-      <div class="col-md-6">
-         <div class="pubimg">
-          <img src="pubs/dimofs_concept.png"><br><br>
-          <img src="pubs/dimofs_output.png"><br><br>
-        </div>
+
+<div class="pubwrap">
+  <div class="row">
+    <div class="col-md-6">
+       <div class="pubimg">
+        <img src="pubs/posewarp_concept.png"><br><br>
+        <img src="pubs/posewarp_arch.png"><br><br>
       </div>
-      <div class="col-md-6">
-        <div class="pub">
-          <div class="pubt">Learning Discriminative Motion Features Through Detection</div>
-          <div class="puba">Gedas Bertasius, <b>Christoph Feichtenhofer</b>, Du Tran, Jianbo Shi, Lorenzo Torresani</div>
-                <div class="pubv">Technical report, arXiv, December 2018</div>
-           <div class="pubd"> Despite huge success in the image domain, modern detection models such as Faster R-CNN have not been used nearly as much for video analysis. This is arguably due to the fact that detection models are designed to operate on single frames and as a result do not have a mechanism for learning motion representations directly from video. We propose a learning procedure that allows detection models such as Faster R-CNN to learn motion features directly from the RGB video data while being optimized with respect to a pose estimation task. In our experiments we show that our training scheme helps learn effective motion cues, which can be used to estimate and localize salient human motion. Furthermore, we demonstrate that as a byproduct, our model also learns features that lead to improved pose detection in still-images, and better keypoint tracking. Finally, we show how to leverage our learned model for the tasks of spatiotemporal action localization and fine-grained action recognition.
-           </div>
-          <div class="publ">
-            <ul>
-                   <li><a href="https://arxiv.org/abs/1812.04172">arXiv</a></li>
-            </ul>
-          </div>
+    </div>
+    <div class="col-md-6">
+      <div class="pub">
+        <div class="pubt">Learning Temporal Pose Estimation from Sparsely-Labeled Videos</div>
+        <div class="puba">Gedas Bertasius, <b>Christoph Feichtenhofer</b>, Du Tran, Jianbo Shi, Lorenzo Torresani</div>
+              <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2019</div>
+         <div class="pubd"> Modern approaches for multi-person pose estimation in video require large amounts of dense annotations. However, labeling every frame in a video is costly and labor intensive. To reduce the need for dense annotations, we propose a PoseWarper network that leverages training videos with sparse annotations (every k frames) to learn to perform dense temporal pose propagation and estimation. Given a pair of video frames---a labeled Frame A and an unlabeled Frame B---we train our model to predict human pose in Frame A using the features from Frame B by means of deformable convolutions to implicitly learn the pose warping between A and B. We demonstrate that we can leverage our trained PoseWarper for several applications. First, at inference time we can reverse the application direction of our network in order to propagate pose information from manually annotated frames to unlabeled frames. This makes it possible to generate pose annotations for the entire video given only a few manually-labeled frames. Compared to modern label propagation methods based on optical flow, our warping mechanism is much more compact (6M vs 39M parameters), and also more accurate (88.7% mAP vs 83.8% mAP). We also show that we can improve the accuracy of a pose estimator by training it on an augmented dataset obtained by adding our propagated poses to the original manual labels. Lastly, we can use our PoseWarper to aggregate temporal pose information from neighboring frames during inference. This allows our system to achieve state-of-the-art pose detection results on the PoseTrack2017 dataset.
+         </div>
+        <div class="publ">
+          <ul>
+                 <li><a href="https://arxiv.org/abs/1906.04016">arXiv</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
-
+</div>
 <div class="pubwrap">
   <div class="row">
     <div class="col-md-6">
@@ -352,6 +352,9 @@
         </div>
         <div class="col-md-6">
           <div class="pub">
+            <div class="pubt">Deep insights into convolutional networks for video recognition</div>
+      <div class="puba"><b><b>Christoph Feichtenhofer</b></b>, Axel Pinz, Richard P. Wildes, Andrew Zisserman</div>
+            <div class="pubv">International Journal on Computer Vision (IJCV), 2019</div>
             <div class="pubt">What have we learned from deep representations for action recognition?</div>
 			<div class="puba"><b><b>Christoph Feichtenhofer</b></b>, Axel Pinz, Richard P. Wildes, Andrew Zisserman</div>
             <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR), 2018</div>
@@ -368,6 +371,31 @@
         </div>
       </div>
 	</div>
+  <div class="pubwrap">
+    <div class="row">
+      <div class="col-md-6">
+         <div class="pubimg">
+          <img src="pubs/dimofs_concept.png"><br><br>
+          <img src="pubs/dimofs_output.png"><br><br>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pub">
+          <div class="pubt">Learning Discriminative Motion Features Through Detection</div>
+          <div class="puba">Gedas Bertasius, <b>Christoph Feichtenhofer</b>, Du Tran, Jianbo Shi, Lorenzo Torresani</div>
+                <div class="pubv">Technical report, arXiv, December 2018</div>
+           <div class="pubd"> Despite huge success in the image domain, modern detection models such as Faster R-CNN have not been used nearly as much for video analysis. This is arguably due to the fact that detection models are designed to operate on single frames and as a result do not have a mechanism for learning motion representations directly from video. We propose a learning procedure that allows detection models such as Faster R-CNN to learn motion features directly from the RGB video data while being optimized with respect to a pose estimation task. In our experiments we show that our training scheme helps learn effective motion cues, which can be used to estimate and localize salient human motion. Furthermore, we demonstrate that as a byproduct, our model also learns features that lead to improved pose detection in still-images, and better keypoint tracking. Finally, we show how to leverage our learned model for the tasks of spatiotemporal action localization and fine-grained action recognition.
+           </div>
+          <div class="publ">
+            <ul>
+                   <li><a href="https://arxiv.org/abs/1812.04172">arXiv</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 	<div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
@@ -864,10 +892,9 @@
   <h2>Student Supervision</h2>
 
 	<div class="pubd">
-		<p>Moritz Kampelmuehler, 2017 (MSc level):		<b>	Camera-based Vehicle Velocity Estimation </b>  </p>
-		<p>Horst Fuchs, 2017 (MSc level):				<b>Visualizing and Understanding Deep Driving Models </b>  </p>
-		<p>Roland Mulczet, 2017 (BSc level):			<b>Measuring the Invisible with Laser Speckles </b>  </p>
-		<p>Oliver Papst, 2017 (BSc level):				<b>3D Object Detection for Road Scene Understanding </b>  </p>
+    <p>Stefan Ainetter, 2018 (MSc; now at  <a href="https://www.tugraz.at/">TU Graz</a>):		<b>	Evaluation of Spatiotemporal GANs</b>
+		<p>Moritz Kampelmuehler, 2017 (MSc; now at  <a href="https://www.tugraz.at/">TU Graz</a>):		<b>	Camera-based Vehicle Velocity Estimation </b>  </p>
+		<p>Horst Fuchs, 2017 (MSc; now at <a href="https://www.oxbotica.com/">Oxbotica</a>):				<b>Visualizing and Understanding Deep Driving Models </b>  </p>
 		<p>Gerhard Neuhold, 2015 (MSc; now at <a href="http://research.mapillary.com/">Mapillary</a>):	<b>Pedestrian Detection with Convolutional Neural Networks </b>  </p>
 
 	</div>
