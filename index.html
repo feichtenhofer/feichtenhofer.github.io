@@ -73,141 +73,144 @@
 <div class="container">
   <div id="pubs">
 
-<div class="pubwrap">
-  <div class="row">
-    <div class="col-md-6">
-       <div class="pubimg">
-        <img src="pubs/slowfast_concept.gif"><br><br>
-        <img src="pubs/slowfast_output.gif"><br><br>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="pub">
-        <div class="pubt">SlowFast Networks for Video Recognition</div>
-        <div class="puba"><b>Christoph Feichtenhofer</b>, Haoqi Fan, Jitendra Malik, Kaiming He</div>
-              <div class="pubv">International Conference on Computer Vision (ICCV) 2019 (Oral)</div>
-              <div class="pubaw">Winner of the <a href="http://research.google.com/ava/challenge.html"> AVA video activity detection </a> challenge at CVPR 2019.  </div>
-              <div class="pubaw">PyTorch code is open sourced as <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a>.  </div>
-
-         <div class="pubd"> We present SlowFast networks for video recognition. Our model involves (i) a Slow pathway, operating at low frame rate, to capture spatial semantics, and (ii) a Fast pathway, operating at high frame rate, to capture motion at fine temporal resolution. The Fast pathway can be made very lightweight by reducing its channel capacity, yet can learn useful temporal information for video recognition. Our models achieve strong performance for both action classification and detection in video, and large improvements are pin-pointed as contributions by our SlowFast concept. We report 79.0% accuracy on the Kinetics dataset without using any pre-training, largely surpassing the previous best results of this kind. On AVA action detection we achieve a new state-of-the-art of 28.3 mAP.  </div>
-        <div class="publ">
-          <ul>
-                 <li><a href="https://arxiv.org/abs/1812.03982">arXiv</a></li>
-                 <li><a href="http://static.googleusercontent.com/media/research.google.com/en//ava/2019/fair_slowfast.pdf">AVA challenge report</a></li>
-                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
-                 <li><a href="https://ai.facebook.com/blog/slowfast-video-recognition-through-dual-frame-rate-analysis/">Facebook AI blog</a></li>
-                 <li><a href="https://venturebeat.com/2019/11/04/facebooks-slowfast-video-classifier-ai-was-inspired-by-primate-eyes/">Venturebeat article</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="pubwrap">
-  <div class="row">
-    <div class="col-md-6">
-       <div class="pubimg">
-        <img src="pubs/lfb_concept.png"><br><br>
-        <img src="pubs/lfb_output.png"><br><br>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="pub">
-        <div class="pubt">Long-Term Feature Banks for Detailed Video Understanding</div>
-        <div class="puba">Chao-Yuan Wu, <b>Christoph Feichtenhofer</b>, Haoqi Fan, Kaiming He, Philipp Krähenbühl, Ross Girshick</div>
-        <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2019 (Oral)</div>
-         <div class="pubd"> 	To understand the world, we humans constantly need to relate the present to the past, and put events in context. In this paper, we enable existing video models to do the same. We propose a long-term feature bank---supportive information extracted over the entire span of a video---to augment state-of-the-art video models that otherwise would only view short clips of 2-5 seconds. Our experiments demonstrate that augmenting 3D convolutional networks with a long-term feature bank yields state-of-the-art results on three challenging video datasets: AVA, EPIC-Kitchens, and Charades. </div>
-        <div class="publ">
-          <ul>
-                 <li><a href="https://arxiv.org/abs/1812.05038">arXiv</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="pubwrap">
-    <div class="row">
-      <div class="col-md-6">
-     <div class="pubimg">
-    <img src="pubs/grounded_concept.gif"><br><br>
-    <img src="pubs/grounded_output.png"><br><br>
-    <img src="pubs/grounded_legend.png"><br><br>
-
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="pub">
-          <div class="pubt">Grounded Human-Object Interaction Hotspots from Video</div>
-          <div class="puba">Tushar Nagarajan, <b>Christoph Feichtenhofer</b>, Kristen Grauman</div>
-                <div class="pubv">International Conference on Computer Vision (ICCV) 2019</div>
-           <div class="pubd"> Learning how to interact with objects is an important step towards embodied visual intelligence, but existing techniques suffer from heavy supervision or sensing requirements. We propose an approach to learn human-object interaction "hotspots" directly from video. Rather than treat affordances as a manually supervised semantic segmentation task, our approach learns about interactions by watching videos of real human behavior and anticipating afforded actions. Given a novel image or video, our model infers a spatial hotspot map indicating how an object would be manipulated in a potential interaction-- even if the object is currently at rest. Through results with both first and third person video, we show the value of grounding affordances in real human-object interactions. Not only are our weakly supervised hotspots competitive with strongly supervised affordance methods, but they can also anticipate object interaction for novel object categories.
-          </div>
-          <div class="publ">
-            <ul>
-                   <li><a href="https://arxiv.org/abs/1812.04558">arXiv</a></li>
-                   <li><a href="http://vision.cs.utexas.edu/projects/interaction-hotspots/">website</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 <div class="pubwrap">
   <div class="row">
     <div class="col-md-6">
        <div class="pubimg">
-        <img src="pubs/posewarp_concept.png"><br><br>
-        <img src="pubs/posewarp_arch.png"><br><br>
+        <img src="pubs/avslowfast_concept.gif"><br><br>
       </div>
     </div>
     <div class="col-md-6">
       <div class="pub">
-        <div class="pubt">Learning Temporal Pose Estimation from Sparsely-Labeled Videos</div>
-        <div class="puba">Gedas Bertasius, <b>Christoph Feichtenhofer</b>, Du Tran, Jianbo Shi, Lorenzo Torresani</div>
-              <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2019</div>
-         <div class="pubd"> Modern approaches for multi-person pose estimation in video require large amounts of dense annotations. However, labeling every frame in a video is costly and labor intensive. To reduce the need for dense annotations, we propose a PoseWarper network that leverages training videos with sparse annotations (every k frames) to learn to perform dense temporal pose propagation and estimation. Given a pair of video frames---a labeled Frame A and an unlabeled Frame B---we train our model to predict human pose in Frame A using the features from Frame B by means of deformable convolutions to implicitly learn the pose warping between A and B. We demonstrate that we can leverage our trained PoseWarper for several applications. First, at inference time we can reverse the application direction of our network in order to propagate pose information from manually annotated frames to unlabeled frames. This makes it possible to generate pose annotations for the entire video given only a few manually-labeled frames. Compared to modern label propagation methods based on optical flow, our warping mechanism is much more compact (6M vs 39M parameters), and also more accurate (88.7% mAP vs 83.8% mAP). We also show that we can improve the accuracy of a pose estimator by training it on an augmented dataset obtained by adding our propagated poses to the original manual labels. Lastly, we can use our PoseWarper to aggregate temporal pose information from neighboring frames during inference. This allows our system to achieve state-of-the-art pose detection results on the PoseTrack2017 dataset.
+        <div class="pubt">Audiovisual SlowFast Networks for Video Recognition</div>
+        <div class="puba"> Fanyi Xiao, Yong Jae Lee, Kristen Grauman, Jitendra Malik, <b>Christoph Feichtenhofer</b></div>
+              <div class="pubv">Technical report, arXiv, 2020</div>
+         <div class="pubd">
+           We present Audiovisual SlowFast Networks, an architecture for integrated audiovisual perception. AVSlowFast extends SlowFast Networks with a Faster Audio pathway that is deeply integrated with its visual counterparts. We fuse audio and visual features at multiple layers, enabling audio to contribute to the formation of hierarchical audiovisual concepts. To overcome training difficulties that arise from different learning dynamics for audio and visual modalities, we employ DropPathway that randomly drops the Audio pathway during training as a simple and effective regularization technique. Inspired by prior studies in neuroscience, we perform hierarchical audiovisual synchronization and show that it leads to better audiovisual features. We report state-of-the-art results on four video action classification and detection datasets, perform detailed ablation studies, and show the generalization of AVSlowFast to self-supervised tasks, where it improves over prior work.
          </div>
         <div class="publ">
           <ul>
-                 <li><a href="https://arxiv.org/abs/1906.04016">arXiv</a></li>
+                 <li><a href="https://arxiv.org/abs/2001.08740">arXiv</a></li>
+                 <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 <div class="pubwrap">
   <div class="row">
     <div class="col-md-6">
        <div class="pubimg">
-        <img src="pubs/vid_pose_concept.gif"><br><br>
-        <img src="pubs/vid_pose_output.gif"><br><br>
+        <img src="pubs/multigrid_concept.png"><br><br><br><br>
+        <img src="pubs/multigrid_output.png">
       </div>
     </div>
     <div class="col-md-6">
       <div class="pub">
-        <div class="pubt">3D human pose estimation in video with temporal convolutions and semi-supervised training</div>
-        <div class="puba">Dario Pavllo, <b>Christoph Feichtenhofer</b>, David Grangier, Michael Auli</div>
-        <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2019 </div>
-         <div class="pubd"> 	In this work, we demonstrate that 3D poses in video can be effectively estimated with a fully convolutional model based on dilated temporal convolutions over 2D keypoints. We also introduce back-projection, a simple and effective semi-supervised training method that leverages unlabeled video data. We start with predicted 2D keypoints for unlabeled video, then estimate 3D poses and finally back-project to the input 2D keypoints. In the supervised setting, our fully-convolutional model outperforms the previous best result from the literature by 6 mm mean per-joint position error on Human3.6M, corresponding to an error reduction of 11%, and the model also shows significant improvements on HumanEva-I. Moreover, experiments with back-projection show that it comfortably outperforms previous state-of-the-art results in semi-supervised settings where labeled data is scarce.
-        </div>
+        <div class="pubt">A Multigrid Method for Efficiently Training Video Models</div>
+        <div class="puba"> Chao-Yuan Wu, Ross Girshick, Kaiming He, <b>Christoph Feichtenhofer</b>,  Philipp Krähenbühl</div>
+              <div class="pubv">Technical report, arXiv, 2019</div>
+         <div class="pubd">
+           Training competitive deep video models is an order of magnitude slower than training their counterpart image models. Slow training causes long research cycles, which hinders progress in video understanding research. Following standard practice for training image models, video model training assumes a fixed mini-batch shape: a specific number of clips, frames, and spatial size. However, what is the optimal shape? High resolution models perform well, but train slowly. Low resolution models train faster, but they are inaccurate. Inspired by multigrid methods in numerical optimization, we propose to use variable mini-batch shapes with different spatial-temporal resolutions that are varied according to a schedule. The different shapes arise from resampling the training data on multiple sampling grids. Training is accelerated by scaling up the mini-batch size and learning rate when shrinking the other dimensions. We empirically demonstrate a general and robust grid schedule that yields a significant out-of-the-box training speedup without a loss in accuracy for different models (I3D, non-local, SlowFast), datasets (Kinetics, Something-Something, Charades), and training settings (with and without pre-training, 128 GPUs or 1 GPU). As an illustrative example, the proposed multigrid method trains a ResNet-50 SlowFast network 4.5x faster (wall-clock time, same hardware) while also improving accuracy (+0.8% absolute) on Kinetics-400 compared to the baseline training method.
+         </div>
         <div class="publ">
           <ul>
-                 <li><a href="https://arxiv.org/abs/1811.11742">arXiv</a></li>
-                 <li><a href="https://github.com/facebookresearch/VideoPose3D">code <img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/VideoPose3D?style=social">&nbsp;</a></li>
-                 <li><a href="https://dariopavllo.github.io/VideoPose3D/">website</a></li>
+                 <li><a href="https://arxiv.org/abs/1912.00998">arXiv</a></li>
+                 <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="pubwrap">
+  <div class="row">
+    <div class="col-md-6">
+       <div class="pubimg">
+         <video height="260" playsinline autoplay muted loop>
+          <source src="pubs/egotopo_concept.mp4" type="video/mp4">
+         </video><br><br>
+         <img src="pubs/egotopo_output.png">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="pub">
+        <div class="pubt">EGO-TOPO: Environment Affordances from Egocentric Video</div>
+        <div class="puba"> Tushar Nagarajan,	Yanghao Li,	 <b>Christoph Feichtenhofer</b>, Kristen Grauman</div>
+              <div class="pubv">Technical report, arXiv, 2020</div>
+         <div class="pubd">
+           First-person video naturally brings the use of a physical environment to the forefront, since it shows the camera wearer interacting fluidly in a space based on his intentions. However, current methods largely separate the observed actions from the persistent space itself. We introduce a model for environment affordances that is learned directly from egocentric video. The main idea is to gain a human-centric model of a physical space (such as a kitchen) that captures (1) the primary spatial zones of interaction and (2) the likely activities they support. Our approach decomposes a space into a topological map derived from first-person activity, organizing an ego-video into a series of visits to the different zones. Further, we show how to link zones across multiple related environments (e.g., from videos of multiple kitchens) to obtain a consolidated representation of environment functionality. On EPIC-Kitchens and EGTEA+, we demonstrate our approach for learning scene affordances and anticipating future actions in long-form video.
+         </div>
+        <div class="publ">
+          <ul>
+                 <li><a href="https://arxiv.org/abs/2001.04583">arXiv</a></li>
+                 <li><a href="http://vision.cs.utexas.edu/projects/ego-topo/">website</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pubwrap">
+  <div class="row">
+    <div class="col-md-6">
+       <div class="pubimg">
+        <img src="pubs/x3d_concept.png"><br>
+        <img src="pubs/x3d_output.png">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="pub">
+        <div class="pubt">X3D: Expanding Architectures for Fast Video Recognition</div>
+        <div class="puba"> <b>Christoph Feichtenhofer</b></div>
+              <div class="pubv">Technical report, 2020</div>
+         <div class="pubd">
+           This paper presents X3D, a family of efficient video networks that progressively expand a tiny 2D image classification architecture along multiple network axes, in space, time, width and depth. Inspired by feature selection methods in machine learning, a simple stepwise network expansion approach is employed that  expands a single axis in each step, such that good accuracy to complexity trade-off is achieved. To expand X3D to a specific target complexity, we perform progressive forward expansion followed by backward contraction. X3D achieves state-of-the-art performance while requiring 4.8\x~and 5.5\x~fewer multiply-adds and parameters for similar accuracy as previous work. Our most surprising finding is that networks with high spatiotemporal resolution can perform well, while being extremely light in terms of network width and  parameters. We report competitive accuracy at unprecedented efficiency on video classification and detection benchmarks.
+         </div>
+        <div class="publ">
+          <ul>
+             <li><a href="">(to be released)</a></li>
+             <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="pubwrap">
+  <div class="row">
+    <div class="col-md-6">
+       <div class="pubimg">
+        <img src="pubs/fpg_concept.png"><br>
+        <img src="pubs/fpg_output.png">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="pub">
+        <div class="pubt">Feature Pyramid Grids</div>
+        <div class="puba"> Kai Chen, Yuhang Cao, Chen Change Loy, Dahua Lin, <b>Christoph Feichtenhofer</b></div>
+              <div class="pubv">Technical report, 2020</div>
+         <div class="pubd">
+           Feature pyramid networks (FPN) have been widely adopted in the object detection literature to improve feature representations for better handling of variations in scale. In this paper, we present Feature Pyramid Grids (FPG), a simple extension to FPN, that represents the feature scale-space as a regular grid of parallel  bottom-up pathways which are fused by multi-directional lateral connections between them. FPG is simple and flexible, which only adds a small overhead to regular, single pathway FPN while significantly increasing its performance. In addition to its general and simple structure, over complicated structures that have been found with neural architecture search, it also compares favorably against such approaches,  providing higher accuracy and speed. We hope that FPG with its simple and effective nature can serve as a strong baseline for future work in object recognition.
+        </div>
+        <div class="publ">
+          <ul>
+             <li><a href="">(to be released)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> <!-- <div id="pubs"> -->
 </div>
 
 <div class="container quote2">
@@ -345,6 +348,140 @@
   <h2>Publications</h2>
   <div id="pubs">
 
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+           <div class="pubimg">
+            <img src="pubs/slowfast_concept.gif"><br><br>
+            <img src="pubs/slowfast_output.gif"><br><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">SlowFast Networks for Video Recognition</div>
+            <div class="puba"><b>Christoph Feichtenhofer</b>, Haoqi Fan, Jitendra Malik, Kaiming He</div>
+                  <div class="pubv">International Conference on Computer Vision (ICCV) 2019 (Oral)</div>
+                  <div class="pubaw">Winner of the <a href="http://research.google.com/ava/challenge.html"> AVA video activity detection </a> challenge at CVPR 2019.  </div>
+                  <div class="pubaw">PyTorch code is open sourced as <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a>.  </div>
+
+             <div class="pubd"> We present SlowFast networks for video recognition. Our model involves (i) a Slow pathway, operating at low frame rate, to capture spatial semantics, and (ii) a Fast pathway, operating at high frame rate, to capture motion at fine temporal resolution. The Fast pathway can be made very lightweight by reducing its channel capacity, yet can learn useful temporal information for video recognition. Our models achieve strong performance for both action classification and detection in video, and large improvements are pin-pointed as contributions by our SlowFast concept. We report 79.0% accuracy on the Kinetics dataset without using any pre-training, largely surpassing the previous best results of this kind. On AVA action detection we achieve a new state-of-the-art of 28.3 mAP.  </div>
+            <div class="publ">
+              <ul>
+                     <li><a href="https://arxiv.org/abs/1812.03982">arXiv</a></li>
+                     <li><a href="http://static.googleusercontent.com/media/research.google.com/en//ava/2019/fair_slowfast.pdf">AVA challenge report</a></li>
+                     <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+                     <li><a href="https://ai.facebook.com/blog/slowfast-video-recognition-through-dual-frame-rate-analysis/">Facebook AI blog</a></li>
+                     <li><a href="https://venturebeat.com/2019/11/04/facebooks-slowfast-video-classifier-ai-was-inspired-by-primate-eyes/">Venturebeat article</a></li>
+                     <li><a href="https://conftube.com/video/8oUPyhwzIDo?tocitem=37">talk</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+           <div class="pubimg">
+            <img src="pubs/lfb_concept.png"><br><br>
+            <img src="pubs/lfb_output.png"><br><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Long-Term Feature Banks for Detailed Video Understanding</div>
+            <div class="puba">Chao-Yuan Wu, <b>Christoph Feichtenhofer</b>, Haoqi Fan, Kaiming He, Philipp Krähenbühl, Ross Girshick</div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2019 (Oral)</div>
+             <div class="pubd"> 	To understand the world, we humans constantly need to relate the present to the past, and put events in context. In this paper, we enable existing video models to do the same. We propose a long-term feature bank---supportive information extracted over the entire span of a video---to augment state-of-the-art video models that otherwise would only view short clips of 2-5 seconds. Our experiments demonstrate that augmenting 3D convolutional networks with a long-term feature bank yields state-of-the-art results on three challenging video datasets: AVA, EPIC-Kitchens, and Charades. </div>
+            <div class="publ">
+              <ul>
+                     <li><a href="https://arxiv.org/abs/1812.05038">arXiv</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-6">
+         <div class="pubimg">
+        <img src="pubs/grounded_concept.gif"><br><br>
+        <img src="pubs/grounded_output.png"><br><br>
+        <img src="pubs/grounded_legend.png"><br><br>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Grounded Human-Object Interaction Hotspots from Video</div>
+              <div class="puba">Tushar Nagarajan, <b>Christoph Feichtenhofer</b>, Kristen Grauman</div>
+                    <div class="pubv">International Conference on Computer Vision (ICCV) 2019</div>
+               <div class="pubd"> Learning how to interact with objects is an important step towards embodied visual intelligence, but existing techniques suffer from heavy supervision or sensing requirements. We propose an approach to learn human-object interaction "hotspots" directly from video. Rather than treat affordances as a manually supervised semantic segmentation task, our approach learns about interactions by watching videos of real human behavior and anticipating afforded actions. Given a novel image or video, our model infers a spatial hotspot map indicating how an object would be manipulated in a potential interaction-- even if the object is currently at rest. Through results with both first and third person video, we show the value of grounding affordances in real human-object interactions. Not only are our weakly supervised hotspots competitive with strongly supervised affordance methods, but they can also anticipate object interaction for novel object categories.
+              </div>
+              <div class="publ">
+                <ul>
+                       <li><a href="https://arxiv.org/abs/1812.04558">arXiv</a></li>
+                       <li><a href="http://vision.cs.utexas.edu/projects/interaction-hotspots/">website</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+           <div class="pubimg">
+            <img src="pubs/posewarp_concept.png"><br><br>
+            <img src="pubs/posewarp_arch.png"><br><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Learning Temporal Pose Estimation from Sparsely-Labeled Videos</div>
+            <div class="puba">Gedas Bertasius, <b>Christoph Feichtenhofer</b>, Du Tran, Jianbo Shi, Lorenzo Torresani</div>
+                  <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2019</div>
+             <div class="pubd"> Modern approaches for multi-person pose estimation in video require large amounts of dense annotations. However, labeling every frame in a video is costly and labor intensive. To reduce the need for dense annotations, we propose a PoseWarper network that leverages training videos with sparse annotations (every k frames) to learn to perform dense temporal pose propagation and estimation. Given a pair of video frames---a labeled Frame A and an unlabeled Frame B---we train our model to predict human pose in Frame A using the features from Frame B by means of deformable convolutions to implicitly learn the pose warping between A and B. We demonstrate that we can leverage our trained PoseWarper for several applications. First, at inference time we can reverse the application direction of our network in order to propagate pose information from manually annotated frames to unlabeled frames. This makes it possible to generate pose annotations for the entire video given only a few manually-labeled frames. Compared to modern label propagation methods based on optical flow, our warping mechanism is much more compact (6M vs 39M parameters), and also more accurate (88.7% mAP vs 83.8% mAP). We also show that we can improve the accuracy of a pose estimator by training it on an augmented dataset obtained by adding our propagated poses to the original manual labels. Lastly, we can use our PoseWarper to aggregate temporal pose information from neighboring frames during inference. This allows our system to achieve state-of-the-art pose detection results on the PoseTrack2017 dataset.
+             </div>
+            <div class="publ">
+              <ul>
+                     <li><a href="https://arxiv.org/abs/1906.04016">arXiv</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+           <div class="pubimg">
+            <img src="pubs/vid_pose_concept.gif"><br><br>
+            <img src="pubs/vid_pose_output.gif"><br><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">3D human pose estimation in video with temporal convolutions and semi-supervised training</div>
+            <div class="puba">Dario Pavllo, <b>Christoph Feichtenhofer</b>, David Grangier, Michael Auli</div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2019 </div>
+             <div class="pubd"> 	In this work, we demonstrate that 3D poses in video can be effectively estimated with a fully convolutional model based on dilated temporal convolutions over 2D keypoints. We also introduce back-projection, a simple and effective semi-supervised training method that leverages unlabeled video data. We start with predicted 2D keypoints for unlabeled video, then estimate 3D poses and finally back-project to the input 2D keypoints. In the supervised setting, our fully-convolutional model outperforms the previous best result from the literature by 6 mm mean per-joint position error on Human3.6M, corresponding to an error reduction of 11%, and the model also shows significant improvements on HumanEva-I. Moreover, experiments with back-projection show that it comfortably outperforms previous state-of-the-art results in semi-supervised settings where labeled data is scarce.
+            </div>
+            <div class="publ">
+              <ul>
+                     <li><a href="https://arxiv.org/abs/1811.11742">arXiv</a></li>
+                     <li><a href="https://github.com/facebookresearch/VideoPose3D">code <img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/VideoPose3D?style=social">&nbsp;</a></li>
+                     <li><a href="https://dariopavllo.github.io/VideoPose3D/">website</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
 	<div class="pubwrap">
       <div class="row">
@@ -776,6 +913,7 @@
             <div class="publ">
               <ul>
                 <li><a href="pubs/spacetime_forests_BMVC13.pdf">paper</a></li>
+                <li><a href="http://videolectures.net/bmvc2013_feichtenhofer_scene_recognition/">talk</a></li>
               </ul>
 
             </div>
