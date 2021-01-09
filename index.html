@@ -73,27 +73,34 @@
 <div class="container">
   <div id="pubs">
 
-
   <div class="pubwrap">
     <div class="row">
       <div class="col-md-6">
-         <div class="pubimg">
-          <img src="pubs/x3d_concept.png"><br>
-          <img src="pubs/x3d_output.png">
+        <div class="pubimg">
+          <img src="pubs/trackformer_output.gif" style="width: 75%"><br>
+          <img src="pubs/trackformer_concept.png" style="width: 80%"><br>
+
         </div>
       </div>
       <div class="col-md-6">
         <div class="pub">
-          <div class="pubt">X3D: Expanding Architectures for Efficient Video Recognition</div>
-          <div class="puba"> <b>Christoph Feichtenhofer</b></div>
-          <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2020 (Oral)</div>
-           <div class="pubd">
-             This paper presents X3D, a family of efficient video networks that progressively expand a tiny 2D image classification architecture along multiple network axes, in space, time, width and depth. Inspired by feature selection methods in machine learning, a simple stepwise network expansion approach is employed that  expands a single axis in each step, such that good accuracy to complexity trade-off is achieved. To expand X3D to a specific target complexity, we perform progressive forward expansion followed by backward contraction. X3D achieves state-of-the-art performance while requiring 4.8x and 5.5x fewer multiply-adds and parameters for similar accuracy as previous work. Our most surprising finding is that networks with high spatiotemporal resolution can perform well, while being extremely light in terms of network width and  parameters. We report competitive accuracy at unprecedented efficiency on video classification and detection benchmarks.
-           </div>
+          <div class="pubt">TrackFormer: Multi-Object Tracking with Transformers</div>
+          <div class="puba"> <b>Tim Meinhardt, Alexander Kirillov, Laura Leal-Taixé, Christoph Feichtenhofer</b></div>
+          <div class="pubv">Technical report, arXiv, January 2021</div>
+          <div class="pubd">
+            We present TrackFormer, an end-to-end multi-object tracking and segmentation model based on an encoder-decoder
+            Transformer architecture. Our approach introduces track query embeddings which follow objects through a video sequence
+            in an autoregressive fashion. New track queries are spawned by the DETR object detector and embed the position of their
+            corresponding object over time. The Transformer decoder adjusts track query embeddings from frame to frame, thereby
+            following the changing object positions. TrackFormer achieves a seamless data association between frames in a new
+            tracking-by-attention paradigm by self- and encoder-decoder attention mechanisms which simultaneously reason about
+            location, occlusion, and object identity. TrackFormer yields state-of-the-art performance on the tasks of multi-object
+            tracking (MOT17) and segmentation (MOTS20). We hope our unified way of performing detection and tracking will foster
+            future research in multi-object tracking and video understanding. Code will be made publicly available.
+          </div>
           <div class="publ">
             <ul>
-               <li><a href="https://arxiv.org/abs/2004.04730">arXiv</a></li>
-               <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+              <li><a href="https://arxiv.org/abs/2101.02702">arXiv</a></li>
             </ul>
           </div>
         </div>
@@ -101,115 +108,7 @@
     </div>
   </div>
 
-  <div class="pubwrap">
-    <div class="row">
-      <div class="col-md-6">
-         <div class="pubimg">
-          <img src="pubs/avslowfast_concept.gif"><br><br>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="pub">
-          <div class="pubt">Audiovisual SlowFast Networks for Video Recognition</div>
-          <div class="puba"> Fanyi Xiao, Yong Jae Lee, Kristen Grauman, Jitendra Malik, <b>Christoph Feichtenhofer</b></div>
-                <div class="pubv">Technical report, arXiv, 2020</div>
-           <div class="pubd">
-              We present Audiovisual SlowFast Networks, an architecture for integrated audiovisual perception. AVSlowFast has Slow and Fast visual pathways that are deeply integrated with a Faster Audio pathway to model vision and sound in a unified representation. We fuse audio and visual features at multiple layers, enabling audio to contribute to the formation of hierarchical audiovisual concepts. To overcome training difficulties that arise from different learning dynamics for audio and visual modalities, we introduce DropPathway, which randomly drops the Audio pathway during training as an effective regularization technique. Inspired by prior studies in neuroscience, we perform hierarchical audiovisual synchronization to learn joint audiovisual features. We report state-of-the-art results on six video action classification and detection datasets, perform detailed ablation studies, and show the generalization of AVSlowFast to learn self-supervised audiovisual features.
-           </div>
-          <div class="publ">
-            <ul>
-                   <li><a href="https://arxiv.org/abs/2001.08740">arXiv</a></li>
-                   <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="pubwrap">
-    <div class="row">
-      <div class="col-md-6">
-         <div class="pubimg">
-           <img src="pubs/fpg_concept.png"><br>
-           <img src="pubs/fpg_output.jpg">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="pub">
-          <div class="pubt">Feature Pyramid Grids</div>
-          <div class="puba"> Kai Chen, Yuhang Cao, Chen Change Loy, Dahua Lin, <b>Christoph Feichtenhofer</b></div>
-          <div class="pubv">Technical report, arXiv, 2020</div>
-           <div class="pubd">
-             Feature pyramid networks (FPN) have been widely adopted in the object detection literature to improve feature representations for better handling of variations in scale. In this paper, we present Feature Pyramid Grids (FPG), a simple extension to FPN, that represents the feature scale-space as a regular grid of parallel  bottom-up pathways which are fused by multi-directional lateral connections between them. FPG is simple and flexible, which only adds a small overhead to regular, single pathway FPN while significantly increasing its performance. In addition to its general and simple structure, over complicated structures that have been found with neural architecture search, it also compares favorably against such approaches,  providing higher accuracy and speed. We hope that FPG with its simple and effective nature can serve as a strong baseline for future work in object recognition.
-          </div>
-          <div class="publ">
-            <ul>
-               <li><a href="https://arxiv.org/abs/2004.03580">arXiv</a></li>
-            </ul>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="pubwrap">
-  <div class="row">
-    <div class="col-md-6">
-       <div class="pubimg">
-        <img src="pubs/multigrid_concept.png"><br><br><br><br>
-        <img src="pubs/multigrid_output.png">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="pub">
-        <div class="pubt">A Multigrid Method for Efficiently Training Video Models</div>
-        <div class="puba"> Chao-Yuan Wu, Ross Girshick, Kaiming He, <b>Christoph Feichtenhofer</b>,  Philipp Krähenbühl</div>
-        <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2020 (Oral)</div>
-         <div class="pubd">
-           Training competitive deep video models is an order of magnitude slower than training their counterpart image models. Slow training causes long research cycles, which hinders progress in video understanding research. Following standard practice for training image models, video model training assumes a fixed mini-batch shape: a specific number of clips, frames, and spatial size. However, what is the optimal shape? High resolution models perform well, but train slowly. Low resolution models train faster, but they are inaccurate. Inspired by multigrid methods in numerical optimization, we propose to use variable mini-batch shapes with different spatial-temporal resolutions that are varied according to a schedule. The different shapes arise from resampling the training data on multiple sampling grids. Training is accelerated by scaling up the mini-batch size and learning rate when shrinking the other dimensions. We empirically demonstrate a general and robust grid schedule that yields a significant out-of-the-box training speedup without a loss in accuracy for different models (I3D, non-local, SlowFast), datasets (Kinetics, Something-Something, Charades), and training settings (with and without pre-training, 128 GPUs or 1 GPU). As an illustrative example, the proposed multigrid method trains a ResNet-50 SlowFast network 4.5x faster (wall-clock time, same hardware) while also improving accuracy (+0.8% absolute) on Kinetics-400 compared to the baseline training method.
-         </div>
-        <div class="publ">
-          <ul>
-                 <li><a href="https://arxiv.org/abs/1912.00998">arXiv</a></li>
-                 <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="pubwrap">
-  <div class="row">
-    <div class="col-md-6">
-       <div class="pubimg">
-         <!-- <video height="260" playsinline autoplay muted loop>
-          <source src="pubs/egotopo_concept.mp4" type="video/mp4">
-         </video> -->
-         <img src="pubs/egotopo_concept.gif">
-         <br><br>
-         <img src="pubs/egotopo_output.png">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="pub">
-        <div class="pubt">EGO-TOPO: Environment Affordances from Egocentric Video</div>
-        <div class="puba"> Tushar Nagarajan,	Yanghao Li,	 <b>Christoph Feichtenhofer</b>, Kristen Grauman</div>
-        <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2020 (Oral)</div>
-         <div class="pubd">
-           First-person video naturally brings the use of a physical environment to the forefront, since it shows the camera wearer interacting fluidly in a space based on his intentions. However, current methods largely separate the observed actions from the persistent space itself. We introduce a model for environment affordances that is learned directly from egocentric video. The main idea is to gain a human-centric model of a physical space (such as a kitchen) that captures (1) the primary spatial zones of interaction and (2) the likely activities they support. Our approach decomposes a space into a topological map derived from first-person activity, organizing an ego-video into a series of visits to the different zones. Further, we show how to link zones across multiple related environments (e.g., from videos of multiple kitchens) to obtain a consolidated representation of environment functionality. On EPIC-Kitchens and EGTEA+, we demonstrate our approach for learning scene affordances and anticipating future actions in long-form video.
-         </div>
-        <div class="publ">
-          <ul>
-                 <li><a href="https://arxiv.org/abs/2001.04583">arXiv</a></li>
-                 <li><a href="http://vision.cs.utexas.edu/projects/ego-topo/">website</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 </div> <!-- <div id="pubs"> -->
 </div>
@@ -272,6 +171,9 @@
 
 <div class="container">
   <h2>News & Highlights </h2>
+  <div class="pubwrap">
+    <div class="ttitle"> We organized a tutorial on <a href="https://s9xie.github.io/Tutorials/ECCV2020/"> isual Recognition for Images, Video, and 3D</a> at ECCV 2020 </div>
+  </div>
 
   <div class="pubwrap">
     <div class="ttitle"> At CVPR 2020, we organize a tutorial on <a
@@ -359,6 +261,143 @@
 <div class="container">
   <h2>Publications</h2>
   <div id="pubs">
+
+      <div class="pubwrap">
+    <div class="row">
+      <div class="col-md-6">
+         <div class="pubimg">
+          <img src="pubs/x3d_concept.png"><br>
+          <img src="pubs/x3d_output.png">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pub">
+          <div class="pubt">X3D: Expanding Architectures for Efficient Video Recognition</div>
+          <div class="puba"> <b>Christoph Feichtenhofer</b></div>
+          <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2020 (Oral)</div>
+           <div class="pubd">
+             This paper presents X3D, a family of efficient video networks that progressively expand a tiny 2D image classification architecture along multiple network axes, in space, time, width and depth. Inspired by feature selection methods in machine learning, a simple stepwise network expansion approach is employed that  expands a single axis in each step, such that good accuracy to complexity trade-off is achieved. To expand X3D to a specific target complexity, we perform progressive forward expansion followed by backward contraction. X3D achieves state-of-the-art performance while requiring 4.8x and 5.5x fewer multiply-adds and parameters for similar accuracy as previous work. Our most surprising finding is that networks with high spatiotemporal resolution can perform well, while being extremely light in terms of network width and  parameters. We report competitive accuracy at unprecedented efficiency on video classification and detection benchmarks.
+           </div>
+          <div class="publ">
+            <ul>
+               <li><a href="https://arxiv.org/abs/2004.04730">arXiv</a></li>
+               <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pubwrap">
+    <div class="row">
+      <div class="col-md-6">
+         <div class="pubimg">
+          <img src="pubs/avslowfast_concept.gif"><br><br>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pub">
+          <div class="pubt">Audiovisual SlowFast Networks for Video Recognition</div>
+          <div class="puba"> Fanyi Xiao, Yong Jae Lee, Kristen Grauman, Jitendra Malik, <b>Christoph Feichtenhofer</b></div>
+                <div class="pubv">Technical report, arXiv, 2020</div>
+           <div class="pubd">
+              We present Audiovisual SlowFast Networks, an architecture for integrated audiovisual perception. AVSlowFast has Slow and Fast visual pathways that are deeply integrated with a Faster Audio pathway to model vision and sound in a unified representation. We fuse audio and visual features at multiple layers, enabling audio to contribute to the formation of hierarchical audiovisual concepts. To overcome training difficulties that arise from different learning dynamics for audio and visual modalities, we introduce DropPathway, which randomly drops the Audio pathway during training as an effective regularization technique. Inspired by prior studies in neuroscience, we perform hierarchical audiovisual synchronization to learn joint audiovisual features. We report state-of-the-art results on six video action classification and detection datasets, perform detailed ablation studies, and show the generalization of AVSlowFast to learn self-supervised audiovisual features.
+           </div>
+          <div class="publ">
+            <ul>
+                   <li><a href="https://arxiv.org/abs/2001.08740">arXiv</a></li>
+                   <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pubwrap">
+    <div class="row">
+      <div class="col-md-6">
+         <div class="pubimg">
+           <img src="pubs/fpg_concept.png"><br>
+           <img src="pubs/fpg_output.jpg">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pub">
+          <div class="pubt">Feature Pyramid Grids</div>
+          <div class="puba"> Kai Chen, Yuhang Cao, Chen Change Loy, Dahua Lin, <b>Christoph Feichtenhofer</b></div>
+          <div class="pubv">Technical report, arXiv, 2020</div>
+           <div class="pubd">
+             Feature pyramid networks (FPN) have been widely adopted in the object detection literature to improve feature representations for better handling of variations in scale. In this paper, we present Feature Pyramid Grids (FPG), a simple extension to FPN, that represents the feature scale-space as a regular grid of parallel  bottom-up pathways which are fused by multi-directional lateral connections between them. FPG is simple and flexible, which only adds a small overhead to regular, single pathway FPN while significantly increasing its performance. In addition to its general and simple structure, over complicated structures that have been found with neural architecture search, it also compares favorably against such approaches,  providing higher accuracy and speed. We hope that FPG with its simple and effective nature can serve as a strong baseline for future work in object recognition.
+          </div>
+          <div class="publ">
+            <ul>
+               <li><a href="https://arxiv.org/abs/2004.03580">arXiv</a></li>
+            </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="pubwrap">
+  <div class="row">
+    <div class="col-md-6">
+       <div class="pubimg">
+        <img src="pubs/multigrid_concept.png"><br><br><br><br>
+        <img src="pubs/multigrid_output.png">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="pub">
+        <div class="pubt">A Multigrid Method for Efficiently Training Video Models</div>
+        <div class="puba"> Chao-Yuan Wu, Ross Girshick, Kaiming He, <b>Christoph Feichtenhofer</b>,  Philipp Krähenbühl</div>
+        <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2020 (Oral)</div>
+         <div class="pubd">
+           Training competitive deep video models is an order of magnitude slower than training their counterpart image models. Slow training causes long research cycles, which hinders progress in video understanding research. Following standard practice for training image models, video model training assumes a fixed mini-batch shape: a specific number of clips, frames, and spatial size. However, what is the optimal shape? High resolution models perform well, but train slowly. Low resolution models train faster, but they are inaccurate. Inspired by multigrid methods in numerical optimization, we propose to use variable mini-batch shapes with different spatial-temporal resolutions that are varied according to a schedule. The different shapes arise from resampling the training data on multiple sampling grids. Training is accelerated by scaling up the mini-batch size and learning rate when shrinking the other dimensions. We empirically demonstrate a general and robust grid schedule that yields a significant out-of-the-box training speedup without a loss in accuracy for different models (I3D, non-local, SlowFast), datasets (Kinetics, Something-Something, Charades), and training settings (with and without pre-training, 128 GPUs or 1 GPU). As an illustrative example, the proposed multigrid method trains a ResNet-50 SlowFast network 4.5x faster (wall-clock time, same hardware) while also improving accuracy (+0.8% absolute) on Kinetics-400 compared to the baseline training method.
+         </div>
+        <div class="publ">
+          <ul>
+                 <li><a href="https://arxiv.org/abs/1912.00998">arXiv</a></li>
+                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pubwrap">
+  <div class="row">
+    <div class="col-md-6">
+       <div class="pubimg">
+         <!-- <video height="260" playsinline autoplay muted loop>
+          <source src="pubs/egotopo_concept.mp4" type="video/mp4">
+         </video> -->
+         <img src="pubs/egotopo_concept.gif">
+         <br><br>
+         <img src="pubs/egotopo_output.png">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="pub">
+        <div class="pubt">EGO-TOPO: Environment Affordances from Egocentric Video</div>
+        <div class="puba"> Tushar Nagarajan,	Yanghao Li,	 <b>Christoph Feichtenhofer</b>, Kristen Grauman</div>
+        <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2020 (Oral)</div>
+         <div class="pubd">
+           First-person video naturally brings the use of a physical environment to the forefront, since it shows the camera wearer interacting fluidly in a space based on his intentions. However, current methods largely separate the observed actions from the persistent space itself. We introduce a model for environment affordances that is learned directly from egocentric video. The main idea is to gain a human-centric model of a physical space (such as a kitchen) that captures (1) the primary spatial zones of interaction and (2) the likely activities they support. Our approach decomposes a space into a topological map derived from first-person activity, organizing an ego-video into a series of visits to the different zones. Further, we show how to link zones across multiple related environments (e.g., from videos of multiple kitchens) to obtain a consolidated representation of environment functionality. On EPIC-Kitchens and EGTEA+, we demonstrate our approach for learning scene affordances and anticipating future actions in long-form video.
+         </div>
+        <div class="publ">
+          <ul>
+                 <li><a href="https://arxiv.org/abs/2001.04583">arXiv</a></li>
+                 <li><a href="http://vision.cs.utexas.edu/projects/ego-topo/">website</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div class="pubwrap">
       <div class="row">
