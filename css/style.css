@@ -366,3 +366,6 @@ hr.soft {
   margin-bottom: 20px;
   font-weight: 300;
 }
+.smallerfont {
+  font-size: .8em;
+}
