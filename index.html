@@ -76,8 +76,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/mvit.png" style="width: 90%"><br>
-            <img src="pubs/mvit_output.png" style="width: 90%"><br>
+            <img src="pubs/mvit.png" style="width: 100%"><br> <br> <br>
+            <img src="pubs/mvit_output.png" style="width: 100%"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -86,11 +86,13 @@
             <div class="puba">Haoqi Fan*, Bo Xiong*, Karttikeya Mangalam*, Yanghao Li*, Zhicheng Yan, Jitendra Malik, <b>Christoph Feichtenhofer</b>* <br> *equal technical contribution</div>
             <div class="pubv">Technical report, arXiv, April 2021</div>
             <div class="pubd">
-              We present Multiscale Vision Transformers (MViT) for video and image recognition, by connecting the seminal idea of multiscale feature hierarchies with transformer models. Multiscale Transformers have several channel-resolution scale stages. Starting from the input resolution and a small channel dimension, the stages hierarchically expand the channel capacity while reducing the spatial resolution. This creates a multiscale pyramid of features with early layers operating at high spatial resolution to model simple low-level visual information, and deeper layers at spatially coarse, but complex, high-dimensional features. We evaluate this fundamental architectural prior for modeling the dense nature of visual signals for a variety of video recognition tasks where it outperforms concurrent vision transformers that rely on large scale external pre-training and are 5-10x more costly in computation and parameters. We further remove the temporal dimension and apply our model for image classification where it outperforms prior work on vision transformers. Code will be made available in <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a>.
+              We present Multiscale Vision Transformers (MViT) for video and image recognition, by connecting the seminal idea of multiscale feature hierarchies with transformer models. Multiscale Transformers have several channel-resolution scale stages. Starting from the input resolution and a small channel dimension, the stages hierarchically expand the channel capacity while reducing the spatial resolution. This creates a multiscale pyramid of features with early layers operating at high spatial resolution to model simple low-level visual information, and deeper layers at spatially coarse, but complex, high-dimensional features. We evaluate this fundamental architectural prior for modeling the dense nature of visual signals for a variety of video recognition tasks where it outperforms concurrent vision transformers that rely on large scale external pre-training and are 5-10x more costly in computation and parameters. We further remove the temporal dimension and apply our model for image classification where it outperforms prior work on vision transformers.
             </div>
             <div class="publ">
               <ul>
                 <li><a href="https://arxiv.org/abs/2104.11227">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                <div class="pubaw">PyTorch code will be open sourced in <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo.</a> </div>
               </ul>
             </div>
           </div>
@@ -113,12 +115,13 @@
             <div class="puba"><b>Christoph Feichtenhofer</b>, Haoqi Fan, Bo Xiong, Ross Girshick, Kaiming He</div>
             <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2021 </div>
             <div class="pubd">
-              We present a large-scale study on unsupervised spatiotemporal representation learning from videos. With a unified perspective on four recent image-based frameworks, we study a simple objective that can easily generalize all these methods to space-time. Our objective encourages temporally-persistent features in the same video, and in spite of its simplicity, it works surprisingly well across: (i) different unsupervised frameworks, (ii) pre-training datasets, (iii) downstream datasets, and (iv) backbone architectures. We draw a series of intriguing observations from this study, e.g., we discover that encouraging long-spanned persistency can be effective even if the timespan is 60 seconds. In addition to state-of-the-art results in multiple benchmarks, we report a few promising cases in which unsupervised pre-training can outperform its supervised counterpart. Code will be made available in <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a>.
+              We present a large-scale study on unsupervised spatiotemporal representation learning from videos. With a unified perspective on four recent image-based frameworks, we study a simple objective that can easily generalize all these methods to space-time. Our objective encourages temporally-persistent features in the same video, and in spite of its simplicity, it works surprisingly well across: (i) different unsupervised frameworks, (ii) pre-training datasets, (iii) downstream datasets, and (iv) backbone architectures. We draw a series of intriguing observations from this study, e.g., we discover that encouraging long-spanned persistency can be effective even if the timespan is 60 seconds. In addition to state-of-the-art results in multiple benchmarks, we report a few promising cases in which unsupervised pre-training can outperform its supervised counterpart.
             </div>
             <div class="publ">
               <ul>
                 <li><a href="">arXiv</a></li>
-                <div class="pubaw">PyTorch code will be open sourced in <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a>.  </div>
+                <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                <div class="pubaw">PyTorch code will be open sourced in <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo.</a> </div>
               </ul>
             </div>
           </div>
@@ -153,8 +156,11 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/trackformer_output.gif" style="width: 75%"><br>
+            <!-- <img src="pubs/trackformer_output.gif" style="width: 75%"><br>
+            <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOT17-03-SDP.gif" style="width: 75%"><br> -->
+            <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOTS20-07.gif" style="width: 80%"><br>
             <img src="pubs/trackformer_concept.png" style="width: 80%"><br>
+
 
           </div>
         </div>
@@ -184,6 +190,7 @@
             <div class="publ">
               <ul>
                 <li><a href="https://arxiv.org/abs/2101.02702">arXiv</a></li>
+                <li><a href="https://github.com/timmeinhardt/trackformer">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/timmeinhardt/trackformer?style=social"></a></li>
               </ul>
             </div>
           </div>
@@ -366,7 +373,7 @@
           <div class="publ">
             <ul>
                <li><a href="https://arxiv.org/abs/2004.04730">arXiv</a></li>
-               <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+               <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
             </ul>
           </div>
         </div>
@@ -392,7 +399,7 @@
           <div class="publ">
             <ul>
                    <li><a href="https://arxiv.org/abs/2001.08740">arXiv</a></li>
-                   <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+                   <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
             </ul>
           </div>
         </div>
@@ -445,7 +452,7 @@
         <div class="publ">
           <ul>
                  <li><a href="https://arxiv.org/abs/1912.00998">arXiv</a></li>
-                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
           </ul>
         </div>
       </div>
@@ -505,7 +512,7 @@
               <ul>
                      <li><a href="https://arxiv.org/abs/1812.03982">arXiv</a></li>
                      <li><a href="http://static.googleusercontent.com/media/research.google.com/en//ava/2019/fair_slowfast.pdf">AVA challenge report</a></li>
-                     <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social">&nbsp;</a></li>
+                     <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
                      <li><a href="https://ai.facebook.com/blog/slowfast-video-recognition-through-dual-frame-rate-analysis/">Facebook AI blog</a></li>
                      <li><a href="https://venturebeat.com/2019/11/04/facebooks-slowfast-video-classifier-ai-was-inspired-by-primate-eyes/">Venturebeat article</a></li>
                      <li><a href="https://conftube.com/video/8oUPyhwzIDo?tocitem=37">talk</a></li>
@@ -534,7 +541,7 @@
             <div class="publ">
               <ul>
                      <li><a href="https://arxiv.org/abs/1901.07677">arXiv</a></li>
-                     <li><a href="https://github.com/facebookresearch/QuaterNet">code <img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/QuaterNet">&nbsp;</a></li>
+                     <li><a href="https://github.com/facebookresearch/QuaterNet">code <img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/QuaterNet?style=social"></a></li>
                      <li><a href="https://link.springer.com/article/10.1007/s11263-019-01245-6">springer</a></li>
               </ul>
             </div>
@@ -638,7 +645,7 @@
             <div class="publ">
               <ul>
                      <li><a href="https://arxiv.org/abs/1811.11742">arXiv</a></li>
-                     <li><a href="https://github.com/facebookresearch/VideoPose3D">code <img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/VideoPose3D?style=social">&nbsp;</a></li>
+                     <li><a href="https://github.com/facebookresearch/VideoPose3D">code <img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/VideoPose3D?style=social"></a></li>
                      <li><a href="https://dariopavllo.github.io/VideoPose3D/">website</a></li>
               </ul>
             </div>
