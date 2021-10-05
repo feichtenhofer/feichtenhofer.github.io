@@ -87,7 +87,7 @@
           <div class="pub">
             <div class="pubt">Multiscale Vision Transformers</div>
             <div class="puba">Haoqi Fan*, Bo Xiong*, Karttikeya Mangalam*, Yanghao Li*, Zhicheng Yan, Jitendra Malik, <b>Christoph Feichtenhofer</b>* <br> *equal technical contribution</div>
-            <div class="pubv">Technical report, arXiv, April 2021</div>
+            <div class="pubv">International Conference on Computer Vision (ICCV) 2021</div>
             <div class="pubd">
               We present Multiscale Vision Transformers (MViT) for video and image recognition, by connecting the seminal idea of multiscale feature hierarchies with transformer models. Multiscale Transformers have several channel-resolution scale stages. Starting from the input resolution and a small channel dimension, the stages hierarchically expand the channel capacity while reducing the spatial resolution. This creates a multiscale pyramid of features with early layers operating at high spatial resolution to model simple low-level visual information, and deeper layers at spatially coarse, but complex, high-dimensional features. We evaluate this fundamental architectural prior for modeling the dense nature of visual signals for a variety of video recognition tasks where it outperforms concurrent vision transformers that rely on large scale external pre-training and are 5-10x more costly in computation and parameters. We further remove the temporal dimension and apply our model for image classification where it outperforms prior work on vision transformers.
             </div>
@@ -95,7 +95,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2104.11227">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
-                <div class="pubaw">PyTorch code will be open sourced in <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
+                <div class="pubaw">PyTorch code has been open sourced in <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
               </ul>
             </div>
           </div>
@@ -123,7 +123,7 @@
             <div class="publ">
               <ul>
                 <li><a href="https://arxiv.org/abs/2104.14558">arXiv</a></li>
-                <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
                 <div class="pubaw">PyTorch code will be open sourced in <a href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo.</a> </div>
               </ul>
             </div>
@@ -142,7 +142,7 @@
           <div class="pub">
             <div class="pubt">Multiview Pseudo-Labeling for Semi-supervised Learning from Video</div>
             <div class="puba">Bo Xiong, Haoqi Fan, Kristen Grauman, <b>Christoph Feichtenhofer</b></div>
-            <div class="pubv">Technical report, arXiv, April 2021</div>
+            <div class="pubv">International Conference on Computer Vision (ICCV) 2021</div>
             <div class="pubd">
               We present a multiview pseudo-labeling approach to video learning, a novel framework that uses complementary views in the form of appearance and motion information for semi-supervised learning in video. The complementary views help obtain more reliable pseudo-labels on unlabeled video, to learn stronger video representations than from purely supervised data. Though our method capitalizes on multiple views, it nonetheless trains a model that is shared across appearance and motion input and thus, by design, incurs no additional computation overhead at inference time. On multiple video recognition datasets, our method substantially outperforms its supervised counterpart, and compares favorably to previous work on standard benchmarks in self-supervised video representation learning.
             </div>
@@ -163,8 +163,6 @@
             <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOT17-03-SDP.gif" style="width: 75%"><br> -->
             <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOTS20-07.gif" style="width: 80%"><br>
             <img src="pubs/trackformer_concept.png" style="width: 80%"><br>
-
-
           </div>
         </div>
         <div class="col-md-6">
@@ -200,9 +198,118 @@
         </div>
       </div>
     </div>
+  <div class="pubwrap">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="pubimg">
+          <br><br>
+            <img src="pubs/videoclip.png" style="width: 100%"><br>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="pub">
+          <div class="pubt">VideoCLIP: Contrastive Pre-training for Zero-shot Video-Text Understanding</div>
+          <div class="puba">Hu Xu, Gargi Ghosh, Po-Yao Huang, Dmytro Okhonko, Armen Aghajanyan, Florian Metze, Luke Zettlemoyer,
+            <b>Christoph Feichtenhofer</b> </div>
+          <div class="pubv">Empirical Methods in Natural Language Processing (EMNLP) 2021 (Oral) </div>
+          <div class="pubd">
+            We present VideoCLIP, a contrastive approach to pre-train a unified model for zero-shot video and text understanding,
+            without using any labels on downstream tasks. VideoCLIP trains a transformer for video and text by contrasting
+            temporally overlapping positive video-text pairs with hard negatives from nearest neighbor retrieval. Our experiments on
+            a diverse series of downstream tasks, including sequence-level text-video retrieval, VideoQA, token-level action
+            localization, and action segmentation reveal state-of-the-art performance, surpassing prior work, and in some cases even
+            outperforming supervised approaches.
+          </div>
+          <div class="publ">
+            <ul>
+              <li><a href="https://arxiv.org/abs/2109.14084">arXiv</a></li>
+              <li><a href="https://github.com/pytorch/fairseq/tree/main/examples/MMPT">code<img alt="GitHub stars"
+                    src="https://img.shields.io/github/stars/pytorch/fairseq?style=social"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br><br>
+            <img src="pubs/motionformer_concept.png" style="width: 100%"><br><br><br>
+              <img src="pubs/motionformer_arch.png" style="width: 100%"><br>
 
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Keeping Your Eye on the Ball: Trajectory Attention in Video Transformers</div>
+            <div class="puba">Mandela Patrick, Dylan Campbell, Yuki M Asano, Ishan Misra Florian Metze, <b>Christoph Feichtenhofer</b>, Andrea Vedaldi, Jo
+            Henriques
+            </div>
+              <div class="pubv">Advances in Neural Information Processing Systems NeurIPS 2021 (Oral)</div>
+            <div class="pubd">
+              In video transformers, the time dimension is often treated in the same way as the two spatial dimensions. However, in a
+              scene where objects or the camera may move, a physical point imaged at one location in frame may be entirely unrelated
+              to what is found at that location in frame . These temporal correspondences should be modeled to facilitate learning
+              about dynamic scenes. To this end, we propose a new drop-in block for video transformers -- trajectory attention -- that
+              aggregates information along implicitly determined motion paths. We additionally propose a new method to address the
+              quadratic dependence of computation and memory on the input size, which is particularly important for high resolution or
+              long videos. While these ideas are useful in a range of settings, we apply them to the specific task of video action
+              recognition with a transformer model and obtain state-of-the-art results on the Kinetics, Something--Something V2, and
+              Epic-Kitchens datasets.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2106.05392">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/Motionformer">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/Motionformer?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br><br>
+            <img src="pubs/vlm.png" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">VLM: Task-agnostic Video-Language Model Pre-training for Video Understanding</div>
+            <div class="puba">Hu Xu, Gargi Ghosh, Po-Yao Huang, Prahal Arora, Masoumeh Aminzadeh, <b>Christoph
+                Feichtenhofer</b>, Florian Metze, Luke
+              Zettlemoyer </div>
+            <div class="pubv">Findings of the Association for Computational Linguistics (ACL) 2021</div>
+            <div class="pubd">
+              We present a simplified, task-agnostic multi-modal pre-training approach that can accept either video or text input, or
+              both for a variety of end tasks. Existing pre-training are task-specific by adopting either a single cross-modal encoder
+              that requires both modalities, limiting their use for retrieval-style end tasks or more complex multitask learning with
+              two unimodal encoders, limiting early cross-modal fusion. We instead introduce new pretraining masking schemes that
+              better mix across modalities (e.g. by forcing masks for text to predict the closest video embeddings) while also
+              maintaining separability (e.g. unimodal predictions are sometimes required, without using all the input). Experimental
+              results show strong performance across a wider range of tasks than any previous methods, often outperforming
+              task-specific pre-training
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2105.09996">arXiv</a></li>
+                <li><a href="https://github.com/pytorch/fairseq/tree/main/examples/MMPT">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/pytorch/fairseq?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div> <div id="pubs">
 </div>
+
+
 
 
 <div class="container quote2">
@@ -261,6 +368,11 @@
 
 <div class="container">
   <h2>News & Highlights </h2>
+    <div class="pubwrap">
+    <div class="ttitle"> At ICCV 2021, we organize a tutorial on <a
+        href="https://sites.google.com/view/effvideo-2021/"> Efficient Video Understanding: State-of-the-art, Challenges, and Opportunities</a>
+      and I'll be a Mentor for the <a href="https://iccv2021.thecvf.com/doctoral-consortium">Doctoral Consortium</a> & <a href="https://iccv2021.thecvf.com/node/56"> Social Events </a> </div>
+  </div>
   <div class="pubwrap">
     <div class="ttitle"> We released <a href="https://pytorchvideo.org/">PyTorchVideo</a>  - a deep learning library for video research and applications </div>
   </div>
