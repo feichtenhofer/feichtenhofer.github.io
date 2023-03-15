@@ -10,7 +10,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="css/style.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-
+  <link rel=icon href=https://static.xx.fbcdn.net/rsrc.php/yi/r/gbO80SSOuBU.ico>
   <style type="text/css"></style>
 
   <script>
@@ -38,8 +38,8 @@
     <div id="headertext">
       <div id="htname" style="color:white">Christoph Feichtenhofer</div>
       <div id="htdesc" style="color:white">Research Scientist, Manager</div>
-	  <div id="htdesc" style="color:white">Facebook AI Research (FAIR)</div>
-      <div id="htem" style="color:white">feichtenhofer _at_ fb.com</div>
+	  <div id="htdesc" style="color:white">Meta AI, FAIR</div>
+      <div id="htem" style="color:white">feichtenhofer _at_ meta.com</div>
 	</div>
       <div id="icons">
         <div class="svgico">
@@ -57,13 +57,15 @@
 
 <br><br>
 
+<!--
 <div class="container">
-  <!-- <h1>Hiring </h1> -->
+  <h1>Hiring </h1>
   <div class="pubwrap">
     <div class="ttitle"> We are hiring full-time Research Scientists and Postdocs at US locations and remotely. Please reach out if
     you are interested. </div>
   </div>
 </div>
+-->
 
 <div class="container quote2">
   <h3>Recent technical reports  <span class="smallerfont"> ·
@@ -72,272 +74,260 @@
   </span> </h3>
 </div>
 
+
 <div class="container">
   <div id="pubs">
-      <div class="pubwrap">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="pubimg">
-              <img src="pubs/mae_concept.jpg" style="width: 100%"><br> <br> <br>
-              <img src="pubs/vis_14_2.gif" style="width: 100%"><br> <br> <br>
-            </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/flip_concept.png" style="width: 60%"><br><br>
+            <img src="pubs/flip_output.png" style="width: 60%">
           </div>
-          <div class="col-md-6">
-            <div class="pub">
-              <div class="pubt">Masked Autoencoders As Spatiotemporal Learners</div>
-              <div class="puba"><b>Christoph Feichtenhofer</b>*, Haoqi Fan*, Yanghao Li, Kaiming He
-                 <br> *equal technical contribution
-              </div>
-              <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2022</div>
-              <div class="pubd">
-                This paper studies a conceptually simple extension of Masked Autoencoders (MAE) to spatiotemporal representation
-                learning from videos. We randomly mask out spacetime patches in videos and learn an autoencoder to reconstruct them in
-                pixels. Interestingly, we show that our MAE method can learn strong representations with almost no inductive bias on
-                spacetime (only except for patch and positional embeddings), and spacetime-agnostic random masking performs the best. We
-                observe that the optimal masking ratio is as high as 90% (vs. 75% on images), supporting the hypothesis that this ratio
-                is related to information redundancy of the data. A high masking ratio leads to a large speedup, e.g., > 4x in
-                wall-clock time or even more. We report competitive results on several challenging video datasets using vanilla Vision
-                Transformers. We observe that MAE can outperform supervised pre-training by large margins. We further report encouraging
-                results of training on real-world, uncurated Instagram data. Our study suggests that the general framework of masked
-                autoencoding (BERT, MAE, etc.) can be a unified methodology for representation learning with minimal domain knowledge.
-              </div>
-              <div class="publ">
-                <ul>
-                  <li><a href="https://arxiv.org/abs/2205.09113">arXiv</a></li>
-                  <li><a href="https://github.com/facebookresearch/SlowFast/tree/main/projects/mae">code<img alt="GitHub stars"
-                        src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
-                  <div class="pubaw">PyTorch code has been open sourced in <a
-                      href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
-                      href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
-                </ul>
-              </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Scaling Language-Image Pre-training via Masking</div>
+            <div class="puba"> Yanghao Li<sup>*</sup>, Haoqi Fan<sup>*</sup>, Ronghang Hu<sup>*</sup>, <b>Christoph Feichtenhofer</b><sup>&#8225;</sup>, Kaiming He<sup>&#8225;</sup>
+              <br> <sup>*</sup>equal technical contribution, <sup>&#8225;</sup>equal advising
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2023 </div>
+            <div class="pubd">
+              We present Fast Language-Image Pre-training (FLIP), a simple and more efficient method for training CLIP. Our method
+              randomly masks out and removes a large portion of image patches during training. Masking allows us to learn from more
+              image-text pairs given the same wall-clock time and contrast more samples per iteration with similar memory footprint.
+              It leads to a favorable trade-off between accuracy and training time. In our experiments on 400 million image-text
+              pairs, FLIP improves both accuracy and speed over the no-masking baseline. On a large diversity of downstream tasks,
+              FLIP dominantly outperforms the CLIP counterparts trained on the same data. Facilitated by the speedup, we explore the
+              scaling behavior of increasing the model size, data size, or training length, and report encouraging results and
+              comparisons. We hope that our work will foster future research on scaling vision-language learning.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2212.00794">arXiv</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="pubwrap">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="pubimg">
-              <br> <br>
-              <img src="pubs/audiomae_concept.jpg" style="width: 100%"><br> <br> <br>
-              <img src="pubs/audiomae_output.jpg" style="width: 100%"><br>
-            </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br><br>
+            <img src="pubs/mavil.png" style="width: 100%"><br>
+            <img src="pubs/mavil_output.jpg" style="width: 100%"><br>
           </div>
-          <div class="col-md-6">
-            <div class="pub">
-              <div class="pubt">Masked Autoencoders that Listen</div>
-              <div class="puba">Po-Yao Huang, Hu Xu, Juncheng Li, Alexei Baevski, Michael Auli, Wojciech Galuba, Florian Metze, <b>Christoph Feichtenhofer</b>
-              </div>
-              <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2022</div>
-              <div class="pubd">
-                This paper studies a simple extension of image-based Masked Autoencoders (MAE) to self-supervised representation
-                learning from audio spectrograms. Following the Transformer encoder-decoder design in MAE, our Audio-MAE first encodes
-                audio spectrogram patches with a high masking ratio, feeding only the non-masked tokens through encoder layers. The
-                decoder then re-orders and decodes the encoded context padded with mask tokens, in order to reconstruct the input
-                spectrogram. We find it beneficial to incorporate local window attention in the decoder, as audio spectrograms are
-                highly correlated in local time and frequency bands. We then fine-tune the encoder with a lower masking ratio on target
-                datasets. Empirically, Audio-MAE sets new state-of-the-art performance on six audio and speech classification tasks,
-                outperforming other recent models that use external supervised pre-training.
-              </div>
-              <div class="publ">
-                <ul>
-                  <li><a href="https://arxiv.org/abs/2207.06405">arXiv</a></li>
-                  <li><a href="https://github.com/facebookresearch/AudioMAE">code<img alt="GitHub stars"
-                        src="https://img.shields.io/github/stars/facebookresearch/AudioMAE?style=social"></a></li>
-                </ul>
-              </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">MAViL: Masked Audio-Video Learners</div>
+            <div class="puba"> Po-Yao Huang, Vasu Sharma, Hu Xu, Chaitanya Ryali, Haoqi Fan, Yanghao Li, Shang-Wen Li, Gargi
+              Ghosh, Jitendra Malik,
+              <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">arXiv, 2023</div>
+            <div class="pubd">
+              We present Masked Audio-Video Learners (MAViL) to train audio-visual representations. Our approach learns with
+              three
+              complementary forms of self-supervision: (1) reconstruction of masked audio and video input data, (2) intra-
+              and
+              inter-modal contrastive learning with masking, and (3) self-training by reconstructing joint audio-video
+              contextualized
+              features learned from the first two objectives. Pre-training with MAViL not only enables the model to perform
+              well in
+              audio-visual classification and retrieval tasks but also improves representations of each modality in
+              isolation, without
+              using information from the other modality for fine-tuning or inference. Empirically, MAViL sets a new
+              state-of-the-art
+              on AudioSet (53.1 mAP) and VGGSound (67.1% accuracy). For the first time, a self-supervised audio-visual model
+              outperforms ones that use external supervision on these benchmarks.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2212.08071">arXiv</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="pubwrap">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="pubimg">
-              <img src="pubs/memvit_concept.png" style="width: 100%"><br> <br> <br>
-              <img src="pubs/memvit_output.png" style="width: 100%"><br>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/cit_concept.png" style="width: 100%"><br> <br> <br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">CiT: Curation in Training for Effective Vision-Language Data</div>
+            <div class="puba">Hu Xu, Saining Xie, Po-Yao Huang, Licheng Yu, Russell Howes, Gargi Ghosh, Luke Zettlemoyer,
+              <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">arXiv, 2023</div>
+            <div class="pubd">
+              Large vision-language models are generally applicable to many downstream tasks, but come at an exorbitant
+              training cost
+              that only large institutions can afford. This paper trades generality for efficiency and presents Curation in
+              Training
+              (CiT), a simple and efficient vision-text learning algorithm that couples a data objective into training. CiT
+              automatically yields quality data to speed-up contrastive image-text training and alleviates the need for an
+              offline
+              data filtering pipeline, allowing broad data sources (including raw image-text pairs from the web). CiT
+              contains two
+              loops: an outer loop curating the training data and an inner loop consuming the curated training data. The
+              text encoder
+              connects the two loops. Given metadata for tasks of interest, e.g., class names, and a large pool of
+              image-text pairs,
+              CiT alternatively selects relevant training data from the pool by measuring the similarity of their text
+              embeddings and
+              embeddings of the metadata. In our experiments, we observe that CiT can speed up training by over an order of
+              magnitude,
+              especially if the raw data size is large.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/CiT">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/CiT?style=social"></a></li>
+              </ul>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="pub">
-              <div class="pubt">MeMViT: Memory-Augmented Multiscale Vision Transformer for Efficient Long-Term Video Recognition</div>
-              <div class="puba">Chao-Yuan Wu*, Yanghao Li*, Karttikeya Mangalam, Haoqi Fan, Bo Xiong, Jitendra Malik,
-                <b>Christoph Feichtenhofer</b>* <br> *equal technical contribution
-              </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/mcc_concept.jpg" style="width: 100%"><br> <br> <br>
+            <img src="pubs/mcc_quest_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_quest_2.gif" style="height:130px; vertical-align:top">
+            <img src="pubs/mcc_spyro_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_spyro_2.gif" style="height:130px; vertical-align:top"><br>
+            <img src="pubs/mcc_chair_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_chair_2.gif"
+              style="height:130px; vertical-align:top">
+            <img src="pubs/mcc_plant_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_plant_2.gif"
+              style="height:130px; vertical-align:top"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Multiview Compressive Coding for 3D Reconstruction</div>
+            <div class="puba">Chao-Yuan Wu, Justin Johnson, Jitendra Malik, <b>Christoph Feichtenhofer</b>, Georgia Gkioxari
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2023 </div>
+            <div class="pubd">
+              A central goal of visual recognition is to understand objects and scenes from
+              a single image. 2D recognition has witnessed tremendous progress thanks to
+              large-scale learning and general-purpose representations. Comparatively, 3D
+              poses new challenges stemming from occlusions not depicted in the image. Prior
+              works try to overcome these by inferring from multiple views or rely on scarce
+              CAD models and category-specific priors which hinder scaling to novel settings.
+              In this work, we explore single-view 3D reconstruction by learning
+              generalizable representations inspired by advances in self-supervised learning.
+              We introduce a simple framework that operates on 3D points of single objects or
+              whole scenes coupled with category-agnostic large-scale training from diverse
+              RGB-D videos. Our model, Multiview Compressive Coding (MCC), learns to compress
+              the input appearance and geometry to predict the 3D structure by querying a
+              3D-aware decoder. MCC&#39;s generality and efficiency allow it to learn from
+              large-scale and diverse data sources with strong generalization to novel
+              objects imagined by DALL-E 2 or captured in-the-wild with an iPhone.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2301.08247">arXiv</a></li>
+                <li><a href="https://mcc3d.github.io/"">website</a></li>
+                <li><a href="https://github.com/facebookresearch/MCC">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/MCC?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/tome_concept.png" style="width: 100%"><br> <br> <br>
+            <img src="pubs/tome_output.gif" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Token Merging: Your ViT But Faster</div>
+            <div class="puba"> Daniel Bolya, Cheng-Yang Fu, Xiaoliang Dai, Peizhao Zhang, <b>Christoph Feichtenhofer</b>, Judy Hoffman
+            </div>
+            <div class="pubv">International Conference on Learning Representations (ICLR) 2023, Oral</div>
+            <div class="pubd">
+              We introduce Token Merging (ToMe), a simple method to increase the throughput of existing ViT models without needing to
+              train. ToMe gradually combines similar tokens in a transformer using a general and light-weight matching algorithm that
+              is as fast as pruning while being more accurate. Off-the-shelf, ToMe can 2x the throughput of state-of-the-art ViT-L @
+              512 and ViT-H @ 518 models on images and 2.2x the throughput of ViT-L on video with only a 0.2-0.3% accuracy drop in
+              each case. ToMe can also easily be applied during training, improving in practice training speed up to 2x for MAE
+              fine-tuning on video. Training with ToMe further minimizes accuracy drop, leading to 2x the throughput of ViT-B on audio
+              for only a 0.4% mAP drop. Qualitatively, we find that ToMe merges object parts into one token, even over multiple frames
+              of video. Overall, ToMe's accuracy and speed are competitive with state-of-the-art on images, video, and audio.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2210.09461">arXiv</a></li>
+                <li><a href="https://research.facebook.com/blog/2023/2/token-merging-your-vit-but-faster/">Meta AI
+                    blog</a></li>
+                <li><a href="https://github.com/facebookresearch/ToMe">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/ToMe?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/rev_concept.png" style="width: 50%">
+            <!-- <img src="pubs/rev_output.png" style="width: 80%"><br> -->
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Reversible Vision Transformers</div>
+            <div class="puba">Karttikeya Mangalam<sup>*</sup>, Haoqi Fan, Yanghao Li, Chao-Yuan Wu, Bo Xiong, <b>Christoph Feichtenhofer</b><sup>*</sup>, Jitendra Malik
+                <br> <sup>*</sup>equal technical contribution
+            </div>
             <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022 (Oral)</div>
-              <div class="pubd">
-                In this paper, we propose a new strategy to overcome this challenge. Instead of trying to process more frames at once
-                like most existing methods, we propose to process videos in an online fashion and cache "memory" at each iteration.
-                Through the memory, the model can reference prior context for long-term modeling, with only a marginal cost. Based on
-                this idea, we build MeMViT, a Memory-augmented Multiscale Vision Transformer, that has a temporal support 30x longer
-                than existing models with only 4.5% more compute; traditional methods need >3,000% more compute to do the same. On a
-                wide range of settings, the increased temporal support enabled by MeMViT brings large gains in recognition accuracy
-                consistently. MeMViT obtains state-of-the-art results on the AVA, EPIC-Kitchens-100 action classification, and action
-                anticipation datasets. Code and models will be made publicly available.
-              </div>
-              <div class="publ">
-                <ul>
-                  <li><a href="https://arxiv.org/abs/2201.08383">arXiv</a></li>
-                  <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
-                        src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
-                  <div class="pubaw">PyTorch code will be open sourced in <a
-                      href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
-                      href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
-                </ul>
-              </div>
+            <div class="pubd">
+              We present Reversible Vision Transformers, a memory efficient architecture design for visual recognition. By decoupling
+              the GPU memory footprint from the depth of the model, Reversible Vision Transformers enable memory efficient scaling of
+              transformer architectures. We adapt two popular models, namely Vision Transformer and Multi-scale Vision Transformers,
+              to reversible variants and benchmark extensively across both model sizes and tasks of image classification, object
+              detection and video classification. Reversible Vision Transformers achieve a reduced memory footprint of up to 15.5x at
+              identical model complexity, parameters and accuracy, demonstrating the promise of reversible vision transformers as an
+              efficient backbone for resource limited training regimes. Finally, we find that the additional computational burden of
+              recomputing activations is more than overcome for deeper models, where throughput can increase up to 3.9x over their
+              non-reversible counterparts.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2302.04869">arXiv</a></li>
+                <li><a href="https://karttikeya.github.io/publication/revvit/"">website</a></li>
+                <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                <li><a href="https://github.com/karttikeya/minREV">min code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/karttikeya/minREV?style=social"></a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="pubwrap">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="pubimg">
-              <img src="pubs/maskfeat_concept.png" style="width: 100%"><br> <br> <br>
-              <img src="pubs/maskfeat_output.png" style="width: 100%"><br>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="pub">
-              <div class="pubt">Masked Feature Prediction for Self-Supervised Visual Pre-Training</div>
-              <div class="puba">Chen Wei*, Haoqi Fan, Saining Xie, Chao-Yuan Wu, Alan Yuille,
-                <b>Christoph Feichtenhofer</b>* <br> *equal technical contribution
-              </div>
-            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022</div>
-              <div class="pubd">
-                We present Masked Feature Prediction (MaskFeat) for self-supervised pre-training of video models. Our approach first
-                randomly masks out a portion of the input sequence and then predicts the feature of the masked regions. We study five
-                different types of features and find Histograms of Oriented Gradients (HOG), a hand-crafted feature descriptor, works
-                particularly well in terms of both performance and efficiency. We observe that the local contrast normalization in HOG
-                is essential for good results, which is in line with earlier work using HOG for visual recognition. Our approach can
-                learn abundant visual knowledge and drive large-scale Transformer-based models. Without using extra model weights or
-                supervision, MaskFeat pre-trained on unlabeled videos achieves unprecedented results of 86.7% with MViT-L on
-                Kinetics-400, 88.3% on Kinetics-600, 80.4% on Kinetics-700, 38.8 mAP on AVA, and 75.0% on SSv2. MaskFeat further
-                generalizes to image input, which can be interpreted as a video with a single frame and obtains competitive results on
-                ImageNet.
-              </div>
-              <div class="publ">
-                <ul>
-                  <li><a href="https://arxiv.org/abs/2112.09133">arXiv</a></li>
-                  <li><a href="https://github.com/facebookresearch/SlowFast/tree/main/projects/maskfeat">code<img alt="GitHub stars"
-                        src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
-                  <div class="pubaw">PyTorch code has been open sourced in <a
-                      href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
-                      href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="pubwrap">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="pubimg">
-              <img src="pubs/mvit_v2.png" style="width: 100%"><br> <br> <br>
-              <img src="pubs/mvit_fpn.png" style="width: 100%"><br>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="pub">
-              <div class="pubt">MViTv2: Improved Multiscale Vision Transformers for Classification and Detection</div>
-              <div class="puba">Yanghao Li*, Chao-Yuan Wu*, Haoqi Fan, Karttikeya Mangalam, Bo Xiong, Jitendra Malik,
-                <b>Christoph Feichtenhofer</b>* <br> *equal technical contribution
-              </div>
-            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022</div>
-              <div class="pubd">
-                In this paper, we study Multiscale Vision Transformers (MViT) as a unified architecture for image and video
-                classification, as well as object detection. We present an improved version of MViT that incorporates decomposed
-                relative positional embeddings and residual pooling connections. We instantiate this architecture in five sizes and
-                evaluate it for ImageNet classification, COCO detection and Kinetics video recognition where it outperforms prior work.
-                We further compare MViTs' pooling attention to window attention mechanisms where it outperforms the latter in
-                accuracy/compute. Without bells-and-whistles, MViT has state-of-the-art performance in 3 domains: 88.8% accuracy on
-                ImageNet classification, 56.1 box AP on COCO object detection as well as 86.1% on Kinetics-400 video classification.
-              </div>
-              <div class="publ">
-                <ul>
-                  <li><a href="https://arxiv.org/abs/2112.01526">arXiv</a></li>
-                  <li><a href="https://github.com/facebookresearch/mvit">code<img alt="GitHub stars"
-                        src="https://img.shields.io/github/stars/facebookresearch/mvit?style=social"></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="pubwrap">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="pubimg">
-              <img src="pubs/pytorchvide.png" style="width: 100%"><br> <br> <br>
-              <img src="https://github.com/facebookresearch/pytorchvideo/blob/main/.github/media/ava_slowfast.gif?raw=true" style="width: 100%"><br>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="pub">
-              <div class="pubt">PyTorchVideo: A Deep Learning Library for Video Understanding</div>
-              <div class="puba">Haoqi Fan, Tullie Murrell, Heng Wang, Kalyan Vasudev Alwala, Yanghao Li, Yilei Li, Bo Xiong, Nikhila Ravi, Meng Li,
-              Haichuan Yang, Jitendra Malik, Ross Girshick, Matt Feiszli, Aaron Adcock, Wan-Yen Lo, <b>Christoph Feichtenhofer</b>
-              </div>
-              <div class="pubv">Proceedings of the 29th ACM International Conference on Multimedia, 2021</div>
-              <div class="pubd">
-                We introduce PyTorchVideo, an open-source deep-learning library that provides a rich set of modular, efficient, and
-                reproducible components for a variety of video understanding tasks, including classification, detection, self-supervised
-                learning, and low-level processing. The library covers a full stack of video understanding tools including multimodal
-                data loading, transformations, and models that reproduce state-of-the-art performance. PyTorchVideo further supports
-                hardware acceleration that enables real-time inference on mobile devices. The library is based on PyTorch and can be
-                used by any training framework; for example, PyTorchLightning, PySlowFast, or Classy Vision.
-              </div>
-              <div class="publ">
-                <ul>
-                  <li><a href="https://dl.acm.org/doi/abs/10.1145/3474085.3478329">arXiv</a></li>
-                  <li><a href="https://github.com/facebookresearch/pytorchvideo">code<img alt="GitHub stars"
-                        src="https://img.shields.io/github/stars/facebookresearch/pytorchvideo?style=social"></a></li>
-                <li><a href="https://pytorchvideo.org/">website</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="pubwrap">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="pubimg">
-                <br> <br>
-                <img src="https://ego4d-data.org/assets/images/Ego4D-Collage.jpg" style="width: 100%"><br>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="pub">
-                <div class="pubt">Ego4d: Around the world in 3,000 hours of egocentric video</div>
-                <div class="puba">Kristen Grauman et al.
-                </div>
-            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022 (Oral)</div>
-                <div class="pubd">
-                  We introduce Ego4D, a massive-scale egocentric video dataset and benchmark suite. It offers 3,025 hours of daily-life
-                  activity video spanning hundreds of scenarios (household, outdoor, workplace, leisure, etc.) captured by 855 unique
-                  camera wearers from 74 worldwide locations and 9 different countries. The approach to collection is designed to uphold
-                  rigorous privacy and ethics standards with consenting participants and robust de-identification procedures where
-                  relevant. Ego4D dramatically expands the volume of diverse egocentric video footage publicly available to the research
-                  community. Portions of the video are accompanied by audio, 3D meshes of the environment, eye gaze, stereo, and/or
-                  synchronized videos from multiple egocentric cameras at the same event. Furthermore, we present a host of new benchmark
-                  challenges centered around understanding the first-person visual experience in the past (querying an episodic memory),
-                  present (analyzing hand-object manipulation, audio-visual conversation, and social interactions), and future
-                  (forecasting activities). By publicly sharing this massive annotated dataset and benchmark suite, we aim to push the
-                  frontier of first-person perception.
-                </div>
-                <div class="publ">
-                  <ul>
-                    <li><a href="https://arxiv.org/abs/2110.07058">arXiv</a></li>
-                    <li><a href="https://ego4d-data.org/">website</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
 
   </div>
 </div>
@@ -398,9 +388,11 @@
   </div>
 </div>
 
-
 <div class="container">
   <h2>News & Highlights </h2>
+  <div class="pubwrap">
+    <div class="ttitle"> I am an Area Chair for CVPR 2023, ICCV 2023 and NeurIPS 2023 </div>
+  </div>
   <div class="pubwrap">
     <div class="ttitle"> At ECCV 2022, we organize a tutorial on <a href="https://feichtenhofer.github.io/eccv2022-ssl-tutorial/">
         Self-Supervised Representation Learning in Computer Vision</a>,
@@ -409,7 +401,7 @@
     </div>
   </div>
   <div class="pubwrap">
-    <div class="ttitle"> 2 / 2 submissions accepted to NeurIPS 2022 and I will serve as an Area Chair for BMVC 2022 and CVPR 2023 </div>
+    <div class="ttitle"> 2 / 2 submissions accepted to NeurIPS 2022 and I will serve as an Area Chair for BMVC 2022</div>
   </div>
   <div class="pubwrap">
     <div class="ttitle"> 7 / 7 submissions accepted to CVPR 2022 and I will serve as an Area Chair for ECCV
@@ -515,6 +507,381 @@
     </a>
   </span> </h2>
   <div id="pubs">
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="pubs/mae_concept.jpg" style="width: 100%"><br> <br> <br>
+            <img src="pubs/vis_14_2.gif" style="width: 100%"><br> <br> <br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Masked Autoencoders As Spatiotemporal Learners</div>
+            <div class="puba"><b>Christoph Feichtenhofer</b><sup>*</sup>, Haoqi Fan<sup>*</sup>, Yanghao Li, Kaiming He
+              <br> <sup>*</sup>equal technical contribution
+            </div>
+            <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2022</div>
+            <div class="pubd">
+              This paper studies a conceptually simple extension of Masked Autoencoders (MAE) to spatiotemporal
+              representation
+              learning from videos. We randomly mask out spacetime patches in videos and learn an autoencoder to reconstruct
+              them in
+              pixels. Interestingly, we show that our MAE method can learn strong representations with almost no inductive
+              bias on
+              spacetime (only except for patch and positional embeddings), and spacetime-agnostic random masking performs
+              the best. We
+              observe that the optimal masking ratio is as high as 90% (vs. 75% on images), supporting the hypothesis that
+              this ratio
+              is related to information redundancy of the data. A high masking ratio leads to a large speedup, e.g., > 4x in
+              wall-clock time or even more. We report competitive results on several challenging video datasets using
+              vanilla Vision
+              Transformers. We observe that MAE can outperform supervised pre-training by large margins. We further report
+              encouraging
+              results of training on real-world, uncurated Instagram data. Our study suggests that the general framework of
+              masked
+              autoencoding (BERT, MAE, etc.) can be a unified methodology for representation learning with minimal domain
+              knowledge.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2205.09113">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/SlowFast/tree/main/projects/mae">code<img
+                      alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                <div class="pubaw">PyTorch code has been open sourced in <a
+                    href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
+                    href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/audiomae_concept.jpg" style="width: 100%"><br> <br> <br>
+            <img src="pubs/audiomae_output.jpg" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Masked Autoencoders that Listen</div>
+            <div class="puba">Po-Yao Huang, Hu Xu, Juncheng Li, Alexei Baevski, Michael Auli, Wojciech Galuba, Florian
+              Metze, <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2022</div>
+            <div class="pubd">
+              This paper studies a simple extension of image-based Masked Autoencoders (MAE) to self-supervised
+              representation
+              learning from audio spectrograms. Following the Transformer encoder-decoder design in MAE, our Audio-MAE first
+              encodes
+              audio spectrogram patches with a high masking ratio, feeding only the non-masked tokens through encoder
+              layers. The
+              decoder then re-orders and decodes the encoded context padded with mask tokens, in order to reconstruct the
+              input
+              spectrogram. We find it beneficial to incorporate local window attention in the decoder, as audio spectrograms
+              are
+              highly correlated in local time and frequency bands. We then fine-tune the encoder with a lower masking ratio
+              on target
+              datasets. Empirically, Audio-MAE sets new state-of-the-art performance on six audio and speech classification
+              tasks,
+              outperforming other recent models that use external supervised pre-training.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2207.06405">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/AudioMAE">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/AudioMAE?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="pubs/memvit_concept.png" style="width: 100%"><br> <br> <br>
+            <img src="pubs/memvit_output.png" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">MeMViT: Memory-Augmented Multiscale Vision Transformer for Efficient Long-Term Video
+              Recognition</div>
+            <div class="puba">Chao-Yuan Wu<sup>*</sup>, Yanghao Li<sup>*</sup>, Karttikeya Mangalam, Haoqi Fan, Bo Xiong, Jitendra Malik,
+              <b>Christoph Feichtenhofer</b><sup>*</sup> <br> <sup>*</sup>equal technical contribution
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022 (Oral)</div>
+            <div class="pubd">
+              In this paper, we propose a new strategy to overcome this challenge. Instead of trying to process more frames
+              at once
+              like most existing methods, we propose to process videos in an online fashion and cache "memory" at each
+              iteration.
+              Through the memory, the model can reference prior context for long-term modeling, with only a marginal cost.
+              Based on
+              this idea, we build MeMViT, a Memory-augmented Multiscale Vision Transformer, that has a temporal support 30x
+              longer
+              than existing models with only 4.5% more compute; traditional methods need >3,000% more compute to do the
+              same. On a
+              wide range of settings, the increased temporal support enabled by MeMViT brings large gains in recognition
+              accuracy
+              consistently. MeMViT obtains state-of-the-art results on the AVA, EPIC-Kitchens-100 action classification, and
+              action
+              anticipation datasets. Code and models will be made publicly available.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2201.08383">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                <div class="pubaw">PyTorch code will be open sourced in <a
+                    href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
+                    href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="pubs/maskfeat_concept.png" style="width: 100%"><br> <br> <br>
+            <img src="pubs/maskfeat_output.png" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Masked Feature Prediction for Self-Supervised Visual Pre-Training</div>
+            <div class="puba">Chen Wei<sup>*</sup>, Haoqi Fan, Saining Xie, Chao-Yuan Wu, Alan Yuille,
+              <b>Christoph Feichtenhofer</b><sup>*</sup> <br> <sup>*</sup>equal technical contribution
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022</div>
+            <div class="pubd">
+              We present Masked Feature Prediction (MaskFeat) for self-supervised pre-training of video models. Our approach
+              first
+              randomly masks out a portion of the input sequence and then predicts the feature of the masked regions. We
+              study five
+              different types of features and find Histograms of Oriented Gradients (HOG), a hand-crafted feature
+              descriptor, works
+              particularly well in terms of both performance and efficiency. We observe that the local contrast
+              normalization in HOG
+              is essential for good results, which is in line with earlier work using HOG for visual recognition. Our
+              approach can
+              learn abundant visual knowledge and drive large-scale Transformer-based models. Without using extra model
+              weights or
+              supervision, MaskFeat pre-trained on unlabeled videos achieves unprecedented results of 86.7% with MViT-L on
+              Kinetics-400, 88.3% on Kinetics-600, 80.4% on Kinetics-700, 38.8 mAP on AVA, and 75.0% on SSv2. MaskFeat
+              further
+              generalizes to image input, which can be interpreted as a video with a single frame and obtains competitive
+              results on
+              ImageNet.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2112.09133">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/SlowFast/tree/main/projects/maskfeat">code<img
+                      alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                <div class="pubaw">PyTorch code has been open sourced in <a
+                    href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
+                    href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="pubs/mvit_v2.png" style="width: 100%"><br> <br> <br>
+            <img src="pubs/mvit_fpn.png" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">MViTv2: Improved Multiscale Vision Transformers for Classification and Detection</div>
+            <div class="puba">Yanghao Li<sup>*</sup>, Chao-Yuan Wu<sup>*</sup>, Haoqi Fan, Karttikeya Mangalam, Bo Xiong, Jitendra Malik,
+              <b>Christoph Feichtenhofer</b><sup>*</sup> <br> <sup>*</sup>equal technical contribution
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022</div>
+            <div class="pubd">
+              In this paper, we study Multiscale Vision Transformers (MViT) as a unified architecture for image and video
+              classification, as well as object detection. We present an improved version of MViT that incorporates
+              decomposed
+              relative positional embeddings and residual pooling connections. We instantiate this architecture in five
+              sizes and
+              evaluate it for ImageNet classification, COCO detection and Kinetics video recognition where it outperforms
+              prior work.
+              We further compare MViTs' pooling attention to window attention mechanisms where it outperforms the latter in
+              accuracy/compute. Without bells-and-whistles, MViT has state-of-the-art performance in 3 domains: 88.8%
+              accuracy on
+              ImageNet classification, 56.1 box AP on COCO object detection as well as 86.1% on Kinetics-400 video
+              classification.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2112.01526">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/mvit">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/mvit?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="pubs/convnext_concept.png" style="width: 60%"><br>
+            <img src="pubs/convnext.jpg" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">A convnet for the 2020s</div>
+            <div class="puba">Zhuang Liu, Hanzi Mao, Chao-Yuan Wu, <b>Christoph Feichtenhofer</b>, Trevor Darrell, Saining
+              Xie
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022</div>
+            <div class="pubd">
+              The "Roaring 20s" of visual recognition began with the introduction of Vision Transformers (ViTs), which
+              quickly
+              superseded ConvNets as the state-of-the-art image classification model. A vanilla ViT, on the other hand,
+              faces
+              difficulties when applied to general computer vision tasks such as object detection and semantic segmentation.
+              It is the
+              hierarchical Transformers (e.g., Swin Transformers) that reintroduced several ConvNet priors, making
+              Transformers
+              practically viable as a generic vision backbone and demonstrating remarkable performance on a wide variety of
+              vision
+              tasks. However, the effectiveness of such hybrid approaches is still largely credited to the intrinsic
+              superiority of
+              Transformers, rather than the inherent inductive biases of convolutions. In this work, we reexamine the design
+              spaces
+              and test the limits of what a pure ConvNet can achieve. We gradually "modernize" a standard ResNet toward the
+              design of
+              a vision Transformer, and discover several key components that contribute to the performance difference along
+              the way.
+              The outcome of this exploration is a family of pure ConvNet models dubbed ConvNeXt. Constructed entirely from
+              standard
+              ConvNet modules, ConvNeXts compete favorably with Transformers in terms of accuracy and scalability, achieving
+              87.8%
+              ImageNet top-1 accuracy and outperforming Swin Transformers on COCO detection and ADE20K segmentation, while
+              maintaining
+              the simplicity and efficiency of standard ConvNets.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2201.03545">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/ConvNeXt">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/ConvNeXt?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="pubs/pytorchvide.png" style="width: 100%"><br> <br> <br>
+            <img src="https://github.com/facebookresearch/pytorchvideo/blob/main/.github/media/ava_slowfast.gif?raw=true"
+              style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">PyTorchVideo: A Deep Learning Library for Video Understanding</div>
+            <div class="puba">Haoqi Fan, Tullie Murrell, Heng Wang, Kalyan Vasudev Alwala, Yanghao Li, Yilei Li, Bo Xiong,
+              Nikhila Ravi, Meng Li,
+              Haichuan Yang, Jitendra Malik, Ross Girshick, Matt Feiszli, Aaron Adcock, Wan-Yen Lo, <b>Christoph
+                Feichtenhofer</b>
+            </div>
+            <div class="pubv">Proceedings of the 29th ACM International Conference on Multimedia, 2021</div>
+            <div class="pubd">
+              We introduce PyTorchVideo, an open-source deep-learning library that provides a rich set of modular,
+              efficient, and
+              reproducible components for a variety of video understanding tasks, including classification, detection,
+              self-supervised
+              learning, and low-level processing. The library covers a full stack of video understanding tools including
+              multimodal
+              data loading, transformations, and models that reproduce state-of-the-art performance. PyTorchVideo further
+              supports
+              hardware acceleration that enables real-time inference on mobile devices. The library is based on PyTorch and
+              can be
+              used by any training framework; for example, PyTorchLightning, PySlowFast, or Classy Vision.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://dl.acm.org/doi/abs/10.1145/3474085.3478329">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/pytorchvideo">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/pytorchvideo?style=social"></a></li>
+                <li><a href="https://pytorchvideo.org/">website</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="https://ego4d-data.org/assets/images/Ego4D-Collage.jpg" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Ego4d: Around the world in 3,000 hours of egocentric video</div>
+            <div class="puba">Kristen Grauman et al.
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022 (Oral), </div>
+            <div class="pubaw">Best Paper Finalist </div>
+            <div class="pubd">
+              We introduce Ego4D, a massive-scale egocentric video dataset and benchmark suite. It offers 3,025 hours of
+              daily-life
+              activity video spanning hundreds of scenarios (household, outdoor, workplace, leisure, etc.) captured by 855
+              unique
+              camera wearers from 74 worldwide locations and 9 different countries. The approach to collection is designed
+              to uphold
+              rigorous privacy and ethics standards with consenting participants and robust de-identification procedures
+              where
+              relevant. Ego4D dramatically expands the volume of diverse egocentric video footage publicly available to the
+              research
+              community. Portions of the video are accompanied by audio, 3D meshes of the environment, eye gaze, stereo,
+              and/or
+              synchronized videos from multiple egocentric cameras at the same event. Furthermore, we present a host of new
+              benchmark
+              challenges centered around understanding the first-person visual experience in the past (querying an episodic
+              memory),
+              present (analyzing hand-object manipulation, audio-visual conversation, and social interactions), and future
+              (forecasting activities). By publicly sharing this massive annotated dataset and benchmark suite, we aim to
+              push the
+              frontier of first-person perception.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2110.07058">arXiv</a></li>
+                <li><a href="https://ego4d-data.org/">website</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="pubwrap">
       <div class="row">
@@ -527,8 +894,8 @@
         <div class="col-md-6">
           <div class="pub">
             <div class="pubt">Multiscale Vision Transformers</div>
-            <div class="puba">Haoqi Fan*, Bo Xiong*, Karttikeya Mangalam*, Yanghao Li*, Zhicheng Yan, Jitendra Malik,
-              <b>Christoph Feichtenhofer</b>* <br> *equal technical contribution</div>
+            <div class="puba">Haoqi Fan<sup>*</sup>, Bo Xiong<sup>*</sup>, Karttikeya Mangalam<sup>*</sup>, Yanghao Li<sup>*</sup>, Zhicheng Yan, Jitendra Malik,
+              <b>Christoph Feichtenhofer</b><sup>*</sup> <br> <sup>*</sup>equal technical contribution</div>
             <div class="pubv">International Conference on Computer Vision (ICCV) 2021</div>
             <div class="pubd">
               We present Multiscale Vision Transformers (MViT) for video and image recognition, by connecting the seminal
