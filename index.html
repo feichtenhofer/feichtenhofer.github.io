@@ -798,39 +798,40 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/pytorchvide.png" style="width: 100%"><br> <br> <br>
-            <img src="https://github.com/facebookresearch/pytorchvideo/blob/main/.github/media/ava_slowfast.gif?raw=true"
-              style="width: 100%"><br>
+            <!-- <img src="pubs/trackformer_output.gif" style="width: 75%"><br>
+                    <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOT17-03-SDP.gif" style="width: 75%"><br> -->
+            <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOTS20-07.gif" style="width: 80%"><br>
+            <img src="pubs/trackformer_concept.png" style="width: 80%"><br>
           </div>
         </div>
         <div class="col-md-6">
           <div class="pub">
-            <div class="pubt">PyTorchVideo: A Deep Learning Library for Video Understanding</div>
-            <div class="puba">Haoqi Fan, Tullie Murrell, Heng Wang, Kalyan Vasudev Alwala, Yanghao Li, Yilei Li, Bo Xiong,
-              Nikhila Ravi, Meng Li,
-              Haichuan Yang, Jitendra Malik, Ross Girshick, Matt Feiszli, Aaron Adcock, Wan-Yen Lo, <b>Christoph
-                Feichtenhofer</b>
-            </div>
-            <div class="pubv">Proceedings of the 29th ACM International Conference on Multimedia, 2021</div>
+            <div class="pubt">TrackFormer: Multi-Object Tracking with Transformers</div>
+            <div class="puba"> Tim Meinhardt, Alexander Kirillov, Laura Leal-Taixé, <b>Christoph Feichtenhofer</b></div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022</div>
             <div class="pubd">
-              We introduce PyTorchVideo, an open-source deep-learning library that provides a rich set of modular,
-              efficient, and
-              reproducible components for a variety of video understanding tasks, including classification, detection,
-              self-supervised
-              learning, and low-level processing. The library covers a full stack of video understanding tools including
-              multimodal
-              data loading, transformations, and models that reproduce state-of-the-art performance. PyTorchVideo further
-              supports
-              hardware acceleration that enables real-time inference on mobile devices. The library is based on PyTorch and
-              can be
-              used by any training framework; for example, PyTorchLightning, PySlowFast, or Classy Vision.
+              We present TrackFormer, an end-to-end multi-object tracking and segmentation model based on an encoder-decoder
+              Transformer architecture. Our approach introduces track query embeddings which follow objects through a video
+              sequence
+              in an autoregressive fashion. New track queries are spawned by the DETR object detector and embed the position
+              of their
+              corresponding object over time. The Transformer decoder adjusts track query embeddings from frame to frame,
+              thereby
+              following the changing object positions. TrackFormer achieves a seamless data association between frames in a
+              new
+              tracking-by-attention paradigm by self- and encoder-decoder attention mechanisms which simultaneously reason
+              about
+              location, occlusion, and object identity. TrackFormer yields state-of-the-art performance on the tasks of
+              multi-object
+              tracking (MOT17) and segmentation (MOTS20). We hope our unified way of performing detection and tracking will
+              foster
+              future research in multi-object tracking and video understanding.
             </div>
             <div class="publ">
               <ul>
-                <li><a href="https://dl.acm.org/doi/abs/10.1145/3474085.3478329">arXiv</a></li>
-                <li><a href="https://github.com/facebookresearch/pytorchvideo">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/pytorchvideo?style=social"></a></li>
-                <li><a href="https://pytorchvideo.org/">website</a></li>
+                <li><a href="https://arxiv.org/abs/2101.02702">arXiv</a></li>
+                <li><a href="https://github.com/timmeinhardt/trackformer">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/timmeinhardt/trackformer?style=social"></a></li>
               </ul>
             </div>
           </div>
@@ -884,7 +885,49 @@
         </div>
       </div>
     </div>
-
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="pubs/pytorchvide.png" style="width: 100%"><br> <br> <br>
+            <img src="https://github.com/facebookresearch/pytorchvideo/blob/main/.github/media/ava_slowfast.gif?raw=true"
+              style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">PyTorchVideo: A Deep Learning Library for Video Understanding</div>
+            <div class="puba">Haoqi Fan, Tullie Murrell, Heng Wang, Kalyan Vasudev Alwala, Yanghao Li, Yilei Li, Bo Xiong,
+              Nikhila Ravi, Meng Li,
+              Haichuan Yang, Jitendra Malik, Ross Girshick, Matt Feiszli, Aaron Adcock, Wan-Yen Lo, <b>Christoph
+                Feichtenhofer</b>
+            </div>
+            <div class="pubv">Proceedings of the 29th ACM International Conference on Multimedia, 2021</div>
+            <div class="pubd">
+              We introduce PyTorchVideo, an open-source deep-learning library that provides a rich set of modular,
+              efficient, and
+              reproducible components for a variety of video understanding tasks, including classification, detection,
+              self-supervised
+              learning, and low-level processing. The library covers a full stack of video understanding tools including
+              multimodal
+              data loading, transformations, and models that reproduce state-of-the-art performance. PyTorchVideo further
+              supports
+              hardware acceleration that enables real-time inference on mobile devices. The library is based on PyTorch and
+              can be
+              used by any training framework; for example, PyTorchLightning, PySlowFast, or Classy Vision.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://dl.acm.org/doi/abs/10.1145/3474085.3478329">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/pytorchvideo">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/pytorchvideo?style=social"></a></li>
+                <li><a href="https://pytorchvideo.org/">website</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
@@ -991,50 +1034,6 @@
             <div class="publ">
               <ul>
                 <li><a href="https://arxiv.org/abs/2104.00682">arXiv</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <!-- <img src="pubs/trackformer_output.gif" style="width: 75%"><br>
-                <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOT17-03-SDP.gif" style="width: 75%"><br> -->
-            <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOTS20-07.gif" style="width: 80%"><br>
-            <img src="pubs/trackformer_concept.png" style="width: 80%"><br>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">TrackFormer: Multi-Object Tracking with Transformers</div>
-            <div class="puba"> Tim Meinhardt, Alexander Kirillov, Laura Leal-Taixé, <b>Christoph Feichtenhofer</b></div>
-            <div class="pubv">Technical report, arXiv, January 2021</div>
-            <div class="pubd">
-              We present TrackFormer, an end-to-end multi-object tracking and segmentation model based on an encoder-decoder
-              Transformer architecture. Our approach introduces track query embeddings which follow objects through a video
-              sequence
-              in an autoregressive fashion. New track queries are spawned by the DETR object detector and embed the position
-              of their
-              corresponding object over time. The Transformer decoder adjusts track query embeddings from frame to frame,
-              thereby
-              following the changing object positions. TrackFormer achieves a seamless data association between frames in a
-              new
-              tracking-by-attention paradigm by self- and encoder-decoder attention mechanisms which simultaneously reason
-              about
-              location, occlusion, and object identity. TrackFormer yields state-of-the-art performance on the tasks of
-              multi-object
-              tracking (MOT17) and segmentation (MOTS20). We hope our unified way of performing detection and tracking will
-              foster
-              future research in multi-object tracking and video understanding.
-            </div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://arxiv.org/abs/2101.02702">arXiv</a></li>
-                <li><a href="https://github.com/timmeinhardt/trackformer">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/timmeinhardt/trackformer?style=social"></a></li>
               </ul>
             </div>
           </div>
