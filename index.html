@@ -82,6 +82,45 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
+            <img src="pubs/hiera_concept.jpg" style="width: 100%"><br><br>
+            <img src="pubs/hiera_output.jpg" style="width: 100%">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Hiera: A Hierarchical Vision Transformer without the Bells-and-Whistles</div>
+            <div class="puba">
+                Chaitanya Ryali<sup>*</sup>, Yuan-Ting Hu<sup>*</sup>, Daniel Bolya<sup>*</sup>, Chen Wei, Haoqi Fan, Po-Yao Huang, Vaibhav Aggarwal, Arkabandhu Chowdhury,
+                Omid Poursaeed, Judy Hoffman, Jitendra Malik, Yanghao Li<sup>*</sup>, Christoph Feichtenhofer<sup>*</sup>
+              <br> <sup>*</sup>equal contribution
+            </div>
+            <div class="pubv">International Conference on Machine Learning (ICML) 2023, Oral </div>
+            <div class="pubd">
+              Modern hierarchical vision transformers have added several vision-specific components in the pursuit of supervised
+              classification performance. While these components lead to effective accuracies and attractive FLOP counts, the added
+              complexity actually makes these transformers slower than their vanilla ViT counterparts. In this paper, we argue that
+              this additional bulk is unnecessary. By pretraining with a strong visual pretext task (MAE), we can strip out all the
+              bells-and-whistles from a state-of-the-art multi-stage vision transformer without losing accuracy. In the process, we
+              create Hiera, an extremely simple hierarchical vision transformer that is more accurate than previous models while being
+              significantly faster both at inference and during training. We evaluate Hiera on a variety of tasks for image and video
+              recognition.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2306.00989">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/hiera">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
             <img src="pubs/flip_concept.png" style="width: 60%"><br><br>
             <img src="pubs/flip_output.png" style="width: 60%">
           </div>
@@ -289,48 +328,6 @@
         </div>
       </div>
     </div>
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <br> <br>
-            <img src="pubs/rev_concept.png" style="width: 50%">
-            <!-- <img src="pubs/rev_output.png" style="width: 80%"><br> -->
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Reversible Vision Transformers</div>
-            <div class="puba">Karttikeya Mangalam<sup>*</sup>, Haoqi Fan, Yanghao Li, Chao-Yuan Wu, Bo Xiong, <b>Christoph Feichtenhofer</b><sup>*</sup>, Jitendra Malik
-                <br> <sup>*</sup>equal technical contribution
-            </div>
-            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022 (Oral)</div>
-            <div class="pubd">
-              We present Reversible Vision Transformers, a memory efficient architecture design for visual recognition. By decoupling
-              the GPU memory footprint from the depth of the model, Reversible Vision Transformers enable memory efficient scaling of
-              transformer architectures. We adapt two popular models, namely Vision Transformer and Multi-scale Vision Transformers,
-              to reversible variants and benchmark extensively across both model sizes and tasks of image classification, object
-              detection and video classification. Reversible Vision Transformers achieve a reduced memory footprint of up to 15.5x at
-              identical model complexity, parameters and accuracy, demonstrating the promise of reversible vision transformers as an
-              efficient backbone for resource limited training regimes. Finally, we find that the additional computational burden of
-              recomputing activations is more than overcome for deeper models, where throughput can increase up to 3.9x over their
-              non-reversible counterparts.
-            </div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://arxiv.org/abs/2302.04869">arXiv</a></li>
-                <li><a href="https://karttikeya.github.io/publication/revvit/"">website</a></li>
-                <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
-                <li><a href="https://github.com/karttikeya/minREV">min code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/karttikeya/minREV?style=social"></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
 
@@ -735,6 +732,56 @@
                 <li><a href="https://arxiv.org/abs/2112.01526">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/mvit">code<img alt="GitHub stars"
                       src="https://img.shields.io/github/stars/facebookresearch/mvit?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/rev_concept.png" style="width: 50%">
+            <!-- <img src="pubs/rev_output.png" style="width: 80%"><br> -->
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Reversible Vision Transformers</div>
+            <div class="puba">Karttikeya Mangalam<sup>*</sup>, Haoqi Fan, Yanghao Li, Chao-Yuan Wu, Bo Xiong, <b>Christoph
+                Feichtenhofer</b><sup>*</sup>, Jitendra Malik
+              <br> <sup>*</sup>equal technical contribution
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022 (Oral)</div>
+            <div class="pubd">
+              We present Reversible Vision Transformers, a memory efficient architecture design for visual recognition. By
+              decoupling
+              the GPU memory footprint from the depth of the model, Reversible Vision Transformers enable memory efficient
+              scaling of
+              transformer architectures. We adapt two popular models, namely Vision Transformer and Multi-scale Vision
+              Transformers,
+              to reversible variants and benchmark extensively across both model sizes and tasks of image classification,
+              object
+              detection and video classification. Reversible Vision Transformers achieve a reduced memory footprint of up to
+              15.5x at
+              identical model complexity, parameters and accuracy, demonstrating the promise of reversible vision
+              transformers as an
+              efficient backbone for resource limited training regimes. Finally, we find that the additional computational
+              burden of
+              recomputing activations is more than overcome for deeper models, where throughput can increase up to 3.9x over
+              their
+              non-reversible counterparts.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2302.04869">arXiv</a></li>
+                <li><a href="https://karttikeya.github.io/publication/revvit/"">website</a></li>
+                    <li><a href=" https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                <li><a href="https://github.com/karttikeya/minREV">min code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/karttikeya/minREV?style=social"></a></li>
               </ul>
             </div>
           </div>
