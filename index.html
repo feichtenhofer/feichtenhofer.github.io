@@ -1,5 +1,5 @@
-<!--template source: https://github.com/daviddao/daviddao.github.io-->
 <!DOCTYPE html>
+<!--template source: https://github.com/daviddao/daviddao.github.io-->
 <html lang="en">
 
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -38,14 +38,14 @@
     <div id="headertext">
       <div id="htname" style="color:white">Christoph Feichtenhofer</div>
       <div id="htdesc" style="color:white">Research Scientist, Manager</div>
-	  <div id="htdesc" style="color:white">Meta AI, FAIR</div>
+	    <div id="htdesc" style="color:white">Meta AI, FAIR</div>
       <div id="htem" style="color:white">feichtenhofer _at_ meta.com</div>
-	</div>
+	  </div>
       <div id="icons">
         <div class="svgico">
           <a href="https://github.com/feichtenhofer"><img src="./img/octocat.svg" width="45px"></a>
-		</div>
-	   <div class="svgico">
+		    </div>
+	      <div class="svgico">
           <a href="http://linkedin.com/in/christoph-feichtenhofer-549433a1"><img src="./img/linkedin.svg" width="48px"></a>
         </div>
         <div class="svgico">
@@ -53,8 +53,6 @@
         </div>
       </div>
     </div>
-  </div>
-
 <br><br>
 
 <!--
@@ -73,7 +71,6 @@
     </a>
   </span> </h3>
 </div>
-
 
 <div class="container">
   <div id="pubs">
@@ -110,43 +107,6 @@
                 <li><a href="https://arxiv.org/abs/2306.00989">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/hiera">code<img alt="GitHub stars"
                       src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social"></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <br> <br>
-            <img src="pubs/flip_concept.png" style="width: 60%"><br><br>
-            <img src="pubs/flip_output.png" style="width: 60%">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Scaling Language-Image Pre-training via Masking</div>
-            <div class="puba"> Yanghao Li<sup>*</sup>, Haoqi Fan<sup>*</sup>, Ronghang Hu<sup>*</sup>, <b>Christoph Feichtenhofer</b><sup>&#8225;</sup>, Kaiming He<sup>&#8225;</sup>
-              <br> <sup>*</sup>equal technical contribution, <sup>&#8225;</sup>equal advising
-            </div>
-            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2023 </div>
-            <div class="pubd">
-              We present Fast Language-Image Pre-training (FLIP), a simple and more efficient method for training CLIP. Our method
-              randomly masks out and removes a large portion of image patches during training. Masking allows us to learn from more
-              image-text pairs given the same wall-clock time and contrast more samples per iteration with similar memory footprint.
-              It leads to a favorable trade-off between accuracy and training time. In our experiments on 400 million image-text
-              pairs, FLIP improves both accuracy and speed over the no-masking baseline. On a large diversity of downstream tasks,
-              FLIP dominantly outperforms the CLIP counterparts trained on the same data. Facilitated by the speedup, we explore the
-              scaling behavior of increasing the model size, data size, or training length, and report encouraging results and
-              comparisons. We hope that our work will foster future research on scaling vision-language learning.
-            </div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://arxiv.org/abs/2212.00794">arXiv</a></li>
-                <li><a href="https://github.com/facebookresearch/flip">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/flip?style=social"></a></li>
               </ul>
             </div>
           </div>
@@ -199,6 +159,64 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
+            <br> <br><br>
+            <div class="column has-text-centered">
+                <img src="pubs/diffmae_1.gif">
+                <table width="100%">
+                  <tr>
+                    <td width="33.3%">ground-truth</td>
+                    <td width="33.3%"><span class="diffmae">DiffMAE</span></td>
+                    <td width="33.3">MAE</td>
+                  </tr>
+                </table>
+            </div>
+            <!-- <div class="column has-text-centered">
+              <img src="pubs/diffmae_video.gif" width="95%" height="95%">
+
+              <table width="100%">
+                <tr>
+                  <td width="33.3%">ground-truth</td>
+                  <td width="33.3%">inputs</td>
+                  <td width="33.3"><span class="diffmae">DiffMAE</span></td>
+                </tr>
+              </table>
+            </div> -->
+          </div>
+        </div>
+        <div class="pubwrap">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="pub">
+                <div class="pubt">Diffusion Models as Masked Autoencoders</div>
+                <div class="puba">Chen Wei, Karttikeya Mangalam, Po-Yao Huang, Yanghao Li, Haoqi Fan, Hu Xu, Huiyu Wang, Cihang Xie, Alan Yuille, <b>Christoph Feichtenhofer</b>
+                </div>
+                <div class="pubv">International Conference on Computer Vision (ICCV) 2023</div>
+                <div class="pubd">
+                  There has been a longstanding belief that generation can facilitate a true understanding of visual data. In line with
+                  this, we revisit generatively pre-training visual representations in light of recent interest in denoising diffusion
+                  models. While directly pre-training with diffusion models does not produce strong representations, we condition
+                  diffusion models on masked input and formulate diffusion models as masked autoencoders (DiffMAE). Our approach is
+                  capable of (i) serving as a strong initialization for downstream recognition tasks, (ii) conducting high-quality image
+                  inpainting, and (iii) being effortlessly extended to video where it produces state-of-the-art classification accuracy.
+                  We further perform a comprehensive study on the pros and cons of design choices and build connections between diffusion
+                  models and masked autoencoders.
+                </div>
+                <div class="publ">
+                  <ul>
+                    <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
+                    <li><a href="https://weichen582.github.io/diffmae.html">website</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
             <br> <br>
             <img src="pubs/cit_concept.png" style="width: 100%"><br> <br> <br>
           </div>
@@ -209,25 +227,17 @@
             <div class="puba">Hu Xu, Saining Xie, Po-Yao Huang, Licheng Yu, Russell Howes, Gargi Ghosh, Luke Zettlemoyer,
               <b>Christoph Feichtenhofer</b>
             </div>
-            <div class="pubv">arXiv, 2023</div>
+            <div class="pubv">International Conference on Computer Vision (ICCV) 2023</div>
             <div class="pubd">
-              Large vision-language models are generally applicable to many downstream tasks, but come at an exorbitant
-              training cost
-              that only large institutions can afford. This paper trades generality for efficiency and presents Curation in
-              Training
+              Large vision-language models are generally applicable to many downstream tasks, but come at an exorbitant training cost
+              that only large institutions can afford. This paper trades generality for efficiency and presents Curation in Training
               (CiT), a simple and efficient vision-text learning algorithm that couples a data objective into training. CiT
-              automatically yields quality data to speed-up contrastive image-text training and alleviates the need for an
-              offline
-              data filtering pipeline, allowing broad data sources (including raw image-text pairs from the web). CiT
-              contains two
-              loops: an outer loop curating the training data and an inner loop consuming the curated training data. The
-              text encoder
-              connects the two loops. Given metadata for tasks of interest, e.g., class names, and a large pool of
-              image-text pairs,
-              CiT alternatively selects relevant training data from the pool by measuring the similarity of their text
-              embeddings and
-              embeddings of the metadata. In our experiments, we observe that CiT can speed up training by over an order of
-              magnitude,
+              automatically yields quality data to speed-up contrastive image-text training and alleviates the need for an offline
+              data filtering pipeline, allowing broad data sources (including raw image-text pairs from the web). CiT contains two
+              loops: an outer loop curating the training data and an inner loop consuming the curated training data. The text encoder
+              connects the two loops. Given metadata for tasks of interest, e.g., class names, and a large pool of image-text pairs,
+              CiT alternatively selects relevant training data from the pool by measuring the similarity of their text embeddings and
+              embeddings of the metadata. In our experiments, we observe that CiT can speed up training by over an order of magnitude,
               especially if the raw data size is large.
             </div>
             <div class="publ">
@@ -241,103 +251,12 @@
         </div>
       </div>
     </div>
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <br> <br>
-            <img src="pubs/mcc_concept.jpg" style="width: 100%"><br> <br> <br>
-            <img src="pubs/mcc_quest_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_quest_2.gif" style="height:130px; vertical-align:top">
-            <img src="pubs/mcc_spyro_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_spyro_2.gif" style="height:130px; vertical-align:top"><br>
-            <img src="pubs/mcc_chair_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_chair_2.gif"
-              style="height:130px; vertical-align:top">
-            <img src="pubs/mcc_plant_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_plant_2.gif"
-              style="height:130px; vertical-align:top"><br>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Multiview Compressive Coding for 3D Reconstruction</div>
-            <div class="puba">Chao-Yuan Wu, Justin Johnson, Jitendra Malik, <b>Christoph Feichtenhofer</b>, Georgia Gkioxari
-            </div>
-            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2023 </div>
-            <div class="pubd">
-              A central goal of visual recognition is to understand objects and scenes from
-              a single image. 2D recognition has witnessed tremendous progress thanks to
-              large-scale learning and general-purpose representations. Comparatively, 3D
-              poses new challenges stemming from occlusions not depicted in the image. Prior
-              works try to overcome these by inferring from multiple views or rely on scarce
-              CAD models and category-specific priors which hinder scaling to novel settings.
-              In this work, we explore single-view 3D reconstruction by learning
-              generalizable representations inspired by advances in self-supervised learning.
-              We introduce a simple framework that operates on 3D points of single objects or
-              whole scenes coupled with category-agnostic large-scale training from diverse
-              RGB-D videos. Our model, Multiview Compressive Coding (MCC), learns to compress
-              the input appearance and geometry to predict the 3D structure by querying a
-              3D-aware decoder. MCC&#39;s generality and efficiency allow it to learn from
-              large-scale and diverse data sources with strong generalization to novel
-              objects imagined by DALL-E 2 or captured in-the-wild with an iPhone.
-            </div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://arxiv.org/abs/2301.08247">arXiv</a></li>
-                <li><a href="https://mcc3d.github.io/"">website</a></li>
-                <li><a href="https://github.com/facebookresearch/MCC">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/MCC?style=social"></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <br> <br>
-            <img src="pubs/tome_concept.png" style="width: 100%"><br> <br> <br>
-            <img src="pubs/tome_output.gif" style="width: 100%"><br>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Token Merging: Your ViT But Faster</div>
-            <div class="puba"> Daniel Bolya, Cheng-Yang Fu, Xiaoliang Dai, Peizhao Zhang, <b>Christoph Feichtenhofer</b>, Judy Hoffman
-            </div>
-            <div class="pubv">International Conference on Learning Representations (ICLR) 2023, Oral</div>
-            <div class="pubd">
-              We introduce Token Merging (ToMe), a simple method to increase the throughput of existing ViT models without needing to
-              train. ToMe gradually combines similar tokens in a transformer using a general and light-weight matching algorithm that
-              is as fast as pruning while being more accurate. Off-the-shelf, ToMe can 2x the throughput of state-of-the-art ViT-L @
-              512 and ViT-H @ 518 models on images and 2.2x the throughput of ViT-L on video with only a 0.2-0.3% accuracy drop in
-              each case. ToMe can also easily be applied during training, improving in practice training speed up to 2x for MAE
-              fine-tuning on video. Training with ToMe further minimizes accuracy drop, leading to 2x the throughput of ViT-B on audio
-              for only a 0.4% mAP drop. Qualitatively, we find that ToMe merges object parts into one token, even over multiple frames
-              of video. Overall, ToMe's accuracy and speed are competitive with state-of-the-art on images, video, and audio.
-            </div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://arxiv.org/abs/2210.09461">arXiv</a></li>
-                <li><a href="https://research.facebook.com/blog/2023/2/token-merging-your-vit-but-faster/">Meta AI
-                    blog</a></li>
-                <li><a href="https://github.com/facebookresearch/ToMe">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/ToMe?style=social"></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
-
-
-
 
 <div class="container quote2">
   <h3>Timeline</h3>
 </div>
-
 <div class="container">
   <div id="timeline">
     <div class="timelineitem">
@@ -388,15 +307,34 @@
 </div>
 
 <div class="container">
-  <h2>News & Highlights </h2>
+  <h2>News &amp; Highlights </h2>
+  <div class="pubwrap">
+    <div class="ttitle">I am honored to have received the <a href="https://tc.computer.org/tcpami/2022/08/22/pami-young-researcher-award"> PAMI Young Researcher Award</a> 2023 </div>
+  </div>
+  <div class="pubwrap">
+    <div class="ttitle"> At ICCV 2023, we organize a tutorial on <a
+        href="https://feichtenhofer.github.io/iccv2023-ssl-tutorial/">
+        Self-Supervised Representation Learning in Computer Vision</a> and I am an invited speaker at the <a href="https://sites.google.com/view/nivt-iccv2023/"> New Ideas in Vision Transformers
+ Workshop</a>.
+    </div>
+  </div>
+  <div class="pubwrap">
+    <div class="ttitle"> 1 / 1 and 3 / 3 submissions accepted to ICML and ICCV 2023</div>
+  </div>
+  <div class="pubwrap">
+    <div class="ttitle"> At ICML 2023, we organize a tutorial on <a
+        href="https://icml.cc/virtual/2023/events/tutorial">
+        Self-Supervised Learning in Vision: from Research Advances to Best Practices</a>
+    </div>
+  </div>
   <div class="pubwrap">
     <div class="ttitle"> I am an Area Chair for CVPR, ICCV, BMVC and NeurIPS in 2023 </div>
   </div>
   <div class="pubwrap">
     <div class="ttitle"> At ECCV 2022, we organize a tutorial on <a href="https://feichtenhofer.github.io/eccv2022-ssl-tutorial/">
         Self-Supervised Representation Learning in Computer Vision</a>,
-       I will serve as invited speaker for the <a
-        href="https://ego4d-data.org/workshops/eccv22/"> Ego4D Workshop</a> and I'll be a Mentor for the <a href="https://www.latinxinai.org/eccv-2022">LatinX in CV Workshop</a>.
+       I am an invited speaker at the <a
+        href="https://ego4d-data.org/workshops/eccv22/"> Ego4D Workshop</a> and a Mentor at the <a href="https://www.latinxinai.org/eccv-2022">LatinX in CV Workshop</a>.
     </div>
   </div>
   <div class="pubwrap">
@@ -409,7 +347,7 @@
   <div class="pubwrap">
   <div class="ttitle"> At ICCV 2021, we organize a tutorial on <a
       href="https://sites.google.com/view/effvideo-2021/"> Efficient Video Understanding: State-of-the-art, Challenges, and Opportunities</a>
-    and I'll be a Mentor for the <a href="https://iccv2021.thecvf.com/doctoral-consortium">Doctoral Consortium</a> & <a href="https://iccv2021.thecvf.com/networking-sessions"> Social Events </a> </div>
+    and I'll be a Mentor for the <a href="https://iccv2021.thecvf.com/doctoral-consortium">Doctoral Consortium</a> &amp; <a href="https://iccv2021.thecvf.com/networking-sessions"> Social Events </a> </div>
   </div>
   <div class="pubwrap">
     <div class="ttitle"> We released <a href="https://pytorchvideo.org/">PyTorchVideo</a>  - a deep learning library for video research and applications </div>
@@ -424,7 +362,7 @@
     <div class="ttitle"> At CVPR 2020, we organize a tutorial on <a
         href="http://s9xie.github.io/Tutorials/CVPR2020/"> Images, Video, and 3D</a>,
         and I will serve as invited speaker for the <a href="https://holistic-video-understanding.github.io/tutorials/cvpr2020.html"> Large Scale Holistic Video Understanding Tutorial</a>,
-      the <a href="http://activity-net.org/challenges/2020/">International Challenge on Activity Recognition (ActivityNet)</a>, and the <a href="https://languageandvision.github.io/"> Language & Vision with applications to Video Understanding</a> workshop.
+      the <a href="http://activity-net.org/challenges/2020/">International Challenge on Activity Recognition (ActivityNet)</a>, and the <a href="https://languageandvision.github.io/"> Language &amp; Vision with applications to Video Understanding</a> workshop.
     </div>
   </div>
   <div class="pubwrap">
@@ -510,6 +448,149 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
+            <br> <br>
+            <img src="pubs/flip_concept.png" style="width: 60%"><br><br>
+            <img src="pubs/flip_output.png" style="width: 60%">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Scaling Language-Image Pre-training via Masking</div>
+            <div class="puba"> Yanghao Li<sup>*</sup>, Haoqi Fan<sup>*</sup>, Ronghang Hu<sup>*</sup>, <b>Christoph
+                Feichtenhofer</b><sup>&#8225;</sup>, Kaiming He<sup>&#8225;</sup>
+              <br> <sup>*</sup>equal technical contribution, <sup>&#8225;</sup>equal advising
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2023 </div>
+            <div class="pubd">
+              We present Fast Language-Image Pre-training (FLIP), a simple and more efficient method for training CLIP. Our
+              method
+              randomly masks out and removes a large portion of image patches during training. Masking allows us to learn
+              from more
+              image-text pairs given the same wall-clock time and contrast more samples per iteration with similar memory
+              footprint.
+              It leads to a favorable trade-off between accuracy and training time. In our experiments on 400 million
+              image-text
+              pairs, FLIP improves both accuracy and speed over the no-masking baseline. On a large diversity of downstream
+              tasks,
+              FLIP dominantly outperforms the CLIP counterparts trained on the same data. Facilitated by the speedup, we
+              explore the
+              scaling behavior of increasing the model size, data size, or training length, and report encouraging results
+              and
+              comparisons. We hope that our work will foster future research on scaling vision-language learning.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2212.00794">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/flip">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/flip?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/mcc_concept.jpg" style="width: 100%"><br> <br> <br>
+            <img src="pubs/mcc_quest_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_quest_2.gif"
+              style="height:130px; vertical-align:top">
+            <img src="pubs/mcc_spyro_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_spyro_2.gif"
+              style="height:130px; vertical-align:top"><br>
+            <img src="pubs/mcc_chair_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_chair_2.gif"
+              style="height:130px; vertical-align:top">
+            <img src="pubs/mcc_plant_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_plant_2.gif"
+              style="height:130px; vertical-align:top"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Multiview Compressive Coding for 3D Reconstruction</div>
+            <div class="puba">Chao-Yuan Wu, Justin Johnson, Jitendra Malik, <b>Christoph Feichtenhofer</b>, Georgia Gkioxari
+            </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2023 </div>
+            <div class="pubd">
+              A central goal of visual recognition is to understand objects and scenes from
+              a single image. 2D recognition has witnessed tremendous progress thanks to
+              large-scale learning and general-purpose representations. Comparatively, 3D
+              poses new challenges stemming from occlusions not depicted in the image. Prior
+              works try to overcome these by inferring from multiple views or rely on scarce
+              CAD models and category-specific priors which hinder scaling to novel settings.
+              In this work, we explore single-view 3D reconstruction by learning
+              generalizable representations inspired by advances in self-supervised learning.
+              We introduce a simple framework that operates on 3D points of single objects or
+              whole scenes coupled with category-agnostic large-scale training from diverse
+              RGB-D videos. Our model, Multiview Compressive Coding (MCC), learns to compress
+              the input appearance and geometry to predict the 3D structure by querying a
+              3D-aware decoder. MCC&#39;s generality and efficiency allow it to learn from
+              large-scale and diverse data sources with strong generalization to novel
+              objects imagined by DALL-E 2 or captured in-the-wild with an iPhone.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2301.08247">arXiv</a></li>
+                <li><a href="https://mcc3d.github.io/">website</a></li>
+                    <li><a href=" https://github.com/facebookresearch/MCC">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/MCC?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/tome_concept.png" style="width: 100%"><br> <br> <br>
+            <img src="pubs/tome_output.gif" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Token Merging: Your ViT But Faster</div>
+            <div class="puba"> Daniel Bolya, Cheng-Yang Fu, Xiaoliang Dai, Peizhao Zhang, <b>Christoph Feichtenhofer</b>,
+              Judy Hoffman
+            </div>
+            <div class="pubv">International Conference on Learning Representations (ICLR) 2023, Oral</div>
+            <div class="pubd">
+              We introduce Token Merging (ToMe), a simple method to increase the throughput of existing ViT models without
+              needing to
+              train. ToMe gradually combines similar tokens in a transformer using a general and light-weight matching
+              algorithm that
+              is as fast as pruning while being more accurate. Off-the-shelf, ToMe can 2x the throughput of state-of-the-art
+              ViT-L @
+              512 and ViT-H @ 518 models on images and 2.2x the throughput of ViT-L on video with only a 0.2-0.3% accuracy
+              drop in
+              each case. ToMe can also easily be applied during training, improving in practice training speed up to 2x for
+              MAE
+              fine-tuning on video. Training with ToMe further minimizes accuracy drop, leading to 2x the throughput of
+              ViT-B on audio
+              for only a 0.4% mAP drop. Qualitatively, we find that ToMe merges object parts into one token, even over
+              multiple frames
+              of video. Overall, ToMe's accuracy and speed are competitive with state-of-the-art on images, video, and
+              audio.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2210.09461">arXiv</a></li>
+                <li><a href="https://research.facebook.com/blog/2023/2/token-merging-your-vit-but-faster/">Meta AI
+                    blog</a></li>
+                <li><a href="https://github.com/facebookresearch/ToMe">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/ToMe?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
             <img src="pubs/mae_concept.jpg" style="width: 100%"><br> <br> <br>
             <img src="pubs/vis_14_2.gif" style="width: 100%"><br> <br> <br>
           </div>
@@ -549,7 +630,7 @@
                       alt="GitHub stars"
                       src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
                 <div class="pubaw">PyTorch code has been open sourced in <a
-                    href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
+                    href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> &amp; <a
                     href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
               </ul>
             </div>
@@ -640,7 +721,7 @@
                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
                       src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
                 <div class="pubaw">PyTorch code will be open sourced in <a
-                    href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
+                    href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> &amp; <a
                     href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
               </ul>
             </div>
@@ -777,7 +858,7 @@
             <div class="publ">
               <ul>
                 <li><a href="https://arxiv.org/abs/2302.04869">arXiv</a></li>
-                <li><a href="https://karttikeya.github.io/publication/revvit/"">website</a></li>
+                <li><a href="https://karttikeya.github.io/publication/revvit/">website</a></li>
                     <li><a href=" https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
                       src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
                 <li><a href="https://github.com/karttikeya/minREV">min code<img alt="GitHub stars"
@@ -2054,7 +2135,6 @@
   <div class="pubwrap">
     <div class="pubt">Image and Video Understanding (2014-2017, together with Prof. Axel Pinz)</div>
       <img src="./pubs/teaching/dynamic_scene_understanding.png" >
-    </a>
 	<h4>My Lectures cover</h4>
     <div class="pubd"><a href="pubs/teaching/IVU_Convolutional_Filtering_and_Thinking_in_Frequency.pdf">Convolutional Filtering and Thinking in Frequency (2014)</a> </div>
     <div class="pubd"><a href="pubs/teaching/IVU_Convolutional_Networks_and_Video_Representations.pdf">Convolutional Networks and Video Representations (2014)</a> </div>
@@ -2076,7 +2156,7 @@
   <h2>Student Supervision</h2>
 
 	<div class="pubd">
-    <p>Stefan Ainetter, 2018 (MSc; now at  <a href="https://www.tugraz.at/">TU Graz</a>):		<b>	Evaluation of Spatiotemporal GANs</b>
+    <p>Stefan Ainetter, 2018 (MSc; now at  <a href="https://www.tugraz.at/">TU Graz</a>):		<b>	Evaluation of Spatiotemporal GANs</b> </p>
 		<p>Moritz Kampelmuehler, 2017 (MSc; now at  <a href="https://www.tugraz.at/">TU Graz</a>):		<b>	Camera-based Vehicle Velocity Estimation </b>  </p>
 		<p>Horst Fuchs, 2017 (MSc; now at <a href="https://www.oxbotica.com/">Oxbotica</a>):				<b>Visualizing and Understanding Deep Driving Models </b>  </p>
 		<p>Gerhard Neuhold, 2015 (MSc; now at <a href="http://research.mapillary.com/">Mapillary</a>):	<b>Pedestrian Detection with Convolutional Neural Networks </b>  </p>
