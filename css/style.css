@@ -36,9 +36,11 @@ background-image: linear-gradient(to top, white 0%, #3b5998 0%);
   border: 4px solid white;
   /* box-shadow: #AAA 0px 0px 4px 0px; */
   float: left;
+  margin-right: 20px;
+  margin-top: -20px;
 }
 #htname {
-  font-size: 46px;
+  font-size: 42px;
   font-weight: 400;
   margin-left: 20px;
 }
