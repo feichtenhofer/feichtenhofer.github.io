@@ -84,9 +84,9 @@
             <div class="pubt">Demystifying CLIP Data</div>
             <div class="puba">
               Hu Xu, Saining Xie, Xiaoqing Ellen Tan, Po-Yao Huang, Russell Howes, Vasu Sharma, Shang-Wen Li, Gargi Ghosh, Luke
-              Zettlemoyer, Christoph Feichtenhofer
+              Zettlemoyer, <b>Christoph Feichtenhofer</b>
             </div>
-            <div class="pubv">arXiv 2023 </div>
+            <div class="pubv">International Conference on Learning Representations (ICLR) 2024, Spotlight</div>
             <div class="pubd">Contrastive Language-Image Pre-training (CLIP) is an approach that has advanced research and applications in computer
             vision, fueling modern recognition systems and generative models. We believe that the main ingredient to the success of
             CLIP is its data and not the model architecture or pre-training objective. However, CLIP only provides very limited
@@ -116,32 +116,29 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/hiera_concept.jpg" style="width: 100%"><br><br>
-            <img src="pubs/hiera_output.jpg" style="width: 100%">
+            <img src="pubs/windowpos.png" style="width: 95%"><br>
+            <img src="pubs/windowpos2.png" style="width: 70%">
           </div>
         </div>
         <div class="col-md-6">
           <div class="pub">
-            <div class="pubt">Hiera: A Hierarchical Vision Transformer without the Bells-and-Whistles</div>
+            <div class="pubt">Window Attention is Bugged: How not to Interpolate Position Embeddings</div>
             <div class="puba">
-                Chaitanya Ryali<sup>*</sup>, Yuan-Ting Hu<sup>*</sup>, Daniel Bolya<sup>*</sup>, Chen Wei, Haoqi Fan, Po-Yao Huang, Vaibhav Aggarwal, Arkabandhu Chowdhury,
-                Omid Poursaeed, Judy Hoffman, Jitendra Malik, Yanghao Li<sup>*</sup>, Christoph Feichtenhofer<sup>*</sup>
-              <br> <sup>*</sup>equal contribution
+              Daniel Bolya, Chaitanya Ryali, Judy Hoffman, <b>Christoph Feichtenhofer</b>
             </div>
-            <div class="pubv">International Conference on Machine Learning (ICML) 2023, Oral </div>
-            <div class="pubd">
-              Modern hierarchical vision transformers have added several vision-specific components in the pursuit of supervised
-              classification performance. While these components lead to effective accuracies and attractive FLOP counts, the added
-              complexity actually makes these transformers slower than their vanilla ViT counterparts. In this paper, we argue that
-              this additional bulk is unnecessary. By pretraining with a strong visual pretext task (MAE), we can strip out all the
-              bells-and-whistles from a state-of-the-art multi-stage vision transformer without losing accuracy. In the process, we
-              create Hiera, an extremely simple hierarchical vision transformer that is more accurate than previous models while being
-              significantly faster both at inference and during training. We evaluate Hiera on a variety of tasks for image and video
-              recognition.
+            <div class="pubv">International Conference on Learning Representations (ICLR) 2024</div>
+            <div class="pubd">Window attention, position embeddings, and high resolution finetuning are core concepts in the modern transformer era of
+            computer vision. However, we find that naively combining these near ubiquitous components can have a detrimental effect
+            on performance. The issue is simple: interpolating position embeddings while using window attention is wrong. We study
+            two state-of-the-art methods that have these three components, namely Hiera and ViTDet, and find that both do indeed
+            suffer from this bug. To fix it, we introduce a simple absolute window position embedding strategy, which solves the bug
+            outright in Hiera and allows us to increase both speed and performance of the model in ViTDet. We finally combine the
+            two to obtain HieraDet, which achieves 61.7 box mAP on COCO, making it state-of-the-art for models that only use
+            ImageNet-1k pretraining. This all stems from what is essentially a 3 line bug fix, which we name "absolute win".
             </div>
             <div class="publ">
               <ul>
-                <li><a href="https://arxiv.org/abs/2306.00989">arXiv</a></li>
+                <li><a href="https://arxiv.org/abs/2311.05613">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/hiera">code<img alt="GitHub stars"
                       src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social"></a></li>
               </ul>
@@ -150,146 +147,7 @@
         </div>
       </div>
     </div>
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <br> <br><br>
-            <img src="pubs/mavil.png" style="width: 100%"><br>
-            <img src="pubs/mavil_output.jpg" style="width: 100%"><br>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">MAViL: Masked Audio-Video Learners</div>
-            <div class="puba"> Po-Yao Huang, Vasu Sharma, Hu Xu, Chaitanya Ryali, Haoqi Fan, Yanghao Li, Shang-Wen Li, Gargi
-              Ghosh, Jitendra Malik,
-              <b>Christoph Feichtenhofer</b>
-            </div>
-            <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2023</div>
-            <div class="pubd">
-              We present Masked Audio-Video Learners (MAViL) to train audio-visual representations. Our approach learns with
-              three
-              complementary forms of self-supervision: (1) reconstruction of masked audio and video input data, (2) intra-
-              and
-              inter-modal contrastive learning with masking, and (3) self-training by reconstructing joint audio-video
-              contextualized
-              features learned from the first two objectives. Pre-training with MAViL not only enables the model to perform
-              well in
-              audio-visual classification and retrieval tasks but also improves representations of each modality in
-              isolation, without
-              using information from the other modality for fine-tuning or inference. Empirically, MAViL sets a new
-              state-of-the-art
-              on AudioSet (53.1 mAP) and VGGSound (67.1% accuracy). For the first time, a self-supervised audio-visual model
-              outperforms ones that use external supervision on these benchmarks.
-            </div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://arxiv.org/abs/2212.08071">arXiv</a></li>
-                <li><a href="https://github.com/facebookresearch/mavil">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/mavil?style=social"></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <br> <br><br>
-            <div class="column has-text-centered">
-                <img src="pubs/diffmae_1.gif">
-                <table width="100%">
-                  <tr>
-                    <td width="33.3%">ground-truth</td>
-                    <td width="33.3%"><span class="diffmae">DiffMAE</span></td>
-                    <td width="33.3">MAE</td>
-                  </tr>
-                </table>
-            </div>
-            <!-- <div class="column has-text-centered">
-              <img src="pubs/diffmae_video.gif" width="95%" height="95%">
 
-              <table width="100%">
-                <tr>
-                  <td width="33.3%">ground-truth</td>
-                  <td width="33.3%">inputs</td>
-                  <td width="33.3"><span class="diffmae">DiffMAE</span></td>
-                </tr>
-              </table>
-            </div> -->
-          </div>
-        </div>
-        <div class="pubwrap">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="pub">
-                <div class="pubt">Diffusion Models as Masked Autoencoders</div>
-                <div class="puba">Chen Wei, Karttikeya Mangalam, Po-Yao Huang, Yanghao Li, Haoqi Fan, Hu Xu, Huiyu Wang, Cihang Xie, Alan Yuille, <b>Christoph Feichtenhofer</b>
-                </div>
-                <div class="pubv">International Conference on Computer Vision (ICCV) 2023</div>
-                <div class="pubd">
-                  There has been a longstanding belief that generation can facilitate a true understanding of visual data. In line with
-                  this, we revisit generatively pre-training visual representations in light of recent interest in denoising diffusion
-                  models. While directly pre-training with diffusion models does not produce strong representations, we condition
-                  diffusion models on masked input and formulate diffusion models as masked autoencoders (DiffMAE). Our approach is
-                  capable of (i) serving as a strong initialization for downstream recognition tasks, (ii) conducting high-quality image
-                  inpainting, and (iii) being effortlessly extended to video where it produces state-of-the-art classification accuracy.
-                  We further perform a comprehensive study on the pros and cons of design choices and build connections between diffusion
-                  models and masked autoencoders.
-                </div>
-                <div class="publ">
-                  <ul>
-                    <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
-                    <li><a href="https://weichen582.github.io/diffmae.html">website</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <br> <br>
-            <img src="pubs/cit_concept.png" style="width: 100%"><br> <br> <br>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">CiT: Curation in Training for Effective Vision-Language Data</div>
-            <div class="puba">Hu Xu, Saining Xie, Po-Yao Huang, Licheng Yu, Russell Howes, Gargi Ghosh, Luke Zettlemoyer,
-              <b>Christoph Feichtenhofer</b>
-            </div>
-            <div class="pubv">International Conference on Computer Vision (ICCV) 2023</div>
-            <div class="pubd">
-              Large vision-language models are generally applicable to many downstream tasks, but come at an exorbitant training cost
-              that only large institutions can afford. This paper trades generality for efficiency and presents Curation in Training
-              (CiT), a simple and efficient vision-text learning algorithm that couples a data objective into training. CiT
-              automatically yields quality data to speed-up contrastive image-text training and alleviates the need for an offline
-              data filtering pipeline, allowing broad data sources (including raw image-text pairs from the web). CiT contains two
-              loops: an outer loop curating the training data and an inner loop consuming the curated training data. The text encoder
-              connects the two loops. Given metadata for tasks of interest, e.g., class names, and a large pool of image-text pairs,
-              CiT alternatively selects relevant training data from the pool by measuring the similarity of their text embeddings and
-              embeddings of the metadata. In our experiments, we observe that CiT can speed up training by over an order of magnitude,
-              especially if the raw data size is large.
-            </div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
-                <li><a href="https://github.com/facebookresearch/CiT">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/CiT?style=social"></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -501,6 +359,253 @@
     </a>
   </span> </h2>
   <div id="pubs">
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/hiera_concept.jpg" style="width: 100%"><br><br>
+            <img src="pubs/hiera_output.jpg" style="width: 100%">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Hiera: A Hierarchical Vision Transformer without the Bells-and-Whistles</div>
+            <div class="puba">
+              Chaitanya Ryali<sup>*</sup>, Yuan-Ting Hu<sup>*</sup>, Daniel Bolya<sup>*</sup>, Chen Wei, Haoqi Fan, Po-Yao
+              Huang, Vaibhav Aggarwal, Arkabandhu Chowdhury,
+              Omid Poursaeed, Judy Hoffman, Jitendra Malik, Yanghao Li<sup>*</sup>, Christoph Feichtenhofer<sup>*</sup>
+              <br> <sup>*</sup>equal contribution
+            </div>
+            <div class="pubv">International Conference on Machine Learning (ICML) 2023, Oral </div>
+            <div class="pubd">
+              Modern hierarchical vision transformers have added several vision-specific components in the pursuit of
+              supervised
+              classification performance. While these components lead to effective accuracies and attractive FLOP counts,
+              the added
+              complexity actually makes these transformers slower than their vanilla ViT counterparts. In this paper, we
+              argue that
+              this additional bulk is unnecessary. By pretraining with a strong visual pretext task (MAE), we can strip out
+              all the
+              bells-and-whistles from a state-of-the-art multi-stage vision transformer without losing accuracy. In the
+              process, we
+              create Hiera, an extremely simple hierarchical vision transformer that is more accurate than previous models
+              while being
+              significantly faster both at inference and during training. We evaluate Hiera on a variety of tasks for image
+              and video
+              recognition.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2306.00989">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/hiera">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br><br>
+            <img src="pubs/mavil.png" style="width: 100%"><br>
+            <img src="pubs/mavil_output.jpg" style="width: 100%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">MAViL: Masked Audio-Video Learners</div>
+            <div class="puba"> Po-Yao Huang, Vasu Sharma, Hu Xu, Chaitanya Ryali, Haoqi Fan, Yanghao Li, Shang-Wen Li, Gargi
+              Ghosh, Jitendra Malik,
+              <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2023</div>
+            <div class="pubd">
+              We present Masked Audio-Video Learners (MAViL) to train audio-visual representations. Our approach learns with
+              three
+              complementary forms of self-supervision: (1) reconstruction of masked audio and video input data, (2) intra-
+              and
+              inter-modal contrastive learning with masking, and (3) self-training by reconstructing joint audio-video
+              contextualized
+              features learned from the first two objectives. Pre-training with MAViL not only enables the model to perform
+              well in
+              audio-visual classification and retrieval tasks but also improves representations of each modality in
+              isolation, without
+              using information from the other modality for fine-tuning or inference. Empirically, MAViL sets a new
+              state-of-the-art
+              on AudioSet (53.1 mAP) and VGGSound (67.1% accuracy). For the first time, a self-supervised audio-visual model
+              outperforms ones that use external supervision on these benchmarks.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2212.08071">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/mavil">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/mavil?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br><br>
+            <div class="column has-text-centered">
+              <img src="pubs/diffmae_1.gif">
+              <table width="100%">
+                <tr>
+                  <td width="33.3%">ground-truth</td>
+                  <td width="33.3%"><span class="diffmae">DiffMAE</span></td>
+                  <td width="33.3">MAE</td>
+                </tr>
+              </table>
+            </div>
+            <!-- <div class="column has-text-centered">
+                  <img src="pubs/diffmae_video.gif" width="95%" height="95%">
+
+                  <table width="100%">
+                    <tr>
+                      <td width="33.3%">ground-truth</td>
+                      <td width="33.3%">inputs</td>
+                      <td width="33.3"><span class="diffmae">DiffMAE</span></td>
+                    </tr>
+                  </table>
+                </div> -->
+          </div>
+        </div>
+        <div class="pubwrap">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="pub">
+                <div class="pubt">Diffusion Models as Masked Autoencoders</div>
+                <div class="puba">Chen Wei, Karttikeya Mangalam, Po-Yao Huang, Yanghao Li, Haoqi Fan, Hu Xu, Huiyu Wang,
+                  Cihang Xie, Alan Yuille, <b>Christoph Feichtenhofer</b>
+                </div>
+                <div class="pubv">International Conference on Computer Vision (ICCV) 2023</div>
+                <div class="pubd">
+                  There has been a longstanding belief that generation can facilitate a true understanding of visual data.
+                  In line with
+                  this, we revisit generatively pre-training visual representations in light of recent interest in denoising
+                  diffusion
+                  models. While directly pre-training with diffusion models does not produce strong representations, we
+                  condition
+                  diffusion models on masked input and formulate diffusion models as masked autoencoders (DiffMAE). Our
+                  approach is
+                  capable of (i) serving as a strong initialization for downstream recognition tasks, (ii) conducting
+                  high-quality image
+                  inpainting, and (iii) being effortlessly extended to video where it produces state-of-the-art
+                  classification accuracy.
+                  We further perform a comprehensive study on the pros and cons of design choices and build connections
+                  between diffusion
+                  models and masked autoencoders.
+                </div>
+                <div class="publ">
+                  <ul>
+                    <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
+                    <li><a href="https://weichen582.github.io/diffmae.html">website</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/cit_concept.png" style="width: 100%"><br> <br> <br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">CiT: Curation in Training for Effective Vision-Language Data</div>
+            <div class="puba">Hu Xu, Saining Xie, Po-Yao Huang, Licheng Yu, Russell Howes, Gargi Ghosh, Luke Zettlemoyer,
+              <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">International Conference on Computer Vision (ICCV) 2023</div>
+            <div class="pubd">
+              Large vision-language models are generally applicable to many downstream tasks, but come at an exorbitant
+              training cost
+              that only large institutions can afford. This paper trades generality for efficiency and presents Curation in
+              Training
+              (CiT), a simple and efficient vision-text learning algorithm that couples a data objective into training. CiT
+              automatically yields quality data to speed-up contrastive image-text training and alleviates the need for an
+              offline
+              data filtering pipeline, allowing broad data sources (including raw image-text pairs from the web). CiT
+              contains two
+              loops: an outer loop curating the training data and an inner loop consuming the curated training data. The
+              text encoder
+              connects the two loops. Given metadata for tasks of interest, e.g., class names, and a large pool of
+              image-text pairs,
+              CiT alternatively selects relevant training data from the pool by measuring the similarity of their text
+              embeddings and
+              embeddings of the metadata. In our experiments, we observe that CiT can speed up training by over an order of
+              magnitude,
+              especially if the raw data size is large.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/CiT">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/CiT?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/premae.png" style="width: 100%"><br> <br> <br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">The effectiveness of MAE pre-pretraining for billion-scale pretraining</div>
+            <div class="puba">Mannat Singh*, Quentin Duval*, Kalyan Vasudev Alwala*, Haoqi Fan, Vaibhav Aggarwal, Aaron
+              Adcock, Armand Joulin, Piotr
+              Dollár, <b>Christoph Feichtenhofer</b>, Ross Girshick, Rohit Girdhar, Ishan Misra
+            </div>
+            <div class="pubv">International Conference on Computer Vision (ICCV) 2023</div>
+            <div class="pubd">
+              This paper revisits the standard pretrain-then-finetune paradigm used in computer vision for visual
+              recognition tasks.
+              Typically, state-of-the-art foundation models are pretrained using large scale (weakly) supervised datasets
+              with
+              billions of images. We introduce an additional pre-pretraining stage that is simple and uses the
+              self-supervised MAE
+              technique to initialize the model. While MAE has only been shown to scale with the size of models, we find
+              that it
+              scales with the size of the training dataset as well. Thus, our MAE-based pre-pretraining scales with both
+              model and
+              data size making it applicable for training foundation models. Pre-pretraining consistently improves both the
+              model
+              convergence and the downstream transfer performance across a range of model scales (millions to billions of
+              parameters),
+              and dataset sizes (millions to billions of images).
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/maws/">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/maws?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
