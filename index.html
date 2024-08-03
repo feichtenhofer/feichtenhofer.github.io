@@ -74,37 +74,40 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <br> <br>
-            <img src="pubs/metaclip.png" style="width: 95%"><br>
-            <img src="pubs/metaclip2.png" style="width: 95%">
+            <!-- <video width="100%" playsinline autoplay muted loop>
+                      <source src="pubs/sam2_model.mp4" type="video/mp4">
+            </video> -->
+            <video width="92%" playsinline autoplay muted loop>
+              <source src="pubs/sam2_output.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
         <div class="col-md-6">
           <div class="pub">
-            <div class="pubt">Demystifying CLIP Data</div>
+            <div class="pubt">SAM 2</div>
             <div class="puba">
-              Hu Xu, Saining Xie, Xiaoqing Ellen Tan, Po-Yao Huang, Russell Howes, Vasu Sharma, Shang-Wen Li, Gargi Ghosh, Luke
-              Zettlemoyer, <b>Christoph Feichtenhofer</b>
+              Nikhila Ravi, Valentin Gabeur, Yuan-Ting Hu, Ronghang Hu, Chaitanya Ryali, Tengyu Ma, Haitham Khedr, Roman Rädle, Chloe
+              Rolland, Laura Gustafson, Eric Mintun, Junting Pan, Kalyan Vasudev Alwala, Nicolas Carion, Chao-Yuan Wu, Ross Girshick,
+              Piotr Dollár, <b>Christoph Feichtenhofer</b>
             </div>
-            <div class="pubv">International Conference on Learning Representations (ICLR) 2024, Spotlight</div>
-            <div class="pubd">Contrastive Language-Image Pre-training (CLIP) is an approach that has advanced research and applications in computer
-            vision, fueling modern recognition systems and generative models. We believe that the main ingredient to the success of
-            CLIP is its data and not the model architecture or pre-training objective. However, CLIP only provides very limited
-            information about its data and how it has been collected, leading to works that aim to reproduce CLIP's data by
-            filtering with its model parameters. In this work, we intend to reveal CLIP's data curation approach and in our pursuit
-            of making it open to the community introduce Metadata-Curated Language-Image Pre-training (MetaCLIP). MetaCLIP takes a
-            raw data pool and metadata (derived from CLIP's concepts) and yields a balanced subset over the metadata distribution.
-            Our experimental study rigorously isolates the model and training settings, concentrating solely on data. MetaCLIP
-            applied to CommonCrawl with 400M image-text data pairs outperforms CLIP's data on multiple standard benchmarks. In
-            zero-shot ImageNet classification, MetaCLIP achieves 70.8% accuracy, surpassing CLIP's 68.3% on ViT-B models. Scaling to
-            1B data, while maintaining the same training budget, attains 72.4%. Our observations hold across various model sizes,
-            exemplified by ViT-H achieving 80.5%, without any bells-and-whistles.
+            <div class="pubv">Technical report, arXiv, July 2024</div>
+            <div class="pubd">We present Segment Anything Model 2 (SAM 2), a foundation model towards solving promptable visual segmentation in images
+            and videos. We build a data engine, which improves model and data via user interaction, to collect the largest video
+            segmentation dataset to date. Our model is a simple transformer architecture with streaming memory for real-time video
+            processing. SAM 2 trained on our data provides strong performance across a wide range of tasks. In video segmentation,
+            we observe better accuracy, using 3x fewer interactions than prior approaches. In image segmentation, our model is more
+            accurate and 6x faster than the Segment Anything Model (SAM). We believe that our data, model, and insights will serve
+            as a significant milestone for video segmentation and related perception tasks. We are releasing a version of our model,
+            the dataset and an interactive demo.
             </div>
             <div class="publ">
               <ul>
-                <li><a href="https://arxiv.org/abs/2309.16671">arXiv</a></li>
-                <li><a href="https://github.com/facebookresearch/MetaCLIP">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/MetaCLIP?style=social"></a></li>
+                <li><a href="https://arxiv.org/abs/2408.00714">arXiv</a></li>
+                <li><a href="https://ai.meta.com/sam2/">website</a></li>
+                <li><a href="https://sam2.metademolab.com/">demo</a></li>
+                <li><a href="https://ai.meta.com/blog/segment-anything-2-video/">blog</a></li>
+                <li><a href="https://github.com/facebookresearch/segment-anything-2">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/segment-anything-2?style=social"></a></li>
               </ul>
             </div>
           </div>
@@ -115,44 +118,49 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <br> <br>
-            <img src="pubs/windowpos.png" style="width: 95%"><br>
-            <img src="pubs/windowpos2.png" style="width: 70%">
+            <!-- <img src="pubs/llama3_1.png" style="width: 95%"><br> -->
+            <img src="pubs/Llama_Repo.jpeg" style="width: 92%"><br>
           </div>
         </div>
         <div class="col-md-6">
           <div class="pub">
-            <div class="pubt">Window Attention is Bugged: How not to Interpolate Position Embeddings</div>
+            <div class="pubt">The Llama 3 Herd of Models</div>
             <div class="puba">
-              Daniel Bolya, Chaitanya Ryali, Judy Hoffman, <b>Christoph Feichtenhofer</b>
+              Llama team, Meta
             </div>
-            <div class="pubv">International Conference on Learning Representations (ICLR) 2024</div>
-            <div class="pubd">Window attention, position embeddings, and high resolution finetuning are core concepts in the modern transformer era of
-            computer vision. However, we find that naively combining these near ubiquitous components can have a detrimental effect
-            on performance. The issue is simple: interpolating position embeddings while using window attention is wrong. We study
-            two state-of-the-art methods that have these three components, namely Hiera and ViTDet, and find that both do indeed
-            suffer from this bug. To fix it, we introduce a simple absolute window position embedding strategy, which solves the bug
-            outright in Hiera and allows us to increase both speed and performance of the model in ViTDet. We finally combine the
-            two to obtain HieraDet, which achieves 61.7 box mAP on COCO, making it state-of-the-art for models that only use
-            ImageNet-1k pretraining. This all stems from what is essentially a 3 line bug fix, which we name "absolute win".
+            <div class="pubv">Technical report, arXiv, July 2024</div>
+            <div class="pubd">Modern artificial intelligence (AI) systems are powered by foundation models. This paper presents a new set of
+            foundation models, called Llama 3. It is a herd of language models that natively support multilinguality, coding,
+            reasoning, and tool usage. Our largest model is a dense Transformer with 405B parameters and a context window of up to
+            128K tokens. This paper presents an extensive empirical evaluation of Llama 3. We find that Llama 3 delivers comparable
+            quality to leading language models such as GPT-4 on a plethora of tasks. We publicly release Llama 3, including
+            pre-trained and post-trained versions of the 405B parameter language model and our Llama Guard 3 model for input and
+            output safety. The paper also presents the results of experiments in which we integrate image, video, and speech
+            capabilities into Llama 3 via a compositional approach. We observe this approach performs competitively with the
+            state-of-the-art on image, video, and speech recognition tasks. The resulting models are not yet being broadly released
+            as they are still under development.
             </div>
             <div class="publ">
               <ul>
-                <li><a href="https://arxiv.org/abs/2311.05613">arXiv</a></li>
-                <li><a href="https://github.com/facebookresearch/hiera">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social"></a></li>
+                <li><a href="https://arxiv.org/abs/2407.21783">arXiv</a></li>
+                <li><a href="https://llama.meta.com/">website</a></li>
+                <li><a href="https://ai.meta.com/blog/meta-llama-3-1/">blog</a></li>
+                <li><a href="https://github.com/meta-llama/llama-models">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/meta-llama/llama-models?style=social"></a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
 <div class="container">
   <h2>News &amp; Highlights </h2>
+  <div class="pubwrap">
+    <div class="ttitle"> We released <a href="https://ai.meta.com/sam2">SAM 2</a> and <a href="https://llama.meta.com/">Llama 3</a>. Models and code are available. Check out the <a href="https://sam2.metademolab.com/">demo</a> for SAM 2.  </div>
+  </div>
   <div class="pubwrap">
     <div class="ttitle">I am honored to have received the <a href="https://tc.computer.org/tcpami/2022/08/22/pami-young-researcher-award"> PAMI Young Researcher Award</a> 2023 </div>
   </div>
@@ -359,6 +367,103 @@
     </a>
   </span> </h2>
   <div id="pubs">
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/metaclip.png" style="width: 95%"><br>
+            <img src="pubs/metaclip2.png" style="width: 95%">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Demystifying CLIP Data</div>
+            <div class="puba">
+              Hu Xu, Saining Xie, Xiaoqing Ellen Tan, Po-Yao Huang, Russell Howes, Vasu Sharma, Shang-Wen Li, Gargi Ghosh,
+              Luke
+              Zettlemoyer, <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">International Conference on Learning Representations (ICLR) 2024, Spotlight</div>
+            <div class="pubd">Contrastive Language-Image Pre-training (CLIP) is an approach that has advanced research and
+              applications in computer
+              vision, fueling modern recognition systems and generative models. We believe that the main ingredient to the
+              success of
+              CLIP is its data and not the model architecture or pre-training objective. However, CLIP only provides very
+              limited
+              information about its data and how it has been collected, leading to works that aim to reproduce CLIP's data
+              by
+              filtering with its model parameters. In this work, we intend to reveal CLIP's data curation approach and in
+              our pursuit
+              of making it open to the community introduce Metadata-Curated Language-Image Pre-training (MetaCLIP). MetaCLIP
+              takes a
+              raw data pool and metadata (derived from CLIP's concepts) and yields a balanced subset over the metadata
+              distribution.
+              Our experimental study rigorously isolates the model and training settings, concentrating solely on data.
+              MetaCLIP
+              applied to CommonCrawl with 400M image-text data pairs outperforms CLIP's data on multiple standard
+              benchmarks. In
+              zero-shot ImageNet classification, MetaCLIP achieves 70.8% accuracy, surpassing CLIP's 68.3% on ViT-B models.
+              Scaling to
+              1B data, while maintaining the same training budget, attains 72.4%. Our observations hold across various model
+              sizes,
+              exemplified by ViT-H achieving 80.5%, without any bells-and-whistles.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2309.16671">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/MetaCLIP">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/MetaCLIP?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <br> <br>
+            <img src="pubs/windowpos.png" style="width: 95%"><br>
+            <img src="pubs/windowpos2.png" style="width: 70%">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Window Attention is Bugged: How not to Interpolate Position Embeddings</div>
+            <div class="puba">
+              Daniel Bolya, Chaitanya Ryali, Judy Hoffman, <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">International Conference on Learning Representations (ICLR) 2024</div>
+            <div class="pubd">Window attention, position embeddings, and high resolution finetuning are core concepts in the
+              modern transformer era of
+              computer vision. However, we find that naively combining these near ubiquitous components can have a
+              detrimental effect
+              on performance. The issue is simple: interpolating position embeddings while using window attention is wrong.
+              We study
+              two state-of-the-art methods that have these three components, namely Hiera and ViTDet, and find that both do
+              indeed
+              suffer from this bug. To fix it, we introduce a simple absolute window position embedding strategy, which
+              solves the bug
+              outright in Hiera and allows us to increase both speed and performance of the model in ViTDet. We finally
+              combine the
+              two to obtain HieraDet, which achieves 61.7 box mAP on COCO, making it state-of-the-art for models that only
+              use
+              ImageNet-1k pretraining. This all stems from what is essentially a 3 line bug fix, which we name "absolute
+              win".
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2311.05613">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/hiera">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
