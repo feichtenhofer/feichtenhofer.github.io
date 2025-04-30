@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<!--template source: https://github.com/daviddao/daviddao.github.io-->
 <html lang="en">
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Christoph Feichtenhofer</title>
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="css/style.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
-  <link rel=icon href=https://static.xx.fbcdn.net/rsrc.php/yi/r/gbO80SSOuBU.ico>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500" rel="stylesheet" type="text/css">
+  <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yi/r/gbO80SSOuBU.ico">
   <style type="text/css"></style>
-
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
     ga('create', 'UA-58616069-1', 'auto');
     ga('send', 'pageview');
   </script>
@@ -34,7 +31,7 @@
 
     <div id="headertext">
       <div id="htname" style="color:white">Christoph Feichtenhofer</div>
-      <div id="htdesc" style="color:white">Research Scientist, Manager <br> FAIR, Meta </div>
+      <div id="htdesc" style="color:white">Director, Research Scientist <br> FAIR, Meta </div>
       <div id="htem" style="color:white">feichtenhofer _at_ meta.com</div>
 	  </div>
       <div id="icons">
@@ -52,13 +49,13 @@
 <!-- <br><br> -->
 
 
-<!-- <div class="container">
+<div class="container">
   <h4>Hiring </h4>
   <div class="pubwrap">
     <div class="ttitle"> We are hiring full-time Research Scientists and Engineers. Please reach out if
     you are interested. </div>
   </div>
-</div> -->
+</div>
 
 
 <div class="container quote2">
@@ -71,96 +68,79 @@
 <div class="container">
   <div id="pubs">
     <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <!-- <video width="100%" playsinline autoplay muted loop>
-                      <source src="pubs/sam2_model.mp4" type="video/mp4">
-            </video> -->
-            <video width="92%" playsinline autoplay muted loop>
-              <source src="pubs/sam2_output.mp4" type="video/mp4">
-            </video>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+              <br>
+              <img src="pubs/pe_concept.png" style="width: 100%"><br>
+              <br><br>
+              <img src="pubs/pe_spatial.jpg" style="width: 100%"><br>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">SAM 2: Segment Anything in Images and Videos</div>
-            <div class="puba">
-              Nikhila Ravi, Valentin Gabeur, Yuan-Ting Hu, Ronghang Hu, Chaitanya Ryali, Tengyu Ma, Haitham Khedr, Roman Rädle, Chloe
-              Rolland, Laura Gustafson, Eric Mintun, Junting Pan, Kalyan Vasudev Alwala, Nicolas Carion, Chao-Yuan Wu, Ross Girshick,
-              Piotr Dollár, <b>Christoph Feichtenhofer</b>
-            </div>
-            <div class="pubv">Technical report, arXiv, July 2024</div>
-            <div class="pubd">We present Segment Anything Model 2 (SAM 2), a foundation model towards solving promptable visual segmentation in images
-            and videos. We build a data engine, which improves model and data via user interaction, to collect the largest video
-            segmentation dataset to date. Our model is a simple transformer architecture with streaming memory for real-time video
-            processing. SAM 2 trained on our data provides strong performance across a wide range of tasks. In video segmentation,
-            we observe better accuracy, using 3x fewer interactions than prior approaches. In image segmentation, our model is more
-            accurate and 6x faster than the Segment Anything Model (SAM). We believe that our data, model, and insights will serve
-            as a significant milestone for video segmentation and related perception tasks. We are releasing a version of our model,
-            the dataset and an interactive demo.
-            </div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://arxiv.org/abs/2408.00714">arXiv</a></li>
-                <li><a href="https://ai.meta.com/sam2/">website</a></li>
-                <li><a href="https://sam2.metademolab.com/">demo</a></li>
-                <li><a href="https://ai.meta.com/blog/segment-anything-2-video/">blog</a></li>
-                <li><a href="https://github.com/facebookresearch/segment-anything-2">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/segment-anything-2?style=social"></a></li>
-              </ul>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Perception Encoder: The best visual embeddings are not at the output of the network</div>
+              <div class="puba">
+                Daniel Bolya, Po-Yao Huang, Peize Sun, Jang Hyun Cho, Andrea Madotto, Chen Wei, Tengyu Ma, Jiale Zhi, Jathushan Rajasegaran, Hanoona Rasheed, Junke Wang, Marco Monteiro, Hu Xu, Shiyu Dong, Nikhila Ravi, Daniel Li, Piotr Dollár, <b>Christoph Feichtenhofer</b>
+              </div>
+              <div class="pubv">Technical report, arXiv, April 2025</div>
+              <div class="pubd">
+                We introduce Perception Encoder (PE), a state-of-the-art encoder for image and video understanding trained via simple vision-language learning. Traditionally, vision encoders have relied on a variety of pretraining objectives, each tailored to specific downstream tasks such as classification, captioning, or localization. Surprisingly, after scaling our carefully tuned image pretraining recipe and refining with our robust video data engine, we find that contrastive vision-language training alone can produce strong, general embeddings for all of these downstream tasks. There is only one caveat: these embeddings are hidden within the intermediate layers of the network. To draw them out, we introduce two alignment methods, language alignment for multimodal language modeling, and spatial alignment for dense prediction. Together with the core contrastive checkpoint, our PE family of models achieves state-of-the-art performance on a wide variety of tasks, including zero-shot image and video classification and retrieval; document, image, and video Q&A; and spatial tasks such as detection, depth estimation, and tracking. To foster further research, we are releasing our models, code, and a novel dataset of synthetically and human-annotated videos.
+              </div>
+              <div class="publ">
+                <ul>
+                  <li><a href="https://arxiv.org/abs/2504.13181">arXiv</a></li>
+                  <li><a href="https://github.com/facebookresearch/perception_models/blob/main/apps/pe/README.md">code<img alt="GitHub stars"
+                        src="https://img.shields.io/github/stars/facebookresearch/perception_models?style=social"></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <!-- <img src="pubs/llama3_1.png" style="width: 95%"><br> -->
-            <img src="pubs/Llama_Repo.jpeg" style="width: 92%"><br>
+            <img src="pubs/plm.jpg" style="width: 100%"><br>
           </div>
         </div>
         <div class="col-md-6">
           <div class="pub">
-            <div class="pubt">The Llama 3 Herd of Models</div>
+            <div class="pubt">PerceptionLM: Open-Access Data and Models for Detailed Visual Understanding</div>
             <div class="puba">
-              Llama team, Meta
+              Jang Hyun Cho, Andrea Madotto, Effrosyni Mavroudi, Triantafyllos Afouras, Tushar Nagarajan, Muhammad Maaz, Yale Song, Tengyu Ma, Shuming Hu, Suyog Jain, Miguel Martin, Huiyu Wang, Hanoona Rasheed, Peize Sun, Po-Yao Huang, Daniel Bolya, Nikhila Ravi, Shashank Jain, Tammy Stark, Shane Moon, Babak Damavandi, Vivian Lee, Andrew Westbury, Salman Khan, Philipp Krähenbühl, Piotr Dollár, Lorenzo Torresani, Kristen Grauman, <b>Christoph Feichtenhofer</b>
             </div>
-            <div class="pubv">Technical report, arXiv, July 2024</div>
-            <div class="pubd">Modern artificial intelligence (AI) systems are powered by foundation models. This paper presents a new set of
-            foundation models, called Llama 3. It is a herd of language models that natively support multilinguality, coding,
-            reasoning, and tool usage. Our largest model is a dense Transformer with 405B parameters and a context window of up to
-            128K tokens. This paper presents an extensive empirical evaluation of Llama 3. We find that Llama 3 delivers comparable
-            quality to leading language models such as GPT-4 on a plethora of tasks. We publicly release Llama 3, including
-            pre-trained and post-trained versions of the 405B parameter language model and our Llama Guard 3 model for input and
-            output safety. The paper also presents the results of experiments in which we integrate image, video, and speech
-            capabilities into Llama 3 via a compositional approach. We observe this approach performs competitively with the
-            state-of-the-art on image, video, and speech recognition tasks. The resulting models are not yet being broadly released
-            as they are still under development.
+            <div class="pubv">Technical report, arXiv, April 2025</div>
+            <div class="pubd">
+              Vision-language models are integral to computer vision research, yet many high-performing models remain closed-source, obscuring their data, design and training recipe. The research community has responded by using distillation from black-box models to label training data, achieving strong benchmark results, at the cost of measurable scientific progress. However, without knowing the details of the teacher model and its data sources, scientific progress remains difficult to measure. In this paper, we study building a Perception Language Model (PLM) in a fully open and reproducible framework for transparent research in image and video understanding. We analyze standard training pipelines without distillation from proprietary models and explore large-scale synthetic data to identify critical data gaps, particularly in detailed video understanding. To bridge these gaps, we release 2.8M human-labeled instances of fine-grained video question-answer pairs and spatio-temporally grounded video captions. Additionally, we introduce PLM–VideoBench, a suite for evaluating challenging video understanding tasks focusing on the ability to reason about "what", "where", "when", and "how" of a video. We make our work fully reproducible by providing data, training recipes, code & models.
             </div>
             <div class="publ">
               <ul>
-                <li><a href="https://arxiv.org/abs/2407.21783">arXiv</a></li>
-                <li><a href="https://llama.meta.com/">website</a></li>
-                <li><a href="https://ai.meta.com/blog/meta-llama-3-1/">blog</a></li>
-                <li><a href="https://github.com/meta-llama/llama-models">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/meta-llama/llama-models?style=social"></a></li>
+                <li><a href="https://arxiv.org/abs/2504.13180">arXiv</a></li>
+                <li><a href="https://github.com/facebookresearch/perception_models/blob/main/apps/plm/README.md">code<img alt="GitHub stars"
+                  src="https://img.shields.io/github/stars/facebookresearch/perception_models?style=social"></a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
 <div class="container">
   <h2>News &amp; Highlights </h2>
-    <div class="pubwrap">
-      <div class="ttitle"> I am a Senior Area Chair for ECCV 2024 and Area Chair for CVPR and ICLR 2025 </div>
-    </div>
+  <div class="pubwrap">
+    <div class="ttitle"> SAM 2 received the <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">ICLR Best Paper Honorable Mention Award</a> </div>
+  </div>
+  <div class="pubwrap">
+    <div class="ttitle"> We have released the <a href="https://ai.meta.com/blog/meta-fair-updates-perception-localization-reasoning/"> Perception Encoder and Perception Language Model</a></div>
+</div>
+  <div class="pubwrap">
+      <div class="ttitle"> I am a Senior Area Chair for CVPR, ICCV 2025 and Area Chair for ICLR, NeurIPS 2025</div>
+  </div>
   <div class="pubwrap">
     <div class="ttitle"> At ECCV 2024, I am speaker and panelist at the <a
         href="https://www.votchallenge.net/vots2024/program.html">
@@ -185,6 +165,9 @@
     <div class="ttitle"> We organized a <a
         href="https://dimadamen.github.io/VideoAI2023/"> Video AI Symposium</a> at DeepMind London
     </div>
+  </div>
+  <div class="pubwrap">
+    <div class="ttitle"> I am a Senior Area Chair for ECCV 2024, Area Chair for CVPR and ICLR 2024 </div>
   </div>
   <div class="pubwrap">
     <div class="ttitle"> At ICCV 2023, we organize a tutorial on <a
@@ -266,11 +249,10 @@
   <div class="pubwrap">
     <div class="ttitle"> We organized a tutorial on  <a href="https://gkioxari.github.io/Tutorials/eccv2018/index.html">Visual Recognition</a> at ECCV 2018 </div>
   </div>
+<!--
   <div class="pubwrap">
     <div class="ttitle"> Invited speaker at the <a href="https://bivu2018.github.io/">CVPR'18 Workshop on Brave New Ideas for Video Understanding</a> </div>
   </div>
-
-  <!--
   <div class="pubwrap">
   	<div class="ttitle">Best Student Paper Award at the <a href="http://cmp.felk.cvut.cz/cvww2018/index.html"> Computer Vision Winter Workshop, (CVWW) 2018 </a> </div>
 	<div class="tdesc">"Camera-based vehicle velocity estimation from monocular video",  <span class="thigh"> Moritz Kampelmuehler, Michael Mueller, and Christoph Feichtenhofer </span>	</div>
@@ -319,14 +301,14 @@
   <div id="timeline">
     <div class="timelineitem">
       <div class="tdate"> 2021 - </div>
-      <div class="ttitle">Research Scientist, Manager at Meta </div>
-      <div class="tdesc">Meta (<a href="https://ai.meta.com/research/">FAIR</a>), Menlo Park, CA, USA </div>
+      <div class="ttitle">Director, Research Scientist at Meta </div>
+      <div class="tdesc">Meta (<a href="https://ai.meta.com/research/">FAIR</a>), San Francisco, USA </div>
     </div>
     <div class="timelineitem">
       <div class="tdate"> 2018 - 2021 </div>
       <div class="ttitle">Research Scientist at Facebook </div>
       <div class="tdesc">Facebook AI Research (<a
-          href="https://ai.meta.com/research/">FAIR</a>), Menlo Park, CA, USA </div>
+          href="https://ai.meta.com/research/">FAIR</a>), Menlo Park, USA </div>
     </div>
     <div class="timelineitem">
       <div class="tdate">2015 - 2018</div>
@@ -383,6 +365,87 @@
     </a>
   </span> </h2>
   <div id="pubs">
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <video width="92%" playsinline autoplay muted loop>
+              <source src="pubs/sam2_output.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">SAM 2: Segment Anything in Images and Videos</div>
+            <div class="puba">
+              Nikhila Ravi, Valentin Gabeur, Yuan-Ting Hu, Ronghang Hu, Chaitanya Ryali, Tengyu Ma, Haitham Khedr, Roman Rädle, Chloe
+              Rolland, Laura Gustafson, Eric Mintun, Junting Pan, Kalyan Vasudev Alwala, Nicolas Carion, Chao-Yuan Wu, Ross Girshick,
+              Piotr Dollár, <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">International Conference on Learning Representations (ICLR) 2025, Oral</div>
+            <div class="pubaw">Best Paper Honorable Mention Award</div>
+            <div class="pubd">We present Segment Anything Model 2 (SAM 2), a foundation model towards solving promptable visual segmentation in images
+            and videos. We build a data engine, which improves model and data via user interaction, to collect the largest video
+            segmentation dataset to date. Our model is a simple transformer architecture with streaming memory for real-time video
+            processing. SAM 2 trained on our data provides strong performance across a wide range of tasks. In video segmentation,
+            we observe better accuracy, using 3x fewer interactions than prior approaches. In image segmentation, our model is more
+            accurate and 6x faster than the Segment Anything Model (SAM). We believe that our data, model, and insights will serve
+            as a significant milestone for video segmentation and related perception tasks. We are releasing a version of our model,
+            the dataset and an interactive demo.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2408.00714">arXiv</a></li>
+                <li><a href="https://ai.meta.com/sam2/">website</a></li>
+                <li><a href="https://sam2.metademolab.com/">demo</a></li>
+                <li><a href="https://ai.meta.com/blog/segment-anything-2-video/">blog</a></li>
+                <li><a href="https://github.com/facebookresearch/segment-anything-2">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/segment-anything-2?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <!-- <img src="pubs/llama3_1.png" style="width: 95%"><br> -->
+            <img src="pubs/Llama_Repo.jpeg" style="width: 92%"><br>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">The Llama 3 Herd of Models</div>
+            <div class="puba">
+              Llama team, Meta
+            </div>
+            <div class="pubv">Technical report, arXiv, July 2024</div>
+            <div class="pubd">Modern artificial intelligence (AI) systems are powered by foundation models. This paper presents a new set of
+            foundation models, called Llama 3. It is a herd of language models that natively support multilinguality, coding,
+            reasoning, and tool usage. Our largest model is a dense Transformer with 405B parameters and a context window of up to
+            128K tokens. This paper presents an extensive empirical evaluation of Llama 3. We find that Llama 3 delivers comparable
+            quality to leading language models such as GPT-4 on a plethora of tasks. We publicly release Llama 3, including
+            pre-trained and post-trained versions of the 405B parameter language model and our Llama Guard 3 model for input and
+            output safety. The paper also presents the results of experiments in which we integrate image, video, and speech
+            capabilities into Llama 3 via a compositional approach. We observe this approach performs competitively with the
+            state-of-the-art on image, video, and speech recognition tasks. The resulting models are not yet being broadly released
+            as they are still under development.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2407.21783">arXiv</a></li>
+                <li><a href="https://llama.meta.com/">website</a></li>
+                <li><a href="https://ai.meta.com/blog/meta-llama-3-1/">blog</a></li>
+                <li><a href="https://github.com/meta-llama/llama-models">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/meta-llama/llama-models?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
@@ -495,7 +558,7 @@
             <div class="puba">
               Chaitanya Ryali<sup>*</sup>, Yuan-Ting Hu<sup>*</sup>, Daniel Bolya<sup>*</sup>, Chen Wei, Haoqi Fan, Po-Yao
               Huang, Vaibhav Aggarwal, Arkabandhu Chowdhury,
-              Omid Poursaeed, Judy Hoffman, Jitendra Malik, Yanghao Li<sup>*</sup>, Christoph Feichtenhofer<sup>*</sup>
+              Omid Poursaeed, Judy Hoffman, Jitendra Malik, Yanghao Li<sup>*</sup>, <b>Christoph Feichtenhofer</b<sup>*</sup>
               <br> <sup>*</sup>equal contribution
             </div>
             <div class="pubv">International Conference on Machine Learning (ICML) 2023, Oral </div>
@@ -2357,7 +2420,7 @@
 
 		<div class="publ">
 		  <ul>
-			<li><a href="pubs/Feichtenhofer_Bags_of_Spacetime_2014_CVPR_paper.pdf">paper</a></li>
+			<li><a href="pubs/Feichtenhofer_Spatio-temporal_Good_Features_2013_ICCV_paper.pdf">paper</a></li>
 		  </ul>
 
 		</div>
