@@ -31,7 +31,7 @@
 
     <div id="headertext">
       <div id="htname" style="color:white">Christoph Feichtenhofer</div>
-      <div id="htdesc" style="color:white">Director, Research Scientist <br> FAIR, Meta </div>
+      <div id="htdesc" style="color:white">Director, Research Scientist <br>Meta Superintelligence Labs</div>
       <div id="htem" style="color:white">feichtenhofer _at_ meta.com</div>
 	  </div>
       <div id="icons">
@@ -49,13 +49,13 @@
 <!-- <br><br> -->
 
 
-<div class="container">
+<!-- <div class="container">
   <h4>Hiring </h4>
   <div class="pubwrap">
     <div class="ttitle"> We are hiring full-time Research Scientists and Engineers. Please reach out if
     you are interested. </div>
   </div>
-</div>
+</div> -->
 
 
 <div class="container quote2">
@@ -67,6 +67,51 @@
 
 <div class="container">
   <div id="pubs">
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+              <br><br><br>
+            <video width="102%" playsinline autoplay muted loop>
+              <source src="pubs/sam3_model.mp4" type="video/mp4">
+            </video>
+              <br><br><br>
+            <video width="102%" playsinline autoplay muted loop>
+              <source src="pubs/sam3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">SAM 3: Segment Anything with Concepts</div>
+            <div class="puba">
+              Nicolas Carion, Laura Gustafson, Yuan-Ting Hu, Shoubhik Debnath,
+              Ronghang Hu, Didac Suris, Chaitanya Ryali, Kalyan Vasudev Alwala, Haitham
+              Khedr, Andrew Huang, Jie Lei, Tengyu Ma, Baishan Guo, Arpit Kalla, Markus
+              Marks, Joseph Greer, Meng Wang, Peize Sun, Roman Radle, Triantafyllos
+              Afouras, Effrosyni Mavroudi, Katherine Xu, Tsung-Han Wu, Yu Zhou, Liliane
+              Momeni, Rishi Hazra, Shuangrui Ding, Sagar Vaze, Francois Porcher, Feng Li,
+              Siyuan Li, Aishwarya Kamath, Ho Kei Cheng, Piotr Dollar, Nikhila Ravi, Kate
+              Saenko, Pengchuan Zhang, <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">Technical report, arXiv, November 2025</div>
+            <div class="pubd">We present Segment Anything Model (SAM) 3, a unified model that detects, segments, and tracks objects in images and videos based on concept prompts, which we define as either short noun phrases (e.g., “yellow school bus”), image exemplars, or a combination of both. Promptable Concept Segmentation (PCS) takes such prompts and returns segmentation masks and unique identities for all matching object instances. To advance PCS, we build a scalable data engine that produces a high-quality dataset with 4M unique concept labels, including hard negatives, across images and videos. Our model consists of an image-level detector and a memory-based video tracker that share a single backbone. Recognition and localization are decoupled with a presence head, which boosts detection accuracy. SAM 3 delivers a 2× gain over existing systems in both image and video PCS, and improves previous SAM capabilities on visual segmentation tasks. We open source SAM 3 along with our new Segment Anything with Concepts (SA-Co) benchmark for promptable concept segmentation.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://ai.meta.com/research/publications/sam-3-segment-anything-with-concepts/">paper</a></li>
+                <li><a href="https://ai.meta.com/sam3/">website</a></li>
+                <li><a href="https://aidemos.meta.com/segment-anything/gallery">demo</a></li>
+                <li><a href="https://ai.meta.com/blog/segment-anything-model-3/">blog</a></li>
+                <li><a href="https://github.com/facebookresearch/sam3">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/sam3?style=social"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="pubwrap">
         <div class="row">
           <div class="col-md-6">
@@ -83,7 +128,7 @@
               <div class="puba">
                 Daniel Bolya, Po-Yao Huang, Peize Sun, Jang Hyun Cho, Andrea Madotto, Chen Wei, Tengyu Ma, Jiale Zhi, Jathushan Rajasegaran, Hanoona Rasheed, Junke Wang, Marco Monteiro, Hu Xu, Shiyu Dong, Nikhila Ravi, Daniel Li, Piotr Dollár, <b>Christoph Feichtenhofer</b>
               </div>
-              <div class="pubv">Technical report, arXiv, April 2025</div>
+              <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2025, Oral</div>
               <div class="pubd">
                 We introduce Perception Encoder (PE), a state-of-the-art encoder for image and video understanding trained via simple vision-language learning. Traditionally, vision encoders have relied on a variety of pretraining objectives, each tailored to specific downstream tasks such as classification, captioning, or localization. Surprisingly, after scaling our carefully tuned image pretraining recipe and refining with our robust video data engine, we find that contrastive vision-language training alone can produce strong, general embeddings for all of these downstream tasks. There is only one caveat: these embeddings are hidden within the intermediate layers of the network. To draw them out, we introduce two alignment methods, language alignment for multimodal language modeling, and spatial alignment for dense prediction. Together with the core contrastive checkpoint, our PE family of models achieves state-of-the-art performance on a wide variety of tasks, including zero-shot image and video classification and retrieval; document, image, and video Q&A; and spatial tasks such as detection, depth estimation, and tracking. To foster further research, we are releasing our models, code, and a novel dataset of synthetically and human-annotated videos.
               </div>
@@ -112,7 +157,7 @@
             <div class="puba">
               Jang Hyun Cho, Andrea Madotto, Effrosyni Mavroudi, Triantafyllos Afouras, Tushar Nagarajan, Muhammad Maaz, Yale Song, Tengyu Ma, Shuming Hu, Suyog Jain, Miguel Martin, Huiyu Wang, Hanoona Rasheed, Peize Sun, Po-Yao Huang, Daniel Bolya, Nikhila Ravi, Shashank Jain, Tammy Stark, Shane Moon, Babak Damavandi, Vivian Lee, Andrew Westbury, Salman Khan, Philipp Krähenbühl, Piotr Dollár, Lorenzo Torresani, Kristen Grauman, <b>Christoph Feichtenhofer</b>
             </div>
-            <div class="pubv">Technical report, arXiv, April 2025</div>
+            <div class="pubv">Advances in Neural Information Processing Systems (NeurIPS) 2025, Spotlight</div>
             <div class="pubd">
               Vision-language models are integral to computer vision research, yet many high-performing models remain closed-source, obscuring their data, design and training recipe. The research community has responded by using distillation from black-box models to label training data, achieving strong benchmark results, at the cost of measurable scientific progress. However, without knowing the details of the teacher model and its data sources, scientific progress remains difficult to measure. In this paper, we study building a Perception Language Model (PLM) in a fully open and reproducible framework for transparent research in image and video understanding. We analyze standard training pipelines without distillation from proprietary models and explore large-scale synthetic data to identify critical data gaps, particularly in detailed video understanding. To bridge these gaps, we release 2.8M human-labeled instances of fine-grained video question-answer pairs and spatio-temporally grounded video captions. Additionally, we introduce PLM–VideoBench, a suite for evaluating challenging video understanding tasks focusing on the ability to reason about "what", "where", "when", and "how" of a video. We make our work fully reproducible by providing data, training recipes, code & models.
             </div>
@@ -128,20 +173,25 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
 <div class="container">
   <h2>News &amp; Highlights </h2>
   <div class="pubwrap">
+    <div class="ttitle"> We released <a href="https://ai.meta.com/sam3">SAM 3</a>. Models and benchmark are available. Play with SAM 3 <a href="https://aidemos.meta.com/segment-anything/gallery">here</a>.</div>
+  </div>
+  <div class="pubwrap">
+      <div class="ttitle"> I am a Lead Area Chair for CVPR 2026 and Area Chair for ICLR &amp; ICML 2026</div>
+  </div>
+  <div class="pubwrap">
     <div class="ttitle"> SAM 2 received the <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">ICLR Best Paper Honorable Mention Award</a> </div>
   </div>
   <div class="pubwrap">
     <div class="ttitle"> We have released the <a href="https://ai.meta.com/blog/meta-fair-updates-perception-localization-reasoning/"> Perception Encoder &amp; Perception Language Model</a></div>
-</div>
+  </div>
   <div class="pubwrap">
-      <div class="ttitle"> I am a Senior Area Chair for CVPR &amp; ICCV 2025 and Area Chair for ICLR &amp; NeurIPS 2025</div>
+      <div class="ttitle"> I am a Lead Area Chair for CVPR &amp; ICCV 2025 and Area Chair for ICLR &amp; NeurIPS 2025</div>
   </div>
   <div class="pubwrap">
     <div class="ttitle"> At ECCV 2024, I am speaker and panelist at the <a
@@ -304,7 +354,7 @@
     <div class="timelineitem">
       <div class="tdate"> 2021 - </div>
       <div class="ttitle">Research Scientist, Director at Meta </div>
-      <div class="tdesc">Meta (<a href="https://ai.meta.com/research/">FAIR</a>), San Francisco, USA </div>
+      <div class="tdesc"><a href="https://ai.meta.com/research/">Meta Superintelligence Labs</a>, San Francisco, USA </div>
     </div>
     <div class="timelineitem">
       <div class="tdate"> 2018 - 2021 </div>
@@ -367,6 +417,7 @@
     </a>
   </span> </h2>
   <div id="pubs">
+
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
@@ -401,14 +452,15 @@
                 <li><a href="https://ai.meta.com/sam2/">website</a></li>
                 <li><a href="https://sam2.metademolab.com/">demo</a></li>
                 <li><a href="https://ai.meta.com/blog/segment-anything-2-video/">blog</a></li>
-                <li><a href="https://github.com/facebookresearch/segment-anything-2">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/segment-anything-2?style=social"></a></li>
+                <li><a href="https://github.com/facebookresearch/sam2">code<img alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/facebookresearch/sam2?style=social"></a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
@@ -1327,7 +1379,7 @@
             <div class="pubt">Ego4d: Around the world in 3,000 hours of egocentric video</div>
             <div class="puba">Kristen Grauman et al.
             </div>
-            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022 (Oral), </div>
+            <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2022 (Oral)</div>
             <div class="pubaw">Best Paper Finalist </div>
             <div class="pubd">
               We introduce Ego4D, a massive-scale egocentric video dataset and benchmark suite. It offers 3,025 hours of
