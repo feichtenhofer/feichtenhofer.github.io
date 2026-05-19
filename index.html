@@ -8,16 +8,21 @@
   <title>Christoph Feichtenhofer</title>
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yi/r/gbO80SSOuBU.ico">
   <style type="text/css"></style>
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-58616069-1', 'auto');
-    ga('send', 'pageview');
+    // Defer analytics until after page load
+    window.addEventListener('load', function() {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-58616069-1', 'auto');
+      ga('send', 'pageview');
+    });
   </script>
 </head>
 
@@ -73,12 +78,13 @@
         <div class="col-md-6">
           <div class="pubimg">
               <br><br><br>
-            <video width="102%" playsinline autoplay muted loop>
-              <source src="pubs/sam3_model.mp4" type="video/mp4">
+            <video preload="none" class="lazy-video" width="102%" playsinline muted loop>
+              <source data-src="pubs/sam3_model.mp4" type="video/mp4">
             </video>
               <br><br><br>
-            <video width="102%" playsinline autoplay muted loop>
-              <source src="pubs/sam3.mp4" type="video/mp4">
+              <br><br><br><br><br>
+            <video preload="none" class="lazy-video" width="102%" playsinline muted loop>
+              <source data-src="pubs/sam3.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -95,7 +101,7 @@
               Siyuan Li, Aishwarya Kamath, Ho Kei Cheng, Piotr Dollar, Nikhila Ravi, Kate
               Saenko, Pengchuan Zhang, <b>Christoph Feichtenhofer</b>
             </div>
-            <div class="pubv">Technical report, arXiv, November 2025</div>
+            <div class="pubv">International Conference on Learning Representations (ICLR) 2026</div>
             <div class="pubd">We present Segment Anything Model (SAM) 3, a unified model that detects, segments, and tracks objects in images and videos based on concept prompts, which we define as either short noun phrases (e.g., “yellow school bus”), image exemplars, or a combination of both. Promptable Concept Segmentation (PCS) takes such prompts and returns segmentation masks and unique identities for all matching object instances. To advance PCS, we build a scalable data engine that produces a high-quality dataset with 4M unique concept labels, including hard negatives, across images and videos. Our model consists of an image-level detector and a memory-based video tracker that share a single backbone. Recognition and localization are decoupled with a presence head, which boosts detection accuracy. SAM 3 delivers a 2× gain over existing systems in both image and video PCS, and improves previous SAM capabilities on visual segmentation tasks. We open source SAM 3 along with our new Segment Anything with Concepts (SA-Co) benchmark for promptable concept segmentation.
             </div>
             <div class="publ">
@@ -105,7 +111,70 @@
                 <li><a href="https://aidemos.meta.com/segment-anything/gallery">demo</a></li>
                 <li><a href="https://ai.meta.com/blog/segment-anything-model-3/">blog</a></li>
                 <li><a href="https://github.com/facebookresearch/sam3">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/sam3?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/sam3?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="pubimg">
+                <video
+                  src="pubs/sam_audio_arch.mp4"
+                  controls
+                  preload="metadata"
+                  style="
+                  width: 100%;
+                  border-radius: 6px;
+                  margin-top: 0.3em;
+                  display: block;
+                  "
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                  ></video>
+              <br><br>
+              <video
+                  src="pubs/sam_audio.mp4"
+                  controls
+                  preload="metadata"
+                  style="
+                  width: 100%;
+                  border-radius: 6px;
+                  margin-top: 0.3em;
+                  display: block;
+                  "
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                  ></video>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">SAM Audio: Segment Anything in Audio</div>
+            <div class="puba">
+              Bowen Shi, Andros Tjandra, John Hoffman†, Helin Wang, Yi-Chiao Wu, Luya Gao, Julius Richter, Matt Le, Apoorv Vyas, Sanyuan Chen, <b>Christoph Feichtenhofer</b>, Piotr Dollár, Wei-Ning Hsu, Ann Lee
+            </div>
+            <div class="pubv">International Conference on Machine Learning (ICML) 2026 </div>
+            <div class="pubd">General audio source separation is a key capability for multimodal AI systems that can perceive and reason about sound. Despite substantial progress in recent years, existing separation models are either domain-specific, designed for fixed categories such as speech or music, or limited in controllability, supporting only a single prompting modality such as text. In this work, we present SAM Audio, a foundation model for general audio separation that unifies text, visual, and temporal span prompting within a single framework. Built on a diffusion transformer architecture, SAM Audio is trained with flow matching on large-scale audio data spanning speech, music, and general sounds, and can flexibly separate target sources described by language, visual masks, or temporal spans. The model achieves state-of-the-art performance across a diverse suite of benchmarks, including general sound, speech, music, and musical instrument separation in both in-the-wild and professionally produced audios, substantially outperforming prior general-purpose and specialized systems. Furthermore, we introduce a new real-world separation benchmark with human-labeled multimodal prompts and a reference-free evaluation model that correlates strongly with human judgment.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2512.18099">arXiv</a></li>
+                <li><a href="https://ai.meta.com/research/samaudio/">website</a></li>
+                <li><a href="https://aidemos.meta.com/segment-anything/editor/segment-audio">demo</a></li>
+                <li><a href="https://github.com/facebookresearch/sam-audio">code<img alt="GitHub stars"
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/sam-audio?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -113,13 +182,46 @@
       </div>
     </div>
     <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+            <div class="pubimg">
+              <br>
+              <img src="pubs/pe_av_concept.png" style="width: 90%" loading="lazy"><br>
+              <br><br>
+              <br><br>
+              <img src="pubs/pe_av_engine.png" style="width: 90%" loading="lazy"><br>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Pushing the Frontier of Audiovisual Perception with Large-Scale Multimodal Correspondence Learning</div>
+              <div class="puba">
+                Apoorv Vyas, Heng-Jui Chang, Cheng-Fu Yang, Po-Yao Huang, Luya Gao, Julius Richter, Sanyuan Chen, Matt Le, Piotr Dollár, <b>Christoph Feichtenhofer</b>, Ann Lee, Wei-Ning Hsu
+              </div>
+              <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR) 2026 </div>
+              <div class="pubd">
+                We introduce Perception Encoder Audiovisual, PE-AV, a new family of encoders for audio and video understanding trained with scaled contrastive learning. Built on PE, PE-AV makes several key contributions to extend representations to audio, and natively support joint embeddings across audio-video, audio-text, and video-text modalities. PE-AV's unified cross-modal embeddings enable novel tasks such as speech retrieval, and set a new state of the art across standard audio and video benchmarks. We unlock this by building a strong audiovisual data engine that synthesizes high-quality captions for O(100M) audio-video pairs, enabling large-scale supervision consistent across modalities. Our audio data includes speech, music, and general sound effects-avoiding single-domain limitations common in prior work. We exploit ten pairwise contrastive objectives, showing that scaling cross-modality and caption-type pairs strengthens alignment and improves zero-shot performance. We further develop PE-A-Frame by fine-tuning PE-AV with frame-level contrastive objectives, enabling fine-grained audio-frame-to-text alignment for tasks such as sound event detection.
+              </div>
+              <div class="publ">
+                <ul>
+                  <li><a href="https://arxiv.org/abs/2512.19687">arXiv</a></li>
+                  <li><a href="https://github.com/facebookresearch/perception_models">code<img alt="GitHub stars"
+                        class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/perception_models?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="pubwrap">
         <div class="row">
           <div class="col-md-6">
             <div class="pubimg">
               <br>
-              <img src="pubs/pe_concept.png" style="width: 100%"><br>
+              <img src="pubs/pe_concept.png" style="width: 100%" loading="lazy"><br>
               <br><br>
-              <img src="pubs/pe_spatial.jpg" style="width: 100%"><br>
+              <br><br>
+              <img src="pubs/pe_spatial.jpg" style="width: 100%" loading="lazy"><br>
             </div>
           </div>
           <div class="col-md-6">
@@ -136,7 +238,7 @@
                 <ul>
                   <li><a href="https://arxiv.org/abs/2504.13181">arXiv</a></li>
                   <li><a href="https://github.com/facebookresearch/perception_models/blob/main/apps/pe/README.md">code<img alt="GitHub stars"
-                        src="https://img.shields.io/github/stars/facebookresearch/perception_models?style=social"></a></li>
+                        class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/perception_models?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                 <li><a href="https://ai.meta.com/datasets/pe-video/">data</a></li>
                 </ul>
               </div>
@@ -148,7 +250,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/plm.jpg" style="width: 100%"><br>
+            <img src="pubs/plm.jpg" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -165,7 +267,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2504.13180">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/perception_models/blob/main/apps/plm/README.md">code<img alt="GitHub stars"
-                  src="https://img.shields.io/github/stars/facebookresearch/perception_models?style=social"></a></li>
+                  class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/perception_models?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                 <li><a href="https://ai.meta.com/datasets/plm-data/">data</a></li>
               </ul>
             </div>
@@ -179,10 +281,10 @@
 <div class="container">
   <h2>News &amp; Highlights </h2>
   <div class="pubwrap">
-    <div class="ttitle"> We released <a href="https://ai.meta.com/sam3">SAM 3</a>. Models and benchmark are available. Play with SAM 3 <a href="https://aidemos.meta.com/segment-anything/gallery">here</a>.</div>
+    <div class="ttitle"> We released <a href="https://ai.meta.com/sam3">SAM 3</a>. Models and benchmark are available. Try SAM 3 <a href="https://aidemos.meta.com/segment-anything/gallery">here</a>.</div>
   </div>
   <div class="pubwrap">
-      <div class="ttitle"> I am a Lead Area Chair for CVPR 2026 and Area Chair for ICLR &amp; ICML 2026</div>
+      <div class="ttitle"> I am a Lead Area Chair for CVPR 2026, Senior AC for ECCV 2026 and Area Chair for ICLR, ICML &amp; NeurIPS 2026</div>
   </div>
   <div class="pubwrap">
     <div class="ttitle"> SAM 2 received the <a href="https://blog.iclr.cc/2025/04/22/announcing-the-outstanding-paper-awards-at-iclr-2025/">ICLR Best Paper Honorable Mention Award</a> </div>
@@ -422,8 +524,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <video width="92%" playsinline autoplay muted loop>
-              <source src="pubs/sam2_output.mp4" type="video/mp4">
+            <video preload="none" class="lazy-video" width="92%" playsinline muted loop>
+              <source data-src="pubs/sam2_output.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -453,20 +555,48 @@
                 <li><a href="https://sam2.metademolab.com/">demo</a></li>
                 <li><a href="https://ai.meta.com/blog/segment-anything-2-video/">blog</a></li>
                 <li><a href="https://github.com/facebookresearch/sam2">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/sam2?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/sam2?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <!-- <img src="pubs/llama3_1.png" style="width: 95%"><br> -->
-            <img src="pubs/Llama_Repo.jpeg" style="width: 92%"><br>
+            <img src="pubs/toto_arch.png" style="width: 100%" loading="lazy"><br> <br>
+            <img src="pubs/toto_scaling.png" style="width: 60%" loading="lazy">
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">An empirical study of autoregressive pre-training from videos</div>
+            <div class="puba">
+              Jathushan Rajasegaran, Ilija Radosavovic, Rahul Ravishankar, Yossi Gandelsman, <b>Christoph Feichtenhofer</b>, Jitendra Malik
+            </div>
+            <div class="pubv">International Conference on Computer Vision (ICCV) 2025</div>
+            <div class="pubd">
+              We empirically study autoregressive pre-training from videos. To perform our study, we construct a series of autoregressive video models, called Toto. We treat videos as sequences of visual tokens and train transformer models to autoregressively predict future tokens. Our models are pre-trained on a diverse dataset of videos and images comprising over 1 trillion visual tokens. We explore different architectural, training, and inference design choices. We evaluate the learned visual representations on a range of downstream tasks including image recognition, video classification, object tracking, and robotics. Our results demonstrate that, despite minimal inductive biases, autoregressive pre-training leads to competitive performance across all benchmarks. Finally, we find that scaling our video models results in similar scaling curves to those seen in language models, albeit with a different rate.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2501.05453">arXiv</a></li>
+                <li><a href="https://brjathu.github.io/toto/">website</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <!-- <img src="pubs/llama3_1.png" style="width: 95%" loading="lazy"><br> -->
+            <img src="pubs/Llama_Repo.jpeg" style="width: 92%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -493,7 +623,7 @@
                 <li><a href="https://llama.meta.com/">website</a></li>
                 <li><a href="https://ai.meta.com/blog/meta-llama-3-1/">blog</a></li>
                 <li><a href="https://github.com/meta-llama/llama-models">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/meta-llama/llama-models?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/meta-llama/llama-models?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -505,8 +635,8 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/metaclip.png" style="width: 95%"><br>
-            <img src="pubs/metaclip2.png" style="width: 95%">
+            <img src="pubs/metaclip.png" style="width: 95%" loading="lazy"><br>
+            <img src="pubs/metaclip2.png" style="width: 95%" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -546,7 +676,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2309.16671">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/MetaCLIP">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/MetaCLIP?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/MetaCLIP?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -558,8 +688,8 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/windowpos.png" style="width: 95%"><br>
-            <img src="pubs/windowpos2.png" style="width: 70%">
+            <img src="pubs/windowpos.png" style="width: 95%" loading="lazy"><br>
+            <img src="pubs/windowpos2.png" style="width: 70%" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -590,7 +720,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2311.05613">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/hiera">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -602,8 +732,8 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/hiera_concept.jpg" style="width: 100%"><br><br>
-            <img src="pubs/hiera_output.jpg" style="width: 100%">
+            <img src="pubs/hiera_concept.jpg" style="width: 100%" loading="lazy"><br><br>
+            <img src="pubs/hiera_output.jpg" style="width: 100%" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -612,7 +742,7 @@
             <div class="puba">
               Chaitanya Ryali<sup>*</sup>, Yuan-Ting Hu<sup>*</sup>, Daniel Bolya<sup>*</sup>, Chen Wei, Haoqi Fan, Po-Yao
               Huang, Vaibhav Aggarwal, Arkabandhu Chowdhury,
-              Omid Poursaeed, Judy Hoffman, Jitendra Malik, Yanghao Li<sup>*</sup>, <b>Christoph Feichtenhofer</b<sup>*</sup>
+              Omid Poursaeed, Judy Hoffman, Jitendra Malik, Yanghao Li<sup>*</sup>, <b>Christoph Feichtenhofer</b><sup>*</sup>
               <br> <sup>*</sup>equal contribution
             </div>
             <div class="pubv">International Conference on Machine Learning (ICML) 2023, Oral </div>
@@ -637,7 +767,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2306.00989">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/hiera">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/hiera?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -649,8 +779,8 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br><br>
-            <img src="pubs/mavil.png" style="width: 100%"><br>
-            <img src="pubs/mavil_output.jpg" style="width: 100%"><br>
+            <img src="pubs/mavil.png" style="width: 100%" loading="lazy"><br>
+            <img src="pubs/mavil_output.jpg" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -681,7 +811,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2212.08071">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/mavil">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/mavil?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/mavil?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -694,7 +824,7 @@
           <div class="pubimg">
             <br> <br><br>
             <div class="column has-text-centered">
-              <img src="pubs/diffmae_1.gif">
+              <img src="pubs/diffmae_1.gif" loading="lazy">
               <table width="100%">
                 <tr>
                   <td width="33.3%">ground-truth</td>
@@ -704,7 +834,7 @@
               </table>
             </div>
             <!-- <div class="column has-text-centered">
-                  <img src="pubs/diffmae_video.gif" width="95%" height="95%">
+                  <img src="pubs/diffmae_video.gif" width="95%" height="95%" loading="lazy">
 
                   <table width="100%">
                     <tr>
@@ -716,39 +846,35 @@
                 </div> -->
           </div>
         </div>
-        <div class="pubwrap">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="pub">
-                <div class="pubt">Diffusion Models as Masked Autoencoders</div>
-                <div class="puba">Chen Wei, Karttikeya Mangalam, Po-Yao Huang, Yanghao Li, Haoqi Fan, Hu Xu, Huiyu Wang,
-                  Cihang Xie, Alan Yuille, <b>Christoph Feichtenhofer</b>
-                </div>
-                <div class="pubv">International Conference on Computer Vision (ICCV) 2023</div>
-                <div class="pubd">
-                  There has been a longstanding belief that generation can facilitate a true understanding of visual data.
-                  In line with
-                  this, we revisit generatively pre-training visual representations in light of recent interest in denoising
-                  diffusion
-                  models. While directly pre-training with diffusion models does not produce strong representations, we
-                  condition
-                  diffusion models on masked input and formulate diffusion models as masked autoencoders (DiffMAE). Our
-                  approach is
-                  capable of (i) serving as a strong initialization for downstream recognition tasks, (ii) conducting
-                  high-quality image
-                  inpainting, and (iii) being effortlessly extended to video where it produces state-of-the-art
-                  classification accuracy.
-                  We further perform a comprehensive study on the pros and cons of design choices and build connections
-                  between diffusion
-                  models and masked autoencoders.
-                </div>
-                <div class="publ">
-                  <ul>
-                    <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
-                    <li><a href="https://weichen582.github.io/diffmae.html">website</a></li>
-                  </ul>
-                </div>
-              </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Diffusion Models as Masked Autoencoders</div>
+            <div class="puba">Chen Wei, Karttikeya Mangalam, Po-Yao Huang, Yanghao Li, Haoqi Fan, Hu Xu, Huiyu Wang,
+              Cihang Xie, Alan Yuille, <b>Christoph Feichtenhofer</b>
+            </div>
+            <div class="pubv">International Conference on Computer Vision (ICCV) 2023</div>
+            <div class="pubd">
+              There has been a longstanding belief that generation can facilitate a true understanding of visual data.
+              In line with
+              this, we revisit generatively pre-training visual representations in light of recent interest in denoising
+              diffusion
+              models. While directly pre-training with diffusion models does not produce strong representations, we
+              condition
+              diffusion models on masked input and formulate diffusion models as masked autoencoders (DiffMAE). Our
+              approach is
+              capable of (i) serving as a strong initialization for downstream recognition tasks, (ii) conducting
+              high-quality image
+              inpainting, and (iii) being effortlessly extended to video where it produces state-of-the-art
+              classification accuracy.
+              We further perform a comprehensive study on the pros and cons of design choices and build connections
+              between diffusion
+              models and masked autoencoders.
+            </div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/2304.03283">arXiv</a></li>
+                <li><a href="https://weichen582.github.io/diffmae.html">website</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -759,7 +885,7 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/cit_concept.png" style="width: 100%"><br> <br> <br>
+            <img src="pubs/cit_concept.png" style="width: 100%" loading="lazy"><br> <br> <br>
           </div>
         </div>
         <div class="col-md-6">
@@ -793,7 +919,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/CiT">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/CiT?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/CiT?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -805,7 +931,7 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/premae.png" style="width: 100%"><br> <br> <br>
+            <img src="pubs/premae.png" style="width: 100%" loading="lazy"><br> <br> <br>
           </div>
         </div>
         <div class="col-md-6">
@@ -835,22 +961,23 @@
             </div>
             <div class="publ">
               <ul>
-                <li><a href="https://arxiv.org/abs/2301.02241">arXiv</a></li>
+                <li><a href="https://arxiv.org/abs/2303.13496">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/maws/">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/maws?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/maws?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="pubwrap">
+
+<div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/flip_concept.png" style="width: 60%"><br><br>
-            <img src="pubs/flip_output.png" style="width: 60%">
+            <img src="pubs/flip_concept.png" style="width: 60%" loading="lazy"><br><br>
+            <img src="pubs/flip_output.png" style="width: 60%" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -882,7 +1009,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2212.00794">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/flip">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/flip?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/flip?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -894,15 +1021,15 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/mcc_concept.jpg" style="width: 100%"><br> <br> <br>
-            <img src="pubs/mcc_quest_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_quest_2.gif"
-              style="height:130px; vertical-align:top">
-            <img src="pubs/mcc_spyro_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_spyro_2.gif"
-              style="height:130px; vertical-align:top"><br>
-            <img src="pubs/mcc_chair_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_chair_2.gif"
-              style="height:130px; vertical-align:top">
-            <img src="pubs/mcc_plant_1.jpg" style="height:130px; vertical-align:top"><img src="pubs/mcc_plant_2.gif"
-              style="height:130px; vertical-align:top"><br>
+            <img src="pubs/mcc_concept.jpg" style="width: 100%" loading="lazy"><br> <br> <br>
+            <img src="pubs/mcc_quest_1.jpg" style="height:130px; vertical-align:top" loading="lazy"><img src="pubs/mcc_quest_2.gif"
+              style="height:130px; vertical-align:top" loading="lazy">
+            <img src="pubs/mcc_spyro_1.jpg" style="height:130px; vertical-align:top" loading="lazy"><img src="pubs/mcc_spyro_2.gif"
+              style="height:130px; vertical-align:top" loading="lazy"><br>
+            <img src="pubs/mcc_chair_1.jpg" style="height:130px; vertical-align:top" loading="lazy"><img src="pubs/mcc_chair_2.gif"
+              style="height:130px; vertical-align:top" loading="lazy">
+            <img src="pubs/mcc_plant_1.jpg" style="height:130px; vertical-align:top" loading="lazy"><img src="pubs/mcc_plant_2.gif"
+              style="height:130px; vertical-align:top" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -932,8 +1059,8 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2301.08247">arXiv</a></li>
                 <li><a href="https://mcc3d.github.io/">website</a></li>
-                    <li><a href=" https://github.com/facebookresearch/MCC">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/MCC?style=social"></a></li>
+                    <li><a href="https://github.com/facebookresearch/MCC">code<img alt="GitHub stars"
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/MCC?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -945,8 +1072,8 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/tome_concept.png" style="width: 100%"><br> <br> <br>
-            <img src="pubs/tome_output.gif" style="width: 100%"><br>
+            <img src="pubs/tome_concept.png" style="width: 100%" loading="lazy"><br> <br> <br>
+            <img src="pubs/tome_output.gif" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -980,7 +1107,7 @@
                 <li><a href="https://research.facebook.com/blog/2023/2/token-merging-your-vit-but-faster/">Meta AI
                     blog</a></li>
                 <li><a href="https://github.com/facebookresearch/ToMe">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/ToMe?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/ToMe?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -991,8 +1118,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/mae_concept.jpg" style="width: 100%"><br> <br> <br>
-            <img src="pubs/vis_14_2.gif" style="width: 100%"><br> <br> <br>
+            <img src="pubs/mae_concept.jpg" style="width: 100%" loading="lazy"><br> <br> <br>
+            <img src="pubs/vis_14_2.gif" style="width: 100%" loading="lazy"><br> <br> <br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1043,8 +1170,8 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/audiomae_concept.jpg" style="width: 100%"><br> <br> <br>
-            <img src="pubs/audiomae_output.jpg" style="width: 100%"><br>
+            <img src="pubs/audiomae_concept.jpg" style="width: 100%" loading="lazy"><br> <br> <br>
+            <img src="pubs/audiomae_output.jpg" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1075,7 +1202,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2207.06405">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/AudioMAE">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/AudioMAE?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/AudioMAE?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -1086,8 +1213,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/memvit_concept.png" style="width: 100%"><br> <br> <br>
-            <img src="pubs/memvit_output.png" style="width: 100%"><br>
+            <img src="pubs/memvit_concept.png" style="width: 100%" loading="lazy"><br> <br> <br>
+            <img src="pubs/memvit_output.png" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1119,7 +1246,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2201.08383">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                 <div class="pubaw">PyTorch code will be open sourced in <a
                     href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> &amp; <a
                     href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo</a>. </div>
@@ -1133,8 +1260,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/maskfeat_concept.png" style="width: 100%"><br> <br> <br>
-            <img src="pubs/maskfeat_output.png" style="width: 100%"><br>
+            <img src="pubs/maskfeat_concept.png" style="width: 100%" loading="lazy"><br> <br> <br>
+            <img src="pubs/maskfeat_output.png" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1183,8 +1310,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/mvit_v2.png" style="width: 100%"><br> <br> <br>
-            <img src="pubs/mvit_fpn.png" style="width: 100%"><br>
+            <img src="pubs/mvit_v2.png" style="width: 100%" loading="lazy"><br> <br> <br>
+            <img src="pubs/mvit_fpn.png" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1212,7 +1339,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2112.01526">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/mvit">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/mvit?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/mvit?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -1224,8 +1351,8 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="pubs/rev_concept.png" style="width: 50%">
-            <!-- <img src="pubs/rev_output.png" style="width: 80%"><br> -->
+            <img src="pubs/rev_concept.png" style="width: 50%" loading="lazy">
+            <!-- <img src="pubs/rev_output.png" style="width: 80%" loading="lazy"><br> -->
           </div>
         </div>
         <div class="col-md-6">
@@ -1259,10 +1386,10 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2302.04869">arXiv</a></li>
                 <li><a href="https://karttikeya.github.io/publication/revvit/">website</a></li>
-                    <li><a href=" https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                    <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                 <li><a href="https://github.com/karttikeya/minREV">min code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/karttikeya/minREV?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/karttikeya/minREV?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -1273,8 +1400,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/convnext_concept.png" style="width: 60%"><br>
-            <img src="pubs/convnext.jpg" style="width: 100%"><br>
+            <img src="pubs/convnext_concept.png" style="width: 60%" loading="lazy"><br>
+            <img src="pubs/convnext.jpg" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1315,7 +1442,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2201.03545">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/ConvNeXt">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/ConvNeXt?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/ConvNeXt?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -1326,10 +1453,10 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <!-- <img src="pubs/trackformer_output.gif" style="width: 75%"><br>
-                    <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOT17-03-SDP.gif" style="width: 75%"><br> -->
-            <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOTS20-07.gif" style="width: 80%"><br>
-            <img src="pubs/trackformer_concept.png" style="width: 80%"><br>
+            <!-- <img src="pubs/trackformer_output.gif" style="width: 75%" loading="lazy"><br>
+                    <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOT17-03-SDP.gif" style="width: 75%" loading="lazy"><br> -->
+            <img src="https://github.com/timmeinhardt/trackformer/raw/main/docs/MOTS20-07.gif" style="width: 80%" loading="lazy"><br>
+            <img src="pubs/trackformer_concept.png" style="width: 80%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1359,7 +1486,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2101.02702">arXiv</a></li>
                 <li><a href="https://github.com/timmeinhardt/trackformer">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/timmeinhardt/trackformer?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/timmeinhardt/trackformer?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -1371,7 +1498,7 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br> <br>
-            <img src="https://ego4d-data.org/assets/images/Ego4D-Collage.jpg" style="width: 100%"><br>
+            <img src="https://ego4d-data.org/assets/images/Ego4D-Collage.jpg" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1417,9 +1544,9 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/pytorchvide.png" style="width: 100%"><br> <br> <br>
+            <img src="pubs/pytorchvide.png" style="width: 100%" loading="lazy"><br> <br> <br>
             <img src="https://github.com/facebookresearch/pytorchvideo/blob/main/.github/media/ava_slowfast.gif?raw=true"
-              style="width: 100%"><br>
+              style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1448,7 +1575,7 @@
               <ul>
                 <li><a href="https://dl.acm.org/doi/abs/10.1145/3474085.3478329">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/pytorchvideo">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/pytorchvideo?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/pytorchvideo?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                 <li><a href="https://pytorchvideo.org/">website</a></li>
               </ul>
             </div>
@@ -1460,8 +1587,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/mvit.png" style="width: 100%"><br> <br> <br>
-            <img src="pubs/mvit_output.png" style="width: 100%"><br>
+            <img src="pubs/mvit.png" style="width: 100%" loading="lazy"><br> <br> <br>
+            <img src="pubs/mvit_output.png" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1486,7 +1613,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2104.11227">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                 <li><a href="https://youtu.be/IG4il10zx68">talk</a></li>
                 <div class="pubaw">PyTorch code has been open sourced in <a
                     href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
@@ -1501,9 +1628,9 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/videomoco_concept1.png" style="width: 90%"><br>
-            <img src="pubs/videomoco_concept2.png" style="width: 100%"><br>
-            <img src="pubs/videomoco_output.png" style="width: 90%"><br>
+            <img src="pubs/videomoco_concept1.png" style="width: 90%" loading="lazy"><br>
+            <img src="pubs/videomoco_concept2.png" style="width: 100%" loading="lazy"><br>
+            <img src="pubs/videomoco_output.png" style="width: 90%" loading="lazy"><br>
 
           </div>
         </div>
@@ -1527,7 +1654,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2104.14558">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                 <div class="pubaw">PyTorch code will be open sourced in <a
                     href="https://github.com/facebookresearch/SlowFast">PySlowFast</a> & <a
                     href="https://github.com/facebookresearch/pytorchvideo">PyTorchVideo.</a> </div>
@@ -1537,11 +1664,15 @@
         </div>
       </div>
     </div>
+
+    <div id="show-more-pubs" style="text-align:center;padding:20px;cursor:pointer;color:#999;font-size:20px;border:1px solid #ccc;margin:20px auto;width:300px" onclick="document.getElementById('older-pubs').style.display='block';this.style.display='none'">Show older publications ▼</div>
+    <div id="older-pubs" style="display:none">
+
     <div class="pubwrap">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/mvpl.png" style="width: 90%"><br>
+            <img src="pubs/mvpl.png" style="width: 90%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1573,7 +1704,7 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br><br>
-            <img src="pubs/videoclip.png" style="width: 100%"><br>
+            <img src="pubs/videoclip.png" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1600,7 +1731,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2109.14084">arXiv</a></li>
                 <li><a href="https://github.com/pytorch/fairseq/tree/main/examples/MMPT">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/pytorch/fairseq?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/pytorch/fairseq?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -1612,8 +1743,8 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br><br>
-            <img src="pubs/motionformer_concept.png" style="width: 100%"><br><br><br>
-            <img src="pubs/motionformer_arch.png" style="width: 100%"><br>
+            <img src="pubs/motionformer_concept.png" style="width: 100%" loading="lazy"><br><br><br>
+            <img src="pubs/motionformer_arch.png" style="width: 100%" loading="lazy"><br>
 
           </div>
         </div>
@@ -1648,7 +1779,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2106.05392">arXiv</a></li>
                 <li><a href="https://github.com/facebookresearch/Motionformer">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/facebookresearch/Motionformer?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/Motionformer?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -1660,7 +1791,7 @@
         <div class="col-md-6">
           <div class="pubimg">
             <br><br>
-            <img src="pubs/vlm.png" style="width: 100%"><br>
+            <img src="pubs/vlm.png" style="width: 100%" loading="lazy"><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1690,7 +1821,7 @@
               <ul>
                 <li><a href="https://arxiv.org/abs/2105.09996">arXiv</a></li>
                 <li><a href="https://github.com/pytorch/fairseq/tree/main/examples/MMPT">code<img alt="GitHub stars"
-                      src="https://img.shields.io/github/stars/pytorch/fairseq?style=social"></a></li>
+                      class="lazy-badge" data-src="https://img.shields.io/github/stars/pytorch/fairseq?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
               </ul>
             </div>
           </div>
@@ -1702,8 +1833,8 @@
     <div class="row">
       <div class="col-md-6">
          <div class="pubimg">
-          <img src="pubs/x3d_concept.png"><br>
-          <img src="pubs/x3d_output.png">
+          <img src="pubs/x3d_concept.png" loading="lazy"><br>
+          <img src="pubs/x3d_output.png" loading="lazy">
         </div>
       </div>
       <div class="col-md-6">
@@ -1717,7 +1848,7 @@
           <div class="publ">
             <ul>
                <li><a href="https://arxiv.org/abs/2004.04730">arXiv</a></li>
-               <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+               <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
             </ul>
           </div>
         </div>
@@ -1729,7 +1860,7 @@
     <div class="row">
       <div class="col-md-6">
          <div class="pubimg">
-          <img src="pubs/avslowfast_concept.gif"><br><br>
+          <img src="pubs/avslowfast_concept.gif" loading="lazy"><br><br>
         </div>
       </div>
       <div class="col-md-6">
@@ -1743,7 +1874,7 @@
           <div class="publ">
             <ul>
                    <li><a href="https://arxiv.org/abs/2001.08740">arXiv</a></li>
-                   <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                   <li><a href="https://github.com/facebookresearch/SlowFast">code (to be released)<img alt="GitHub stars" class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
             </ul>
           </div>
         </div>
@@ -1755,8 +1886,8 @@
     <div class="row">
       <div class="col-md-6">
          <div class="pubimg">
-           <img src="pubs/fpg_concept.png"><br>
-           <img src="pubs/fpg_output.jpg">
+           <img src="pubs/fpg_concept.png" loading="lazy"><br>
+           <img src="pubs/fpg_output.jpg" loading="lazy">
         </div>
       </div>
       <div class="col-md-6">
@@ -1770,7 +1901,7 @@
           <div class="publ">
             <ul>
                <li><a href="https://arxiv.org/abs/2004.03580">arXiv</a></li>
-               <li><a href="https://github.com/open-mmlab/mmdetection/tree/master/mmdet/models/necks">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/open-mmlab/mmdetection?style=social"></a></li>
+               <li><a href="https://github.com/open-mmlab/mmdetection/tree/master/mmdet/models/necks">code<img alt="GitHub stars" class="lazy-badge" data-src="https://img.shields.io/github/stars/open-mmlab/mmdetection?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
             </ul>
       </div>
     </div>
@@ -1782,8 +1913,8 @@
   <div class="row">
     <div class="col-md-6">
        <div class="pubimg">
-        <img src="pubs/multigrid_concept.png"><br><br><br><br>
-        <img src="pubs/multigrid_output.png">
+        <img src="pubs/multigrid_concept.png" loading="lazy"><br><br><br><br>
+        <img src="pubs/multigrid_output.png" loading="lazy">
       </div>
     </div>
     <div class="col-md-6">
@@ -1797,7 +1928,7 @@
         <div class="publ">
           <ul>
                  <li><a href="https://arxiv.org/abs/1912.00998">arXiv</a></li>
-                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                 <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
           </ul>
         </div>
       </div>
@@ -1809,12 +1940,12 @@
   <div class="row">
     <div class="col-md-6">
        <div class="pubimg">
-         <!-- <video height="260" playsinline autoplay muted loop>
-          <source src="pubs/egotopo_concept.mp4" type="video/mp4">
+         <!-- <video preload="none" class="lazy-video" height="260" playsinline muted loop>
+          <source data-src="pubs/egotopo_concept.mp4" type="video/mp4">
          </video> -->
-         <img src="pubs/egotopo_concept.gif">
+         <img src="pubs/egotopo_concept.gif" loading="lazy">
          <br><br>
-         <img src="pubs/egotopo_output.png">
+         <img src="pubs/egotopo_output.png" loading="lazy">
       </div>
     </div>
     <div class="col-md-6">
@@ -1840,8 +1971,8 @@
       <div class="row">
         <div class="col-md-6">
            <div class="pubimg">
-            <img src="pubs/slowfast_concept.gif"><br><br>
-            <img src="pubs/slowfast_output.gif"><br><br>
+            <img src="pubs/slowfast_concept.gif" loading="lazy"><br><br>
+            <img src="pubs/slowfast_output.gif" loading="lazy"><br><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1857,7 +1988,7 @@
               <ul>
                      <li><a href="https://arxiv.org/abs/1812.03982">arXiv</a></li>
                      <li><a href="http://static.googleusercontent.com/media/research.google.com/en//ava/2019/fair_slowfast.pdf">AVA challenge report</a></li>
-                     <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social"></a></li>
+                     <li><a href="https://github.com/facebookresearch/SlowFast">code<img alt="GitHub stars" class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/SlowFast?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                      <li><a href="https://ai.facebook.com/blog/slowfast-video-recognition-through-dual-frame-rate-analysis/">Facebook AI blog</a></li>
                      <li><a href="https://venturebeat.com/2019/11/04/facebooks-slowfast-video-classifier-ai-was-inspired-by-primate-eyes/">Venturebeat article</a></li>
                      <li><a href="https://conftube.com/video/8oUPyhwzIDo?tocitem=37">talk</a></li>
@@ -1872,8 +2003,8 @@
       <div class="row">
         <div class="col-md-6">
            <div class="pubimg">
-            <img src="pubs/quarternet_concept.png"><br><br>
-            <img src="pubs/quarternet_output.gif">
+            <img src="pubs/quarternet_concept.png" loading="lazy"><br><br>
+            <img src="pubs/quarternet_output.gif" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -1886,7 +2017,7 @@
             <div class="publ">
               <ul>
                      <li><a href="https://arxiv.org/abs/1901.07677">arXiv</a></li>
-                     <li><a href="https://github.com/facebookresearch/QuaterNet">code <img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/QuaterNet?style=social"></a></li>
+                     <li><a href="https://github.com/facebookresearch/QuaterNet">code <img alt="GitHub stars" class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/QuaterNet?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                      <li><a href="https://link.springer.com/article/10.1007/s11263-019-01245-6">springer</a></li>
               </ul>
             </div>
@@ -1899,9 +2030,9 @@
         <div class="row">
           <div class="col-md-6">
          <div class="pubimg">
-        <img src="pubs/grounded_concept.gif"><br><br>
-        <img src="pubs/grounded_output.png"><br><br>
-        <img src="pubs/grounded_legend.png"><br><br>
+        <img src="pubs/grounded_concept.gif" loading="lazy"><br><br>
+        <img src="pubs/grounded_output.png" loading="lazy"><br><br>
+        <img src="pubs/grounded_legend.png" loading="lazy"><br><br>
 
             </div>
           </div>
@@ -1928,8 +2059,8 @@
       <div class="row">
         <div class="col-md-6">
            <div class="pubimg">
-            <img src="pubs/posewarp_concept.png"><br><br>
-            <img src="pubs/posewarp_arch.png"><br><br>
+            <img src="pubs/posewarp_concept.png" loading="lazy"><br><br>
+            <img src="pubs/posewarp_arch.png" loading="lazy"><br><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1952,8 +2083,8 @@
       <div class="row">
         <div class="col-md-6">
            <div class="pubimg">
-            <img src="pubs/lfb_concept.png"><br><br>
-            <img src="pubs/lfb_output.png"><br><br>
+            <img src="pubs/lfb_concept.png" loading="lazy"><br><br>
+            <img src="pubs/lfb_output.png" loading="lazy"><br><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1976,8 +2107,8 @@
       <div class="row">
         <div class="col-md-6">
            <div class="pubimg">
-            <img src="pubs/vid_pose_concept.gif"><br><br>
-            <img src="pubs/vid_pose_output.gif"><br><br>
+            <img src="pubs/vid_pose_concept.gif" loading="lazy"><br><br>
+            <img src="pubs/vid_pose_output.gif" loading="lazy"><br><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -1990,7 +2121,7 @@
             <div class="publ">
               <ul>
                      <li><a href="https://arxiv.org/abs/1811.11742">arXiv</a></li>
-                     <li><a href="https://github.com/facebookresearch/VideoPose3D">code <img alt="GitHub stars" src="https://img.shields.io/github/stars/facebookresearch/VideoPose3D?style=social"></a></li>
+                     <li><a href="https://github.com/facebookresearch/VideoPose3D">code <img alt="GitHub stars" class="lazy-badge" data-src="https://img.shields.io/github/stars/facebookresearch/VideoPose3D?style=social" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy"></a></li>
                      <li><a href="https://dariopavllo.github.io/VideoPose3D/">website</a></li>
               </ul>
             </div>
@@ -2003,25 +2134,25 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg" style="line-height: 50%;">
-			<img src="pubs/action_vis_architecture.png"><br><br>
-			<img src="pubs/action_vis/conv3_3-mosaic-f1-25.jpg">
-			<img src="pubs/action_vis/conv3_3-mosaic-f1-25-flow_mag_Slow.gif">
-			<img src="pubs/action_vis/conv3_3-mosaic-f1-25-flow_mag_Fast.gif"><br><br>
-			<img src="pubs/action_vis/conv4_3-mosaic-f1-25.jpg">
-			<img src="pubs/action_vis/conv4_3-mosaic-f1-25-flow_mag_Slow.gif">
-			<img src="pubs/action_vis/conv4_3-mosaic-f1-25-flow_mag_Fast.gif"><br><br>
-			<img src="pubs/action_vis/conv5_2-mosaic-f1-16_rgb.jpg">
-			<img src="pubs/action_vis/conv5_2-mosaic-f1-16-flow_mag_Slow.gif">
-			<img src="pubs/action_vis/conv5_2-mosaic-f1-16-flow_mag_Fast.gif">
+			<img src="pubs/action_vis_architecture.png" loading="lazy"><br><br>
+			<img src="pubs/action_vis/conv3_3-mosaic-f1-25.jpg" loading="lazy">
+			<img src="pubs/action_vis/conv3_3-mosaic-f1-25-flow_mag_Slow.gif" loading="lazy">
+			<img src="pubs/action_vis/conv3_3-mosaic-f1-25-flow_mag_Fast.gif" loading="lazy"><br><br>
+			<img src="pubs/action_vis/conv4_3-mosaic-f1-25.jpg" loading="lazy">
+			<img src="pubs/action_vis/conv4_3-mosaic-f1-25-flow_mag_Slow.gif" loading="lazy">
+			<img src="pubs/action_vis/conv4_3-mosaic-f1-25-flow_mag_Fast.gif" loading="lazy"><br><br>
+			<img src="pubs/action_vis/conv5_2-mosaic-f1-16_rgb.jpg" loading="lazy">
+			<img src="pubs/action_vis/conv5_2-mosaic-f1-16-flow_mag_Slow.gif" loading="lazy">
+			<img src="pubs/action_vis/conv5_2-mosaic-f1-16-flow_mag_Fast.gif" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
           <div class="pub">
             <div class="pubt">Deep insights into convolutional networks for video recognition</div>
-      <div class="puba"><b><b>Christoph Feichtenhofer</b></b>, Axel Pinz, Richard P. Wildes, Andrew Zisserman</div>
+      <div class="puba"><b>Christoph Feichtenhofer</b>, Axel Pinz, Richard P. Wildes, Andrew Zisserman</div>
             <div class="pubv">International Journal on Computer Vision (IJCV), 2019</div>
             <div class="pubt">What have we learned from deep representations for action recognition?</div>
-			<div class="puba"><b><b>Christoph Feichtenhofer</b></b>, Axel Pinz, Richard P. Wildes, Andrew Zisserman</div>
+			<div class="puba"><b>Christoph Feichtenhofer</b>, Axel Pinz, Richard P. Wildes, Andrew Zisserman</div>
             <div class="pubv">Conference on Computer Vision and Pattern Recognition (CVPR), 2018</div>
 			 <div class="pubd">As the success of deep models has led to their deployment in all areas of computer vision, it is increasingly important to understand how these representations work and what they are capturing. In this paper, we shed light on deep spatiotemporal representations by visualizing what two-stream models have learned in order to recognize actions in video. We show that local detectors for appearance and motion objects arise to form distributed representations for recognizing human actions. Key observations include the following. First, cross-stream fusion enables the learning of true spatiotemporal features rather than simply separate appearance and motion features. Second, the networks can learn local representations that are highly class specific, but also generic representations that can serve a range of classes. Third, throughout the hierarchy of the network, features become more abstract and show increasing invariance to aspects of the data that are unimportant to desired distinctions (e.g. motion patterns across various speeds). Fourth, visualizations can be used not only to shed light on learned representations, but also to reveal idiosyncracies of training data and to explain failure cases of the system.
 			</div>
@@ -2040,8 +2171,8 @@
     <div class="row">
       <div class="col-md-6">
          <div class="pubimg">
-          <img src="pubs/dimofs_concept.png"><br><br>
-          <img src="pubs/dimofs_output.png"><br><br>
+          <img src="pubs/dimofs_concept.png" loading="lazy"><br><br>
+          <img src="pubs/dimofs_output.png" loading="lazy"><br><br>
         </div>
       </div>
       <div class="col-md-6">
@@ -2064,8 +2195,8 @@
       <div class="row">
         <div class="col-md-6">
 		   <div class="pubimg">
-			<img src="pubs/vel_est_overall_architecture.png"><br><br>
-			<img src="pubs/vel_est_sample.jpg"><br><br>
+			<img src="pubs/vel_est_overall_architecture.png" loading="lazy"><br><br>
+			<img src="pubs/vel_est_sample.jpg" loading="lazy"><br><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -2111,8 +2242,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-			<img src="pubs/DT_architecture.png"><br><br>
-			<img src="pubs/DTfeatures.jpg"><br><br>
+			<img src="pubs/DT_architecture.png" loading="lazy"><br><br>
+			<img src="pubs/DTfeatures.jpg" loading="lazy"><br><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -2155,9 +2286,9 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-		    <img src="pubs/cvpr17_multiplier.jpg"><br><br>
-			<img src="pubs/gradient_mul.png" style="width: 49% ">
-			<img src="pubs/temporal_conv.png" style="width: 49% ">
+		    <img src="pubs/cvpr17_multiplier.jpg" loading="lazy"><br><br>
+			<img src="pubs/gradient_mul.png" style="width: 49% " loading="lazy">
+			<img src="pubs/temporal_conv.png" style="width: 49% " loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -2185,8 +2316,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-		    <img src="pubs/cvpr17_tres.jpg"><br><br>
-			<img src="pubs/cvpr17_scenes.jpg"><br><br>
+		    <img src="pubs/cvpr17_tres.jpg" loading="lazy"><br><br>
+			<img src="pubs/cvpr17_scenes.jpg" loading="lazy"><br><br>
           </div>
         </div>
         <div class="col-md-6">
@@ -2212,8 +2343,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/nips16_teaser.jpg"><br><br>
-			<img src="pubs/nips16_temporal_resnet.png">
+            <img src="pubs/nips16_teaser.jpg" loading="lazy"><br><br>
+			<img src="pubs/nips16_temporal_resnet.png" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -2239,8 +2370,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/cvpr16_teaser.jpg"><br><br>
-			<img src="pubs/cvpr16_architecture.jpg">
+            <img src="pubs/cvpr16_teaser.jpg" loading="lazy"><br><br>
+			<img src="pubs/cvpr16_architecture.jpg" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -2268,7 +2399,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/DPCF_intro_square.jpg">
+            <img src="pubs/DPCF_intro_square.jpg" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -2296,10 +2427,10 @@
           <div class="pubimg">
 		  <table width="100%">
 			  <tr>
-				<td align="center" valign="bottom">	<video autoplay loop> <source src="pubs/Davis_Love_III__Beautiful_swing!_golf_f_cm_np1_ri_med_0.mp4" type="video/mp4"> </video></td>
+				<td align="center" valign="bottom">	<video preload="none" class="lazy-video" loop> <source data-src="pubs/Davis_Love_III__Beautiful_swing!_golf_f_cm_np1_ri_med_0.mp4" type="video/mp4"> </video></td>
 			  </tr>
 			  <tr>
-				<td align="center" valign="bottom">   <video autoplay loop> <source src="pubs/Davis_Love_III__Beautiful_swing!_golf_f_cm_np1_ri_med_sal.mp4" type="video/mp4"> </video></td>
+				<td align="center" valign="bottom">   <video preload="none" class="lazy-video" loop> <source data-src="pubs/Davis_Love_III__Beautiful_swing!_golf_f_cm_np1_ri_med_sal.mp4" type="video/mp4"> </video></td>
 			  </tr>
 		  </table>
           </div>
@@ -2329,7 +2460,7 @@
           <div class="pubimg">
 			  <table width="100%">
 				  <tr>
-					<td align="center" valign="bottom">	<video autoplay loop width="90%"> <source src="pubs/windmill_energies.mp4" type="video/mp4">  </video>  </td>
+					<td align="center" valign="bottom">	<video preload="none" class="lazy-video" loop width="90%"> <source data-src="pubs/windmill_energies.mp4" type="video/mp4">  </video>  </td>
 				  </tr>
 			  </table>
           </div>
@@ -2360,8 +2491,8 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/rfid_vision_block_diagram.svg"><br><br>
-			<img src="pubs/rfid_SP-ST.png">
+            <img src="pubs/rfid_vision_block_diagram.svg" loading="lazy"><br><br>
+			<img src="pubs/rfid_SP-ST.png" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -2401,7 +2532,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-            <img src="pubs/strf.PNG">
+            <img src="pubs/strf.PNG" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -2441,7 +2572,7 @@
   <div class="row">
 	<div class="col-md-6">
 	  <div class="pubimg">
-		<img src="pubs/stm_hom.jpg">
+		<img src="pubs/stm_hom.jpg" loading="lazy">
 	  </div>
 	</div>
 	<div class="col-md-6">
@@ -2487,7 +2618,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
-			<img src="pubs/sharpness/monarchblocks10pct.png">
+			<img src="pubs/sharpness/monarchblocks10pct.png" loading="lazy">
           </div>
         </div>
         <div class="col-md-6">
@@ -2522,6 +2653,8 @@
 
 
     </div>
+    </div> <!-- /older-pubs -->
+
   </div>
 </div>
 
@@ -2534,7 +2667,7 @@
 
   <div class="pubwrap">
     <div class="pubt">Image and Video Understanding (2014-2017, together with Prof. Axel Pinz)</div>
-      <img src="./pubs/teaching/dynamic_scene_understanding.png" >
+      <img src="./pubs/teaching/dynamic_scene_understanding.png"  loading="lazy">
 	<h4>My Lectures cover</h4>
     <div class="pubd"><a href="pubs/teaching/IVU_Convolutional_Filtering_and_Thinking_in_Frequency.pdf">Convolutional Filtering and Thinking in Frequency (2014)</a> </div>
     <div class="pubd"><a href="pubs/teaching/IVU_Convolutional_Networks_and_Video_Representations.pdf">Convolutional Networks and Video Representations (2014)</a> </div>
@@ -2566,4 +2699,48 @@
 
 
 
+
+<script>
+// Lazy load videos: load src and autoplay when they enter viewport
+(function() {
+  var videoObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var video = entry.target;
+        var sources = video.querySelectorAll('source[data-src]');
+        sources.forEach(function(source) {
+          source.src = source.getAttribute('data-src');
+          source.removeAttribute('data-src');
+        });
+        video.load();
+        video.play().catch(function() {});
+        videoObserver.unobserve(video);
+      }
+    });
+  }, { rootMargin: '200px' });
+
+  document.querySelectorAll('.lazy-video').forEach(function(video) {
+    videoObserver.observe(video);
+  });
+
+  // Lazy load shields.io badges
+  var badgeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var img = entry.target;
+        var realSrc = img.getAttribute('data-src');
+        if (realSrc) {
+          img.src = realSrc;
+          img.removeAttribute('data-src');
+        }
+        badgeObserver.unobserve(img);
+      }
+    });
+  }, { rootMargin: '100px' });
+
+  document.querySelectorAll('.lazy-badge').forEach(function(img) {
+    badgeObserver.observe(img);
+  });
+})();
+</script>
 </body></html>
